@@ -364,20 +364,7 @@ public abstract class Exp {
 	public abstract double avgDepth(int d);
 
 	public static void main(String[] args){
-		PType.addTypesFromFile("experiments/atis/atis.types");
-		Lang.loadLangFromFile("experiments/atis/atis.lang");
-		Exp e1;
-		e1 = Exp.makeExp("(argmax $0 (and (place:t $0) (loc:t $0 (argmax $1 (state:t $1) (area:i $1)))) (elevation:i $0))");
-		System.out.println(e1 + " ---- "+e1.inferType());
 		
-		Exp e2 = Exp.makeExp("(lambda $0 e (and (major:t $0) (city:t $0) (loc:t $0 rhode_island:s)))");
-		System.out.println(e2 + " ---- " + e2.inferType());
-		
-		Exp e3 = Exp.makeExp("(len:i missouri_river:r)");
-		System.out.println(e3 + " ---- " + e3.inferType());
-		
-		Exp e4 = Exp.makeExp("(capital:c maine:s)");
-		System.out.println(e4 + " ---- " + e4.inferType());
 	}
 
 }

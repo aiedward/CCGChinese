@@ -21,8 +21,15 @@ package parser;
 
 import java.util.*;
 import java.io.*;
+
 import learn.*;
 import lambda.*;
+
+import org.ansj.domain.Term;
+import org.ansj.splitWord.analysis.BaseAnalysis;
+import org.ansj.splitWord.analysis.IndexAnalysis;
+import org.ansj.splitWord.analysis.NlpAnalysis;
+import org.ansj.splitWord.analysis.ToAnalysis;
 
 public class Parser {
 
@@ -56,6 +63,11 @@ public class Parser {
     }
 
 
+    /**
+     * tokenize the sentence
+     * @param input
+     * @return
+     */
 	public static List tokenize(String input){
 		// first tokenize the string
 		List tokens = new LinkedList();
@@ -67,10 +79,24 @@ public class Parser {
 		}*/
 		
 		//parse with character (e.g. chinese)
-		for (int ii=0; ii<input.length(); ii++) {
+		/*for (int ii=0; ii<input.length(); ii++) {
 			tokens.add(input.charAt(ii));
 			//System.out.println("add token: " + input.charAt(ii));
-		}
+		}*/
+		
+		//Chinese. parse after segmentation
+		/**
+		 * four segmentation methods
+		 * BaseAnalysis.parse(input);
+		 * ToAnalysis.parse(input)
+		 * NlpAnalysis.parse(input)
+		 * IndexAnalysis.parse(input)
+		 */
+		List<Term> parseRes = NlpAnalysis.parse(input);
+
+		System.out.println(parseRes);
+		
+		
 		
 		return tokens;
 	}
@@ -84,7 +110,14 @@ public class Parser {
 
 	public Chart parse(String input, Exp pruningSem, boolean computeInside){
 
+		System.out.println("parsing: " + input + " : " + pruningSem);
 		List tokens = tokenize(input);
+		//System.out.println("tokens size = " + tokens.size());
+		/*for (String ii : tokens) {
+			System.out.print(ii);
+		}
+		System.out.println();*/
+		
 		Globals.tokens=tokens;
 		Globals.lastWordIndex=tokens.size()-1;
 
@@ -404,5 +437,6 @@ public class Parser {
 
 	public static void main(String[] args){
 		Parser p = new Parser();
+		p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
 	}
 }

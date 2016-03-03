@@ -74,9 +74,15 @@ public class DevTrain extends Train {
 	t.setDataSet(train);
 	t.setTestSet(test);
 
-	Train.verbose = false;
+	Train.verbose = true;
+	
+	System.out.println("Start training...");
 	t.stocGradTrain(p,true);
+	
+	System.out.println("Print lexicon...");
+	t.printLex(p.returnLex().getLexicon());
 
+	System.out.println("Start testing...");
 	t.test(p,Train.pruneLex);
 
 	}
