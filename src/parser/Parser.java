@@ -121,10 +121,7 @@ public class Parser {
 		System.out.println("parsing: " + input + " : " + pruningSem);
 		List tokens = tokenize(input);
 		//System.out.println("tokens size = " + tokens.size());
-		/*for (String ii : tokens) {
-			System.out.print(ii);
-		}
-		System.out.println();*/
+		//System.out.println(tokens);
 		
 		Globals.tokens=tokens;
 		Globals.lastWordIndex=tokens.size()-1;
