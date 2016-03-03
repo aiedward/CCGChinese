@@ -91,10 +91,19 @@ public class Parser {
 		 * ToAnalysis.parse(input)
 		 * NlpAnalysis.parse(input)
 		 * IndexAnalysis.parse(input)
+		 * return type List<Term>
 		 */
-		List<Term> parseRes = NlpAnalysis.parse(input);
+		List<Term> myTokens= NlpAnalysis.parse(input);
+		String tmp;
+		for (Term tt : myTokens) {
+			tmp = tt.toString();
+			int tmpIndex = tmp.indexOf("/");
+			tmp = tmp.substring(0, tmpIndex);
+			if (tmp.equalsIgnoreCase("，")) continue;
+			tokens.add(tmp);
+		}
 
-		System.out.println(parseRes);
+		System.out.println(tokens);
 		
 		
 		
