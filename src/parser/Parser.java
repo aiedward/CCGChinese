@@ -30,6 +30,7 @@ import org.ansj.splitWord.analysis.BaseAnalysis;
 import org.ansj.splitWord.analysis.IndexAnalysis;
 import org.ansj.splitWord.analysis.NlpAnalysis;
 import org.ansj.splitWord.analysis.ToAnalysis;
+import org.ansj.util.DownLibrary;
 
 public class Parser {
 
@@ -98,14 +99,12 @@ public class Parser {
 		for (Term tt : myTokens) {
 			tmp = tt.toString();
 			int tmpIndex = tmp.indexOf("/");
-			tmp = tmp.substring(0, tmpIndex);
+			if (tmpIndex != -1) tmp = tmp.substring(0, tmpIndex);
 			if (tmp.equalsIgnoreCase("，")) continue;
 			tokens.add(tmp);
 		}
 
 		System.out.println(tokens);
-		
-		
 		
 		return tokens;
 	}
@@ -445,6 +444,7 @@ public class Parser {
 	int firstLexFeatIndex=0;
 
 	public static void main(String[] args){
+		
 		Parser p = new Parser();
 		p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
 	}

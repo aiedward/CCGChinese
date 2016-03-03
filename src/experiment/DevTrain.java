@@ -24,8 +24,8 @@ public class DevTrain extends Train {
 
 	public static void main(String[] args){
 
-	PType.addTypesFromFile("types");
-	Lang.loadLangFromFile("relations");
+	PType.addTypesFromFile("data/types");
+	Lang.loadLangFromFile("data/relations");
 
 	/*int runNum = Integer.parseInt(args[0]);
 	int splitNum = Integer.parseInt(args[1]);
