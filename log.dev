@@ -1,0 +1,3160 @@
+1: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s))
+makeExptrue:t
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+2: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIZHIMEN:s)
+makeExp$0
+makeExpXIZHIMEN:s
+makeExp(< (price:i $0) 30:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp30:i
+3: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+4: (lambda $0 e (and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i)))
+makeExp(and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(park:t $0:i)
+makeExp$0:i
+5: (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+6: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+7: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+8: (lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 BEIDAPINGZHUANG:s)
+makeExp$0
+makeExpBEIDAPINGZHUANG:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(not （taste:t $0 MALA:s)
+makeExp（taste:t
+9: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+10: (lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 JIUXIANQIAO:s)
+makeExp$0
+makeExpJIUXIANQIAO:s
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+11: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+12: (lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 ZHONGGUANCUN:s)
+makeExp$0
+makeExpZHONGGUANCUN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+13: (lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 TIANQIAO:s)
+makeExp$0
+makeExpTIANQIAO:s
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(label:t $0 SHUANGUO:s)
+makeExp$0
+makeExpSHUANGUO:s
+14: (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 XIANGCAI:s)
+makeExp$0
+makeExpXIANGCAI:s
+15: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(park:t $0)
+makeExp$0
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+16: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 8:i)
+makeExp$0
+makeExp8:i
+makeExp(zone:t $0 DONGBIANMEN:s)
+makeExp$0
+makeExpDONGBIANMEN:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+17: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(zone:t $0 TIANANMEN:s)
+makeExp$0
+makeExpTIANANMEN:s
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+18: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(npeople:t $0 6:i)
+makeExp$0
+makeExp6:i
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+19: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(zone:t $0 YONGHEGONG:s)
+makeExp$0
+makeExpYONGHEGONG:s
+makeExp(label:t $0 YUECAI:s)
+makeExp$0
+makeExpYUECAI:s
+makeExp(< (price:i $0) 60:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp60:i
+20: (lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 YUETAN:s)
+makeExp$0
+makeExpYUETAN:s
+makeExp(label:t $0 KUAIJIEXIAOCHI:s)
+makeExp$0
+makeExpKUAIJIEXIAOCHI:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+21: (lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 QINGDAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 QINGDAN:s)
+makeExp$0
+makeExpQINGDAN:s
+22: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 15:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+23: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 SHAOKAO:s)
+makeExp$0
+makeExpSHAOKAO:s
+24: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+25: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 BEIJINGTESE:s)
+makeExp$0
+makeExpBEIJINGTESE:s
+26: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 3:i)
+makeExp$0
+makeExp3:i
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+27: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 20:i)
+makeExp$0
+makeExp20:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+28: (lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+makeExp(and (restaurant:t $0) (taste:t $0 MALA:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(taste:t $0 MALA:s)
+makeExp$0
+makeExpMALA:s
+29: (lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 KUAICAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 KUAICAN:s)
+makeExp$0
+makeExpKUAICAN:s
+Train Size: 29
+
+1: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+2: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIZHIMEN:s)
+makeExp$0
+makeExpXIZHIMEN:s
+makeExp(< (price:i $0) 30:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp30:i
+3: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+4: (lambda $0 e (and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i)))
+makeExp(and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(park:t $0:i)
+makeExp$0:i
+5: (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+6: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+7: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+8: (lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 BEIDAPINGZHUANG:s)
+makeExp$0
+makeExpBEIDAPINGZHUANG:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(not （taste:t $0 MALA:s)
+makeExp（taste:t
+9: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+10: (lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 JIUXIANQIAO:s)
+makeExp$0
+makeExpJIUXIANQIAO:s
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+11: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+12: (lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 ZHONGGUANCUN:s)
+makeExp$0
+makeExpZHONGGUANCUN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+13: (lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 TIANQIAO:s)
+makeExp$0
+makeExpTIANQIAO:s
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(label:t $0 SHUANGUO:s)
+makeExp$0
+makeExpSHUANGUO:s
+14: (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 XIANGCAI:s)
+makeExp$0
+makeExpXIANGCAI:s
+15: (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(park:t $0)
+makeExp$0
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+16: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 8:i)
+makeExp$0
+makeExp8:i
+makeExp(zone:t $0 DONGBIANMEN:s)
+makeExp$0
+makeExpDONGBIANMEN:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+17: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(zone:t $0 TIANANMEN:s)
+makeExp$0
+makeExpTIANANMEN:s
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+18: (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(npeople:t $0 6:i)
+makeExp$0
+makeExp6:i
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+19: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(zone:t $0 YONGHEGONG:s)
+makeExp$0
+makeExpYONGHEGONG:s
+makeExp(label:t $0 YUECAI:s)
+makeExp$0
+makeExpYUECAI:s
+makeExp(< (price:i $0) 60:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp60:i
+20: (lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 YUETAN:s)
+makeExp$0
+makeExpYUETAN:s
+makeExp(label:t $0 KUAIJIEXIAOCHI:s)
+makeExp$0
+makeExpKUAIJIEXIAOCHI:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+21: (lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 QINGDAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 QINGDAN:s)
+makeExp$0
+makeExpQINGDAN:s
+22: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 15:i)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+23: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 SHAOKAO:s)
+makeExp$0
+makeExpSHAOKAO:s
+24: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+25: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 BEIJINGTESE:s)
+makeExp$0
+makeExpBEIJINGTESE:s
+26: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 3:i)
+makeExp$0
+makeExp3:i
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+27: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 20:i)
+makeExp$0
+makeExp20:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+28: (lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+makeExp(and (restaurant:t $0) (taste:t $0 MALA:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(taste:t $0 MALA:s)
+makeExp$0
+makeExpMALA:s
+29: (lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+makeExp(lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 KUAICAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 KUAICAN:s)
+makeExp$0
+makeExpKUAICAN:s
+Test Size: 29
+
+alpha_0 = 1.0
+C = 1.0E-5
+initialMultiplier = 10.0
+NP init = 10.0
+Parser beam  = 200
+
+Start LexPhi: 0
+Start train
+add Dataset
+add Dataset
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIZHIMEN:s)
+makeExp$0
+makeExpXIZHIMEN:s
+makeExp(< (price:i $0) 30:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp30:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(label:t $0 CHUANCAI:s)
+makeExp$0
+makeExpCHUANCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i)))
+makeExp(and (restaurant:t $0) (< (price:i $0) 80:i) (park:t $0:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(park:t $0:i)
+makeExp$0:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t)))
+makeExp(and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 BEIDAPINGZHUANG:s)
+makeExp$0
+makeExpBEIDAPINGZHUANG:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(not （taste:t)
+makeExp（taste:t
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 JIUXIANQIAO:s)
+makeExp$0
+makeExpJIUXIANQIAO:s
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XUANWUMEN:s)
+makeExp$0
+makeExpXUANWUMEN:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 ZHONGGUANCUN:s)
+makeExp$0
+makeExpZHONGGUANCUN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 TIANQIAO:s)
+makeExp$0
+makeExpTIANQIAO:s
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(label:t $0 SHUANGUO:s)
+makeExp$0
+makeExpSHUANGUO:s
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+makeExp(and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 SHIJINGSHAN:s)
+makeExp$0
+makeExpSHIJINGSHAN:s
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 XIANGCAI:s)
+makeExp$0
+makeExpXIANGCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (park:t $0) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 DONGZHIMEN:s)
+makeExp$0
+makeExpDONGZHIMEN:s
+makeExp(park:t $0)
+makeExp$0
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp(< (price:i $0) 50:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp50:i
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 8:i) (zone:t $0 DONGBIANMEN:s) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 8:i)
+makeExp$0
+makeExp8:i
+makeExp(zone:t $0 DONGBIANMEN:s)
+makeExp$0
+makeExpDONGBIANMEN:s
+makeExp(< (price:i $0) 100:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp100:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 5:i)
+makeExp$0
+makeExp5:i
+makeExp(zone:t $0 TIANANMEN:s)
+makeExp$0
+makeExpTIANANMEN:s
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 XIDAN:s)
+makeExp$0
+makeExpXIDAN:s
+makeExp(npeople:t $0 6:i)
+makeExp$0
+makeExp6:i
+makeExp(< (price:i $0) 70:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp70:i
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(zone:t $0 YONGHEGONG:s)
+makeExp$0
+makeExpYONGHEGONG:s
+makeExp(label:t $0 YUECAI:s)
+makeExp$0
+makeExpYUECAI:s
+makeExp(< (price:i $0) 60:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp60:i
+makeExp (lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
+makeExp(and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(zone:t $0 YUETAN:s)
+makeExp$0
+makeExpYUETAN:s
+makeExp(label:t $0 KUAIJIEXIAOCHI:s)
+makeExp$0
+makeExpKUAIJIEXIAOCHI:s
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp (lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 QINGDAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 QINGDAN:s)
+makeExp$0
+makeExpQINGDAN:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 15:i)))
+makeExp(and (restaurant:t $0) (npeople:t $0 15:i))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 15:i)
+makeExp$0
+makeExp15:i
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 SHAOKAO:s)
+makeExp$0
+makeExpSHAOKAO:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 10:i)
+makeExp$0
+makeExp10:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 2:i)
+makeExp$0
+makeExp2:i
+makeExp(label:t $0 BEIJINGTESE:s)
+makeExp$0
+makeExpBEIJINGTESE:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 3:i)
+makeExp$0
+makeExp3:i
+makeExp(label:t $0 HUOGUO:s)
+makeExp$0
+makeExpHUOGUO:s
+makeExp (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+makeExp(and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(npeople:t $0 20:i)
+makeExp$0
+makeExp20:i
+makeExp(< (price:i $0) 80:i)
+makeExp(price:i $0)
+makeExp$0
+makeExp80:i
+makeExp(label:t $0 JIACHANGCAI:s)
+makeExp$0
+makeExpJIACHANGCAI:s
+makeExp (lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+makeExp(and (restaurant:t $0) (taste:t $0 MALA:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(taste:t $0 MALA:s)
+makeExp$0
+makeExpMALA:s
+makeExp (lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+makeExp(and (restaurant:t $0) (label:t $0 KUAICAN:s))
+makeExp(restaurant:t $0)
+makeExp$0
+makeExp(label:t $0 KUAICAN:s)
+makeExp$0
+makeExpKUAICAN:s
+Training, iteration 0
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 1
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 2
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 3
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 4
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 5
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 6
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 7
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 8
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+Training, iteration 9
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIZHIMEN:s
+setPruningSem, price:i/1
+setPruningSem, 30:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, label:t/2
+setPruningSem, CHUANCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, park:t/1
+setPruningSem, $0:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, BEIDAPINGZHUANG:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, （taste:t
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, JIUXIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XUANWUMEN:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, ZHONGGUANCUN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, TIANQIAO:s
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, label:t/2
+setPruningSem, SHUANGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, SHIJINGSHAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, XIANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, DONGZHIMEN:s
+setPruningSem, park:t/1
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, price:i/1
+setPruningSem, 50:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 8:i
+setPruningSem, zone:t/2
+setPruningSem, DONGBIANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 100:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 5:i
+setPruningSem, zone:t/2
+setPruningSem, TIANANMEN:s
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, XIDAN:s
+setPruningSem, npeople:t/2
+setPruningSem, 6:i
+setPruningSem, price:i/1
+setPruningSem, 70:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, zone:t/2
+setPruningSem, YONGHEGONG:s
+setPruningSem, label:t/2
+setPruningSem, YUECAI:s
+setPruningSem, price:i/1
+setPruningSem, 60:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, zone:t/2
+setPruningSem, YUETAN:s
+setPruningSem, label:t/2
+setPruningSem, KUAIJIEXIAOCHI:s
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, QINGDAN:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 15:i
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, SHAOKAO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 10:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 2:i
+setPruningSem, label:t/2
+setPruningSem, BEIJINGTESE:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 3:i
+setPruningSem, label:t/2
+setPruningSem, HUOGUO:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, npeople:t/2
+setPruningSem, 20:i
+setPruningSem, price:i/1
+setPruningSem, 80:i
+setPruningSem, label:t/2
+setPruningSem, JIACHANGCAI:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, taste:t/2
+setPruningSem, MALA:s
+setPruningSem, class lambda.Funct
+setPruningSem, restaurant:t/1
+setPruningSem, label:t/2
+setPruningSem, KUAICAN:s
+Testing
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
+-----------------------------
+Recall : 0/29 = 0.0
+Precision : 0/0 = NaN
+F1: NaN
+No Parses : 0
+EMPTY Recall : 0/29 = 0.0
+EMPTY Precision : 0/0 = NaN
+EMPTY F1: NaN
+-----------
