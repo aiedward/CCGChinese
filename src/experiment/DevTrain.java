@@ -40,8 +40,8 @@ public class DevTrain extends Train {
 	System.out.println();
 
     //Initialize parameters
-	/*String giza_probs = "data/"+language+"/run-"+runNum+"/fold-"+splitNum+"/w-c.giza_probs";
-	LexiconFeatSet.loadCoOccCounts(giza_probs);*/
+	//String giza_probs = "data/"+language+"/run-"+runNum+"/fold-"+splitNum+"/w-c.giza_probs";
+	//LexiconFeatSet.loadCoOccCounts(giza_probs);
 
 	//fixed np lexicon
     /*String fixedlex =null;

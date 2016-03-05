@@ -32,6 +32,8 @@ import org.ansj.splitWord.analysis.NlpAnalysis;
 import org.ansj.splitWord.analysis.ToAnalysis;
 import org.ansj.util.DownLibrary;
 
+import com.sun.org.apache.regexp.internal.RE;
+
 public class Parser {
 
 	public Parser(){
@@ -102,9 +104,11 @@ public class Parser {
 			if (tmpIndex != -1) tmp = tmp.substring(0, tmpIndex);
 			if (tmp.equalsIgnoreCase("，")) continue;
 			tokens.add(tmp);
+			//System.out.print(tmp + " ");
 		}
+		//System.out.println();
 
-		System.out.println(tokens);
+		//System.out.println(tokens);
 		
 		return tokens;
 	}
@@ -443,6 +447,31 @@ public class Parser {
 	public static void main(String[] args){
 		
 		Parser p = new Parser();
-		p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
+		//p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
+		/*try {
+			BufferedReader in = new BufferedReader(new FileReader("data/train"));
+			BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data/chinese"),"UTF-8"));
+
+			String line = "a";
+			while (line != null) {
+				line = in.readLine();
+				if (line != null) {
+					List<String> res = new LinkedList();
+					res = p.tokenize(line);
+					for (int i=0; i<res.size(); i++) {
+						out.write(res.get(i) + " ");
+					}
+					out.write("\n");
+				}
+				in.readLine();
+				in.readLine();
+			}
+			in.close();
+			out.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+
 	}
 }
