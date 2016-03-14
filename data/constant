@@ -1,8 +1,16 @@
+lambda e and restaurant:t zone:t XIDAN:s 
+lambda e and restaurant:t zone:t XIDAN:s label:t CHUANCAI:s 
 lambda e and restaurant:t zone:t XIDAN:s label:t CHUANCAI:s 
 lambda e and restaurant:t zone:t XIZHIMEN:s < price:i 
+lambda e and restaurant:t zone:t XUANWUMEN:s 
 lambda e and restaurant:t zone:t XUANWUMEN:s label:t CHUANCAI:s 
-lambda e and restaurant:t < price:i park:t 
+lambda e and restaurant:t zone:t XUANWUMEN:s label:t CHUANCAI:s 
+lambda e and restaurant:t zone:t ZHONGGUANCUN:s 
+lambda e and restaurant:t zone:t ZHONGGUANCUN:s park:t 
+lambda e and restaurant:t zone:t ZHONGGUANCUN:s < price:i 
+lambda e and restaurant:t zone:t SHIJINGSHAN:s label:t XIANGCAI:s 
 lambda e and restaurant:t zone:t SHIJINGSHAN:s < price:i 
+lambda e and restaurant:t zone:t DONGZHIMEN:s label:t HUOGUO:s 
 lambda e and restaurant:t zone:t DONGZHIMEN:s label:t HUOGUO:s < price:i 
 lambda e and restaurant:t zone:t DONGZHIMEN:s label:t JIACHANGCAI:s < price:i 
 lambda e and restaurant:t zone:t BEIDAPINGZHUANG:s npeople:t not （taste:t MALA:s 
