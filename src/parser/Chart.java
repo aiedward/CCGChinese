@@ -184,11 +184,11 @@ public class Chart {
 		preds = new LinkedList();
 		predCounts = new LinkedList();
 		e.allPreds(-1,preds);
-		System.out.println("setPruningSem, " + e.getClass().toString());
+		//System.out.println("setPruningSem, " + e.getClass().toString());
 		Iterator i = preds.iterator();
 		while (i.hasNext()){
 			Object p = i.next();
-			System.out.println("setPruningSem, " + p);
+			//System.out.println("setPruningSem, " + p);
 			predCounts.add(new Integer(e.predCount(p)));
 		}
 		theCount=e.expCount(Exp.THE);

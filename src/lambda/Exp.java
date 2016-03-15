@@ -35,7 +35,7 @@ public abstract class Exp {
 	}
 
 	static public Exp makeExp(String input, Map vars){
-		System.out.println("makeExp" + input);
+		//System.out.println("makeExp" + input);
 
 		input = input.trim();
 

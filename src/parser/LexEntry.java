@@ -45,21 +45,23 @@ public class LexEntry {
      * @throws CRASH if c is not a valid category.
      **/
     public LexEntry(String t, String c){
-	myTokens = new LinkedList();
-	/* TODO: add regex "Tokens" */
-	StringTokenizer st = new StringTokenizer(t);
-	while (st.hasMoreTokens()){
-	    myTokens.add(st.nextToken());
-	}
-    
-	//List<String> myTokens = Parser.tokenize(t);
-	
-	myCat = Cat.makeCat(c);
-	if (myCat.getSem()!=null && !myCat.getSem().wellTyped()){
-	    System.err.println("sem "+myCat.getSem()+" is not well typed");
-		System.err.println("type is "+myCat.getSem().inferType());
-	    System.exit(-1);
-	}
+		myTokens = new LinkedList();
+		/* TODO: add regex "Tokens" */
+		
+		
+		/*StringTokenizer st = new StringTokenizer(t);
+		while (st.hasMoreTokens()){
+		    myTokens.add(st.nextToken());
+		}*/
+	    
+		myTokens = Parser.tokenize(t);
+		
+		myCat = Cat.makeCat(c);
+		if (myCat.getSem()!=null && !myCat.getSem().wellTyped()){
+		    System.err.println("sem "+myCat.getSem()+" is not well typed");
+			System.err.println("type is "+myCat.getSem().inferType());
+		    System.exit(-1);
+		}
     }
     //>
     //< public LexEntry (List t, Cat c) - unprotected constructor, for copy?

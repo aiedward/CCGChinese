@@ -55,7 +55,7 @@ public class DataSet {
 					// read semantics
 					line = in.readLine();
 					if (line!=null){
-						System.out.println(count+": "+line);
+						//System.out.println(count+": "+line);
 						Exp e = Exp.makeExp(line);
 						e.simplify();
 						if (e==null || !e.wellTyped()){

@@ -29,6 +29,9 @@ import java.util.*;
 public class CompRule implements BinaryParseRule {
 
     public void newCellsFrom(Cell left, Cell right, List result){
+    //System.out.println("new Cells From");
+    //System.out.println("left: " + left.getWordSpan());
+    //System.out.println("right: " + right.getWordSpan());
 	if (!left.isComplete || !right.isComplete) return;
 
 	Cat leftc = left.getCat();

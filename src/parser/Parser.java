@@ -20,6 +20,8 @@
 package parser;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.io.*;
 
 import learn.*;
@@ -76,10 +78,15 @@ public class Parser {
 		List tokens = new LinkedList();
 		
 		//parse with whitespace (e.g. english)
-		/*StringTokenizer st = new StringTokenizer(input);
-		while (st.hasMoreTokens()){
-			tokens.add(st.nextToken());
-		}*/
+		Pattern pattern = Pattern.compile("[a-zA-Z]");
+		Matcher matcher = pattern.matcher(input.substring(0, 1));
+		if (matcher.matches()) {
+			StringTokenizer st = new StringTokenizer(input);
+			while (st.hasMoreTokens()){
+				tokens.add(st.nextToken());
+			}
+			return tokens;
+		}
 		
 		//parse with character (e.g. chinese)
 		/*for (int ii=0; ii<input.length(); ii++) {
@@ -128,6 +135,8 @@ public class Parser {
 		//System.out.println(tokens);
 		
 		Globals.tokens=tokens;
+		//System.out.println("Global tokens");
+		//System.out.println(Globals.tokens);
 		Globals.lastWordIndex=tokens.size()-1;
 
 		// create a chart and add the input words
@@ -150,6 +159,7 @@ public class Parser {
 		for (int len = 1; len<size; len++){
 			for (int begin = 0; begin<size-len; begin++){
 				for (int split=0; split<len; split++){
+					//System.out.println("begin = " + begin + ", split = " + split + ", len = " + len);
 					temp.clear();
 					Iterator leftIter 
 					= chart.getCellsIterator(begin,begin+split);
@@ -448,9 +458,10 @@ public class Parser {
 		
 		Parser p = new Parser();
 		//p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
-		/*try {
+		try {
 			BufferedReader in = new BufferedReader(new FileReader("data/train"));
-			BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data/chinese"),"UTF-8"));
+			BufferedWriter out = new BufferedWriter(new OutputStreamWriter
+					(new FileOutputStream("data/chinese"),"UTF-8"));
 
 			String line = "a";
 			while (line != null) {
@@ -471,7 +482,7 @@ public class Parser {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 
 	}
 }

@@ -21,6 +21,7 @@ package learn;
 
 import java.util.*;
 import java.io.*;
+
 import lambda.*;
 import parser.*;
 
@@ -280,17 +281,25 @@ public class Train {
 
 	
 	public void printLex(List l){
-		Iterator j = l.iterator();
-		System.out.println("[LexEntries and scores:");
-		while (j.hasNext()){
-			LexEntry le = (LexEntry) j.next();
-			int index = Globals.lexPhi.indexOf(le);
-			System.out.print(le +" : "+index);
-			if (index!=-1) System.out.print(" : "+Globals.theta.get("LEX:"+index));
+		try {
+			BufferedWriter lexOut = new BufferedWriter(new OutputStreamWriter
+					(new FileOutputStream("configure/lexicon"),"UTF-8"));
 
-			System.out.println();
+			Iterator j = l.iterator();
+			lexOut.write("[LexEntries and scores:\n");
+			while (j.hasNext()){
+				LexEntry le = (LexEntry) j.next();
+				int index = Globals.lexPhi.indexOf(le);
+				lexOut.write(le +" : "+index);
+				if (index!=-1) lexOut.write(" : "+Globals.theta.get("LEX:"+index));
+	
+				lexOut.write("\n");;
+			}
+			lexOut.write("]");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.out.println("]");
 	}
 
 
@@ -347,6 +356,7 @@ public class Train {
 						if (total!=0) { 
 							double r = (double)correct/total; 
 							double p = (double)correct/(correct+wrong);
+							System.out.println();
 							System.out.print(i+": =========== r:"+r+" p:"+p);
 							System.out.println(" (epoch:"+j+" file:"+l+" "+filename+")");
 						} else System.out.println(i+": ===========");
@@ -373,13 +383,13 @@ public class Train {
 					List<LexEntry> lex = 			
 						makeLexEntriesChart(words,sem,parser);
 					
-					if (verbose){
+					/*if (verbose){
 						System.out.println("Adding:");
 						for (LexEntry le : lex){
 							System.out.println(le+" : "
 									+LexiconFeatSet.initialWeight(le));
 						}
-					}
+					}*/
 					
 					parser.addLexEntries(lex);		   
 
@@ -399,8 +409,8 @@ public class Train {
 						if (verbose){ 
 							System.out.println("CORRECT:"+best);
 							lex = parser.getMaxLexEntriesFor(sem);
-							System.out.println("Using:");
-							printLex(lex);
+							//System.out.println("Using:");
+							//printLex(lex);
 							if (lex.size()==0){
 								System.out.println("ERROR: empty lex");
 							}
