@@ -16,11 +16,13 @@
 ***********************************************************************/
 package experiment;
 
+import java.io.File;
+
 import learn.*;
 import lambda.*;
 import parser.*;
 
-public class DevTrain extends Train {
+public class DevTrain {
 
 	public static void main(String[] args){
 
@@ -44,11 +46,12 @@ public class DevTrain extends Train {
 	//LexiconFeatSet.loadCoOccCounts(giza_probs);
 
 	//fixed np lexicon
-    /*String fixedlex =null;
-	fixedlex =  language+"-np-fixedlex.geo";*/
-
 	Lexicon fixed = new Lexicon();
-	//fixed.addEntriesFromFile(fixedlex,true);
+	String npLexFileName = "configure/np_lexicon";
+	File npLexFile = new File(npLexFileName);
+	if (npLexFile.exists()) {
+		fixed.addEntriesFromFile(npLexFileName,true);
+	}
 
 	Train.EPOCHS=10;
 	Train.alpha_0 = 1.0;
@@ -74,7 +77,7 @@ public class DevTrain extends Train {
 	t.setDataSet(train);
 	t.setTestSet(test);
 
-	Train.verbose = true;
+	Train.verbose = false;
 	
 	System.out.println("Start training...");
 	t.stocGradTrain(p,true);

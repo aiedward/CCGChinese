@@ -282,8 +282,9 @@ public class Train {
 	
 	public void printLex(List l){
 		try {
+			System.out.println("Start printing lexicon");
 			BufferedWriter lexOut = new BufferedWriter(new OutputStreamWriter
-					(new FileOutputStream("configure/lexicon"),"UTF-8"));
+					(new FileOutputStream("configure/final_lexicon"),"UTF-8"));
 
 			Iterator j = l.iterator();
 			lexOut.write("[LexEntries and scores:\n");

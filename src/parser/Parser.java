@@ -77,6 +77,8 @@ public class Parser {
 		// first tokenize the string
 		List tokens = new LinkedList();
 		
+		input = input.trim();
+		
 		//parse with whitespace (e.g. english)
 		Pattern pattern = Pattern.compile("[a-zA-Z]");
 		Matcher matcher = pattern.matcher(input.substring(0, 1));
@@ -109,7 +111,7 @@ public class Parser {
 			tmp = tt.toString();
 			int tmpIndex = tmp.indexOf("/");
 			if (tmpIndex != -1) tmp = tmp.substring(0, tmpIndex);
-			if (tmp.equalsIgnoreCase("，")) continue;
+			if (tmp.equalsIgnoreCase("，") || tmp.equalsIgnoreCase("。")) continue;
 			tokens.add(tmp);
 			//System.out.print(tmp + " ");
 		}
@@ -129,14 +131,10 @@ public class Parser {
 
 	public Chart parse(String input, Exp pruningSem, boolean computeInside){
 
-		System.out.println("parsing: " + input + " : " + pruningSem);
+		//System.out.println("parsing: " + input + " : " + pruningSem);
 		List tokens = tokenize(input);
-		//System.out.println("tokens size = " + tokens.size());
-		//System.out.println(tokens);
 		
 		Globals.tokens=tokens;
-		//System.out.println("Global tokens");
-		//System.out.println(Globals.tokens);
 		Globals.lastWordIndex=tokens.size()-1;
 
 		// create a chart and add the input words

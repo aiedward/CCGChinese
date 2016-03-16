@@ -73,8 +73,7 @@ public class Lexicon {
 					if (split > 0) {
 						// make a new LexEntry by splitting the string
 						LexEntry le = new LexEntry(line.substring(0,split),
-								line.substring(split+2,
-										line.length()));
+								line.substring(split+2,line.length()));
 						le.setDomainSpecific(flag);
 						le.loaded=true;
 						addLexEntry(le);
