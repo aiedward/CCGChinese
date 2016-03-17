@@ -30,8 +30,8 @@ public class CompRule implements BinaryParseRule {
 
     public void newCellsFrom(Cell left, Cell right, List result){
     //System.out.println("new Cells From");
-    //System.out.println("left: " + left.getWordSpan());
-    //System.out.println("right: " + right.getWordSpan());
+    //System.out.println("left: " + left.getWordSpan() + ", " + left.getLexEntry());
+    //System.out.println("right: " + right.getWordSpan() + ", " + right.getLexEntry());
 	if (!left.isComplete || !right.isComplete) return;
 
 	Cat leftc = left.getCat();

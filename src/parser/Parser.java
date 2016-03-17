@@ -163,10 +163,12 @@ public class Parser {
 					= chart.getCellsIterator(begin,begin+split);
 					while (leftIter.hasNext()){
 						Cell left = (Cell)leftIter.next();
+						//System.out.println("has left: " + left.getLexEntry());
 						Iterator rightIter 
 						= chart.getCellsIterator(begin+split+1,begin+len);
 						while (rightIter.hasNext()){
 							Cell right = (Cell)rightIter.next();
+							//System.out.println("has right: " + right.getLexEntry());
 							Iterator rules = binaryRules.iterator();
 							while (rules.hasNext()){
 								((BinaryParseRule)rules.next())

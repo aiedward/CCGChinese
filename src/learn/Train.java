@@ -279,8 +279,21 @@ public class Train {
 	// with which the system is primed.
 	Lexicon fixedLex;
 
-	
 	public void printLex(List l){
+		Iterator j = l.iterator();
+		System.out.println("[LexEntries and scores:");
+		while (j.hasNext()){
+			LexEntry le = (LexEntry) j.next();
+			int index = Globals.lexPhi.indexOf(le);
+			System.out.print(le +" : "+index);
+			if (index!=-1) System.out.print(" : "+Globals.theta.get("LEX:"+index));
+
+			System.out.println();
+		}
+		System.out.println("]");
+	}
+	
+	public void printLexToFile(List l){
 		try {
 			System.out.println("Start printing lexicon");
 			BufferedWriter lexOut = new BufferedWriter(new OutputStreamWriter
@@ -302,6 +315,8 @@ public class Train {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 
 
@@ -384,13 +399,13 @@ public class Train {
 					List<LexEntry> lex = 			
 						makeLexEntriesChart(words,sem,parser);
 					
-					/*if (verbose){
+					if (verbose){
 						System.out.println("Adding:");
 						for (LexEntry le : lex){
 							System.out.println(le+" : "
 									+LexiconFeatSet.initialWeight(le));
 						}
-					}*/
+					}
 					
 					parser.addLexEntries(lex);		   
 
@@ -410,8 +425,8 @@ public class Train {
 						if (verbose){ 
 							System.out.println("CORRECT:"+best);
 							lex = parser.getMaxLexEntriesFor(sem);
-							//System.out.println("Using:");
-							//printLex(lex);
+							System.out.println("Using:");
+							printLex(lex);
 							if (lex.size()==0){
 								System.out.println("ERROR: empty lex");
 							}

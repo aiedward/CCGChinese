@@ -83,7 +83,7 @@ public class DevTrain {
 	t.stocGradTrain(p,true);
 	
 	System.out.println("Print lexicon...");
-	t.printLex(p.returnLex().getLexicon());
+	t.printLexToFile(p.returnLex().getLexicon());
 
 	System.out.println("Start testing...");
 	t.test(p,Train.pruneLex);

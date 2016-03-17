@@ -2,20 +2,20 @@ Train Size: 64
 
 Test Size: 64
 
-Mar 16, 2016 10:39:34 AM null
+Mar 16, 2016 4:26:15 PM null
 WARNING: not find library.properties in classpath use it by default !
-Mar 16, 2016 10:39:34 AM org.ansj.util.MyStaticValue getCRFSplitWord
+Mar 16, 2016 4:26:15 PM org.ansj.util.MyStaticValue getCRFSplitWord
 INFO: begin init crf model!
-Mar 16, 2016 10:39:41 AM org.ansj.util.MyStaticValue getCRFSplitWord
-INFO: load crf crf use time:6929
-Mar 16, 2016 10:39:42 AM org.ansj.library.UserDefineLibrary loadFile
+Mar 16, 2016 4:26:22 PM org.ansj.util.MyStaticValue getCRFSplitWord
+INFO: load crf crf use time:7684
+Mar 16, 2016 4:26:24 PM org.ansj.library.UserDefineLibrary loadFile
 INFO: init user userLibrary ok path is : /Users/TsaonYih/Documents/Study/EXP/thesis/CCGChinese/library/default.dic
-Mar 16, 2016 10:39:42 AM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+Mar 16, 2016 4:26:24 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
 INFO: init ambiguityLibrary ok!
-Mar 16, 2016 10:39:43 AM org.ansj.library.DATDictionary loadDAT
-INFO: init core library ok use time :304
-Mar 16, 2016 10:39:44 AM org.ansj.library.NgramLibrary <clinit>
-INFO: init ngram ok use time :1949
+Mar 16, 2016 4:26:25 PM org.ansj.library.DATDictionary loadDAT
+INFO: init core library ok use time :320
+Mar 16, 2016 4:26:27 PM org.ansj.library.NgramLibrary <clinit>
+INFO: init ngram ok use time :2136
 alpha_0 = 1.0
 C = 1.0E-5
 initialMultiplier = 10.0

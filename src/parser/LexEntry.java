@@ -366,20 +366,6 @@ public class LexEntry {
 
 
     public static void main(String[] args){
-	PType.addTypesFromFile("experiments/geo250-lambda/geo-lambda.types");
-	Lang.loadLangFromFile("experiments/geo250-lambda/geo-lambda.lang");
-
-	LexEntry one = new LexEntry("what states border texas","S : (lambda $0 e (and (state:t $0) (next_to:t $0 texas:s)))");
-	//LexEntry two = new LexEntry("what rivers cross texas","S : (lambda $0 e (and (river:t $0) (loc:t $0 texas:s)))");
-	LexEntry two = new LexEntry("what","S|NP : (lambda x e (state:t x))");
-
-	System.out.println(one);
-	System.out.println(two);
-	System.out.println("==================");
-
-	for (LexEntry l : splitEntries(one,two)){
-	    System.out.println(l);
-	}
 
     }
 
