@@ -76,6 +76,16 @@ public class LexiconFeatSet implements LexicalFeatureSet {
 			}
 		}
 	}
+	
+	public void addLexEntry(LexEntry l, HashVector theta, double w){
+		//System.out.println("lex: " + l +", theta: " + theta + ", w: " + w);
+		if (!lexItems.containsKey(l)){
+			int i = lexItems.size();
+			lexItems.put(l.copy(),i);
+			
+			theta.set("LEX:" + i, w);
+		}
+	}
 
 	
 	//< constructors

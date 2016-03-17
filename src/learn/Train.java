@@ -300,7 +300,6 @@ public class Train {
 					(new FileOutputStream("configure/final_lexicon"),"UTF-8"));
 
 			Iterator j = l.iterator();
-			lexOut.write("[LexEntries and scores:\n");
 			while (j.hasNext()){
 				LexEntry le = (LexEntry) j.next();
 				int index = Globals.lexPhi.indexOf(le);
@@ -309,7 +308,7 @@ public class Train {
 	
 				lexOut.write("\n");;
 			}
-			lexOut.write("]");
+			lexOut.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -85,10 +85,9 @@ public class Lexicon {
 				}
 				line = in.readLine();
 			}
-
+			in.close();
 		} catch(IOException e){ System.err.println(e); }
 	}
-
 
 	public Lexicon(){
 		lexicon = new LinkedList();
@@ -220,6 +219,29 @@ public class Lexicon {
 			System.out.println();
 		}
 		System.out.println("]");
+	}
+	
+	public void printLexiconWithWeightsToFile() {
+		try {
+			System.out.println("Start printing lexicon");
+			BufferedWriter lexOut = new BufferedWriter(new OutputStreamWriter
+					(new FileOutputStream("output/final_lexicon"),"UTF-8"));
+
+			Iterator j = lexicon.iterator();
+			while (j.hasNext()){
+				LexEntry le = (LexEntry) j.next();
+				//System.out.println("Print lexPhi: " + Globals.lexPhi);
+				int index = Globals.lexPhi.indexOf(le);
+				lexOut.write(le +" : "+index);
+				if (index!=-1) lexOut.write(" : "+Globals.theta.get("LEX:"+index));
+	
+				lexOut.write("\n");;
+			}
+			lexOut.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 

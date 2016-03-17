@@ -77,7 +77,7 @@ public class Parser {
 		// first tokenize the string
 		List tokens = new LinkedList();
 		
-		input = input.trim();
+		input = input.replace(" ", "");
 		
 		//parse with whitespace (e.g. english)
 		Pattern pattern = Pattern.compile("[a-zA-Z]");
@@ -111,6 +111,8 @@ public class Parser {
 			tmp = tt.toString();
 			int tmpIndex = tmp.indexOf("/");
 			if (tmpIndex != -1) tmp = tmp.substring(0, tmpIndex);
+			//Pattern pattern2 = Pattern.compile("[/ \t\r]");
+			//Matcher matcher2 = pattern.matcher(tmp);
 			if (tmp.equalsIgnoreCase("，") || tmp.equalsIgnoreCase("。")) continue;
 			tokens.add(tmp);
 			//System.out.print(tmp + " ");
@@ -131,7 +133,7 @@ public class Parser {
 
 	public Chart parse(String input, Exp pruningSem, boolean computeInside){
 
-		//System.out.println("parsing: " + input + " : " + pruningSem);
+		System.out.println("parsing: " + input + " : " + pruningSem);
 		List tokens = tokenize(input);
 		
 		Globals.tokens=tokens;
@@ -361,10 +363,57 @@ public class Parser {
 			int start = firstLexFeatIndex;
 			for (LexicalFeatureSet lfs : lexicalFeatures){
 				lfs.setStartIndex(start);
+				System.out.println("add lex, start = " + start);
 				lfs.addLexEntry(l,theta);
 				start+=lfs.numFeats();
 			}
 		}	
+	}
+	
+	/**
+	 * load lexical entries and weights from configure file
+	 */
+	public void loadLexiconFromFile(String filename) {
+		String line;
+		String word;
+		String cat;
+		int index;
+		double weight;
+		
+		makeFeatures();
+		
+		try{
+			BufferedReader in = new BufferedReader(new FileReader(filename));
+			line = in.readLine();
+			while (line!=null){  // for each line in the file
+				line.trim();
+				if (line.equals("") || line.startsWith("//")) {
+					// do nothing: ignore blank lines and comments.
+				} else {
+					String[] splits = line.split(" :");
+					if (splits.length != 5) {
+						System.err.println("ERROR: unrecognized lexcal entry: [" + line + "]");
+					} else {
+						word = splits[0];
+						cat = splits[1] + ":" + splits[2];
+						cat = cat.substring(1);
+						index = Integer.parseInt(splits[3].trim());
+						weight = Double.parseDouble(splits[4].trim());
+						//System.out.println("word: " + word + ", cat: " + cat);
+						LexEntry le = new LexEntry(word, cat);
+						le.loaded=true;
+						lexicon.addLexEntry(le);
+						lexPhi.addLexEntry(le, theta, weight);
+						
+					}
+				}
+				line = in.readLine();
+			}
+			in.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**

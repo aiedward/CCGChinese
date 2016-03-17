@@ -71,6 +71,7 @@ public class DevTrain {
 
 	Parser p = new Parser(fixed);
 	p.makeFeatures();
+	//p.returnLex().printLexiconWithWeightsToFile();
 
 	System.out.println("Start train");
 	Train t = new Train();
@@ -83,7 +84,7 @@ public class DevTrain {
 	t.stocGradTrain(p,true);
 	
 	System.out.println("Print lexicon...");
-	t.printLexToFile(p.returnLex().getLexicon());
+	p.returnLex().printLexiconWithWeightsToFile();
 
 	System.out.println("Start testing...");
 	t.test(p,Train.pruneLex);

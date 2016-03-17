@@ -55,6 +55,7 @@ public class LexEntry {
 		}*/
 	    
 		myTokens = Parser.tokenize(t);
+		//System.out.println("lex tokens: " + myTokens);
 		
 		myCat = Cat.makeCat(c);
 		if (myCat.getSem()!=null && !myCat.getSem().wellTyped()){
