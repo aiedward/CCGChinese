@@ -225,7 +225,7 @@ public class Lexicon {
 		try {
 			System.out.println("Start printing lexicon");
 			BufferedWriter lexOut = new BufferedWriter(new OutputStreamWriter
-					(new FileOutputStream("output/final_lexicon"),"UTF-8"));
+					(new FileOutputStream("configure/final_lexicon"),"UTF-8"));
 
 			Iterator j = lexicon.iterator();
 			while (j.hasNext()){

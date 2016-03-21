@@ -29,10 +29,6 @@ public class DevTrain {
 	PType.addTypesFromFile("data/types");
 	Lang.loadLangFromFile("data/relations");
 
-	/*int runNum = Integer.parseInt(args[0]);
-	int splitNum = Integer.parseInt(args[1]);
-	String language = args[2];*/
-
 	DataSet train = new DataSet("data/train");
 	System.out.println("Train Size: "+train.size());
 	System.out.println();

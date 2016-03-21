@@ -1,4 +1,0 @@
-Mar 17, 2016 1:49:49 PM null
-WARNING: not find library.properties in classpath use it by default !
-Mar 17, 2016 1:49:49 PM org.ansj.util.MyStaticValue getCRFSplitWord
-INFO: begin init crf model!

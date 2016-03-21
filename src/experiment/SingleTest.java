@@ -33,7 +33,6 @@ public class SingleTest {
 		p.loadLexiconFromFile(LexFileName);
 		p.setGlobals();
 		System.out.println("after load lexicon");
-		//p.returnLex().printLexiconWithWeightsToFile();
 		
 		p.parseTimed(words,null,null);
 		Exp best = p.bestSem();
