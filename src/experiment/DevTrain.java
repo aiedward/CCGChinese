@@ -43,13 +43,13 @@ public class DevTrain {
 
 	//fixed np lexicon
 	Lexicon fixed = new Lexicon();
-	String npLexFileName = "configure/np_lexicon";
+	String npLexFileName = "data/np_lexicon";
 	File npLexFile = new File(npLexFileName);
 	if (npLexFile.exists()) {
 		fixed.addEntriesFromFile(npLexFileName,true);
 	}
 
-	Train.EPOCHS=10;
+	Train.EPOCHS=5;
 	Train.alpha_0 = 1.0;
 	Train.c = 0.00001;
 	Train.maxSentLen=50;

@@ -13,14 +13,14 @@ import parser.*;
 public class SingleTest {
 	
 	public static void main(String[] args) {
-		String words = "雍和宫附近有哪些餐厅";
+		String words = "我们想在雍和宫附近找个地方吃火锅，人均80";
 		
 		PType.addTypesFromFile("data/types");
 		Lang.loadLangFromFile("data/relations");
 		
 		LexiconFeatSet.initWeightMultiplier = 10.0;
 		LexiconFeatSet.initLexWeight = 10.0;
-		Parser.pruneN=200;
+		Parser.pruneN = 200;
 		
 		Parser p = new Parser();
 		//load lexicon
@@ -31,7 +31,6 @@ public class SingleTest {
 			return;
 		}
 		p.loadLexiconFromFile(LexFileName);
-		p.setGlobals();
 		System.out.println("after load lexicon");
 		
 		p.parseTimed(words,null,null);

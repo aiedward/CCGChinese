@@ -1,191 +1,192 @@
 西单附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
 
 西单附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
 
 西单附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (< (price:i $0) 70:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
 
 西单附近的餐厅，六位，人均七十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
 
 西单附近的川菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
 
 西单附近可以吃川菜的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIDAN:s) (label:t $0 CHUANCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
 
 西直门附近人均30的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XIZHIMEN:s) (< (price:i $0) 30:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
 
 宣武门附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
 
 宣武门附近有哪些川菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
 
 宣武门附近有哪些川菜餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 CHUANCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
 
 中关村附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s)))
 
 中关村附近的餐厅，要有停车位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (park:t $0:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (park:t $0:i)))
 
 中关村附近的餐厅，人均80
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (< (price:i $0) 80:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (< (price:i $0) 80:i)))
 
 中关村附近带包间的餐厅，十个人的，人均80元
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 ZHONGGUANCUN:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
 
 石景山附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
 
 石景山附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
 
 石景山附近的湘菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (label:t $0 XIANGCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (label:t $0 湘菜:s)))
 
 石景山附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (< (price:i $0) 70:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
 
 东直门附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
 
 东直门附近的火锅自助餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
 
 东直门附近的火锅自助餐厅，每位50左右
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 
 东直门附近的餐厅，大众家常菜，人均100
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 JIACHANGCAI:s) (< (price:i $0) 100:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 家常菜:s) (< (price:i $0) 100:i)))
 
 北大平庄附近的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s)))
 
 北大平庄附近的餐厅，两位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i)))
 
 北大平庄附近的餐厅，两位，不要太辣的
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 BEIDAPINGZHUANG:s) (npeople:t $0 2:i) (not （taste:t $0 MALA:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not （taste:t $0 麻辣:s)))
 
 酒仙桥附近的餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
 
 酒仙桥附近的餐厅，要有十五人包间。
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
 
 宣武门附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
 
 宣武门附近的餐厅，烧烤类的
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (label:t $0 SHAOKAO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 烧烤:s)))
 
 宣武门附近的餐厅，两个人，烧烤类的。
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 XUANWUMEN:s) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
 
 带五人包间的餐厅，天桥附近，涮锅类的，人均60
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANQIAO:s) (npeople:t $0 5:i) (label:t $0 SHUANGUO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天桥:s) (npeople:t $0 5:i) (label:t $0 火锅:s)))
 
 石景山附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 SHIJINGSHAN:s) (npeople:t $0 10:i) (label:t $0 XIANGCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (npeople:t $0 10:i) (label:t $0 湘菜:s)))
 
 我们想在东直门附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
 
 我们想在东直门附近找个地方吃火锅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
 
 我们想在东直门附近找个地方吃火锅，人均50
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 
 我们想在东直门附近找个餐厅吃火锅，人均50左右，要有停车位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGZHIMEN:s) (label:t $0 HUOGUO:s) (< (price:i $0) 50:i) (park:t $0)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i) (park:t $0)))
 
 我想在东便门附近订个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGBIANMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s)))
 
 我想在东便门附近订个餐厅，八个人
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGBIANMEN:s) (npeople:t $0 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i)))
 
 我想在东便门附近订个餐厅，八个人，人均100元
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGBIANMEN:s) (npeople:t $0 8:i) (< (price:i $0) 100:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i)))
 
 我想在东便门附近订个餐厅，八个人，人均100元，家常菜
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGBIANMEN:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
 
 我想订个带包间的餐厅，有八个人，东便门附近，人均100元，家常菜
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 DONGBIANMEN:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 JIACHANGCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
 
 我们想在天安门附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANANMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
 天安门附近的餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANANMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
 天安门附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANANMEN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
 我们有五个人，想在天安门附近吃个饭
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANANMEN:s) (npeople:t $0 5:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (npeople:t $0 5:i)))
 
 我们想在天安门广场附近找个餐厅，五个人
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 TIANANMEN:s) (npeople:t $0 5:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (npeople:t $0 5:i)))
 
 我们想在天安门广场附近找个餐厅，五个人，人均八十
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 TIANANMEN:s) (< (price:i $0) 80:i)))
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 天安门:s) (< (price:i $0) 80:i)))
 
 我想在雍和宫附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YONGHEGONG:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s)))
 
 我想订个雍和宫附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YONGHEGONG:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s)))
 
 我想在雍和宫附近找个餐厅吃粤菜
-(lambda $0 e (and (restaurant:t $0) (label:t $0 YUECAI:s)))
+(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
 
 我想在雍和宫附近找个吃粤菜的餐厅，人均六十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (< (price:i $0) 60:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
 
 我想在雍和宫附近找个吃粤菜的餐厅，十个人，人均六十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YONGHEGONG:s) (label:t $0 YUECAI:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
 
-月坛附近的快捷小吃
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s)))
+月坛附近的快餐
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s)))
 
-月坛附近的快捷小吃，两个人
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 YUETAN:s) (label:t $0 KUAIJIEXIAOCHI:s) (npeople:t $0 2:i)))
-
-我想订个餐厅，清淡一些的
-(lambda $0 e (and (restaurant:t $0) (label:t $0 QINGDAN:s)))
+月坛附近的快餐小吃，两个人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s) (npeople:t $0 2:i)))
 
 酒仙桥附近有什么饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
 
 酒仙桥附近的餐厅，要十五人包间
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 JIUXIANQIAO:s) (npeople:t $0 15:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
 
 我们想在宣武门附近找个地方吃烧烤，两人
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 SHAOKAO:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
 
 西单附近的餐厅，十个人的包间，大众家常菜
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 JIACHANGCAI:s)))
-
-西单附近的北京特色小吃，二位
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 2:i) (label:t $0 BEIJINGTESE:s)))
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
 
 北大庄附近的餐厅，三位，吃火锅
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 HUOGUO:s)))
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
 
 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 JIACHANGCAI:s)))
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
 
 月坛附近的餐厅，要麻辣口味的
-(lambda $0 e (and (restaurant:t $0) (taste:t $0 MALA:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (taste:t $0 麻辣:s)))
 
 东便门附近的快餐店
-(lambda $0 e (and (restaurant:t $0) (label:t $0 KUAICAN:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
+
+麻辣诱惑人均多少钱
+(price:i 麻辣诱惑:r)
+
+海底捞人均多少钱
+(price:i 海底捞:r)
+

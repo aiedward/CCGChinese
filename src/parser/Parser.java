@@ -363,7 +363,6 @@ public class Parser {
 			int start = firstLexFeatIndex;
 			for (LexicalFeatureSet lfs : lexicalFeatures){
 				lfs.setStartIndex(start);
-				System.out.println("add lex, start = " + start);
 				lfs.addLexEntry(l,theta);
 				start+=lfs.numFeats();
 			}
@@ -410,6 +409,7 @@ public class Parser {
 				line = in.readLine();
 			}
 			in.close();
+			setGlobals();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
