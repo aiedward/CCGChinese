@@ -1,0 +1,45 @@
+我想吃北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+
+五道口哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (hasCuisine:t $0 北京烤鸭:c)))
+
+我想吃火锅
+(lambda $0 e (and (restaurant:t $0) (label:t $0 火锅:s)))
+
+西单附近的餐厅，六位，人均七十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+
+我想吃麻辣小龙虾
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 麻辣小龙虾:c)))
+
+五道口哪里有麻小
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (hasCuisine:t $0 麻辣小龙虾:c)))
+
+麻辣小龙虾多少钱
+(cuisinePrice:i 麻辣小龙虾:c)
+
+中关村附近哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (hasCuisine:t $0 北京烤鸭:c)))
+
+麻辣诱惑有麻小吃吗
+(hasCuisine:t 麻辣诱惑:r 麻辣小龙虾:c)
+
+西单附近比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
+
+肯德基人均多少钱
+(price:i 肯德基:r)
+
+西直门附近人均30的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
+
+宣武门附近有哪些餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+
+中关村附近的餐厅，要有停车位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (park:t $0)))
+
+全聚德有麻辣小龙虾卖吗
+(hasCuisine:t 全聚德:r 麻辣小龙虾:c)
+

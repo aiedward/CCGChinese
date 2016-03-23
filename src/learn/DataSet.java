@@ -21,6 +21,7 @@ package learn;
 
 import java.util.*;
 import java.io.*;
+
 import lambda.*;
 import parser.*;
 
@@ -142,6 +143,86 @@ public class DataSet {
 		return result;
 	}
 	
+	//split the data set into n folds
+	public void splitFolds(int folds) {
+		int foldSize = size() / folds;
+		String foldName = "";
+		
+		//clear the data/fold directory
+		String path = "data/folds";
+		File file = new File(path);
+		if (! file.isDirectory()) {
+			return;
+		}
+		
+		String[] tempList = file.list();
+	    File temp = null, tmp = null;
+	    for (int i = 0; i < tempList.length; i++) {
+	    	temp = new File(path + File.separator + tempList[i]);
+	    	if (temp.isFile()) {
+	    		temp.delete();
+	    	} else if (temp.isDirectory()) {
+	    		String[] tmplist = temp.list();
+	    		for (int kk=0; kk<tmplist.length; kk++) {
+	    			tmp = new File(path + File.separator + temp + File.separator + tmplist[kk]);
+	    			tmp.delete();
+	    		}
+	    	}
+	    }
+		
+		//split the whole dataset and print into files
+		for (int i=0; i<folds; i++) {
+			try {
+				foldName = path + File.separator + "fold" + i;
+				File foldDir = new File(foldName);
+				foldDir.mkdir();
+				BufferedWriter trainOut = new BufferedWriter(new OutputStreamWriter
+						(new FileOutputStream(foldName + File.separator + "train"),"UTF-8"));
+				BufferedWriter testOut = new BufferedWriter(new OutputStreamWriter
+						(new FileOutputStream(foldName + File.separator + "test"),"UTF-8"));
+				//the last fold
+				/*if (i == folds - 1) {
+					for (int j=0; j<foldSize*i; j++) {
+						trainOut.write(sent(j));
+						trainOut.write("\n");
+						trainOut.write(sem(j).toString());
+						trainOut.write("\n\n");
+					}
+					for (int j=foldSize*i; j<size(); j++) {
+						testOut.write(sent(j));
+						testOut.write("\n");
+						testOut.write(sem(j).toString());
+						testOut.write("\n\n");
+					}
+				} else {*/
+					for (int j=0; j<foldSize*i; j++) {
+						trainOut.write(sent(j));
+						trainOut.write("\n");
+						trainOut.write(sem(j).toString());
+						trainOut.write("\n\n");
+					}
+					for (int j=foldSize*i; j<foldSize*(i+1); j++) {
+						testOut.write(sent(j));
+						testOut.write("\n");
+						testOut.write(sem(j).toString());
+						testOut.write("\n\n");
+					}
+					for (int j=foldSize*(i+1); j<size(); j++) {
+						trainOut.write(sent(j));
+						trainOut.write("\n");
+						trainOut.write(sem(j).toString());
+						trainOut.write("\n\n");
+					}
+				//}
+				trainOut.close();
+				testOut.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
 	public static void main(String[] args){
 
 	}
@@ -149,6 +230,7 @@ public class DataSet {
 
 	List sents;
 	List sems;
+
 
 
 }

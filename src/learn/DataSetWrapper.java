@@ -56,6 +56,12 @@ public class DataSetWrapper {
 		filenames.add("0");
 	}
 
+	public void add(DataSet d) {
+		System.out.println("add Dataset");
+		data.add(d);
+		filenames.add(String.valueOf(size()-1));
+		return;
+	}
 	public String getFilename(int i){
 		return filenames.get(i);
 	}

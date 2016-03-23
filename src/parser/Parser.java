@@ -133,7 +133,7 @@ public class Parser {
 
 	public Chart parse(String input, Exp pruningSem, boolean computeInside){
 
-		System.out.println("parsing: " + input + " : " + pruningSem);
+		//System.out.println("parsing: " + input + " : " + pruningSem);
 		List tokens = tokenize(input);
 		
 		Globals.tokens=tokens;

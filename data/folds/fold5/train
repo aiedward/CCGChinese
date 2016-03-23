@@ -1,0 +1,405 @@
+西单附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
+
+东来顺电话是多少
+(tel:s 东来顺:r)
+
+西单附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
+
+西单有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
+
+我们想在西单附近找个饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
+
+西单附近评分比较高的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
+
+南京大牌档怎么样
+(shopScore:i 南京大牌档:r)
+
+南京大牌档开到几点
+(time:s 南京大牌档:r)
+
+西单有哪些环境比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (surroundingScore:i $0) 8:i)))
+
+北京烤鸭多少钱
+(cuisinePrice:i 北京烤鸭:c)
+
+全聚德有停车位吗
+(park:t 全聚德:r)
+
+西单附近服务比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (serviceScore:i $0) 8:i)))
+
+西单附近的川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
+
+海底捞人均多少钱
+(price:i 海底捞:r)
+
+海底捞是吃什么的
+(lambda $0 e (label:t 海底捞:r $0))
+
+宣武门附近有哪些川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+
+麻辣诱惑好吃吗
+(tasteScore:i 麻辣诱惑:r)
+
+宣武门附近有哪些川菜餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+
+中关村附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s)))
+
+五道口有哪些好吃的地方
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+中关村附近的餐厅，人均80
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (< (price:i $0) 80:i)))
+
+中关村附近带包间的餐厅，十个人的，人均80元
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+
+麦当劳怎么样
+(shopScore:i 麦当劳:r)
+
+石景山附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
+
+石景山附近有哪些餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
+
+石景山附近的湘菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (label:t $0 湘菜:s)))
+
+全聚德做什么菜的
+(lambda $0 e (label:t 全聚德:r $0))
+
+石景山附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
+
+东直门附近有哪些餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+东直门附近的火锅自助餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+
+东直门附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+
+东直门附近的火锅自助餐厅，每位50左右
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
+
+东直门附近的餐厅，大众家常菜，人均100
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 家常菜:s) (< (price:i $0) 100:i)))
+
+北大平庄附近的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s)))
+
+东来顺在哪儿
+(address:s 东来顺:r)
+
+北大平庄附近的餐厅，两位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i)))
+
+海底捞贵吗
+(price:i 海底捞:r)
+
+海底捞人均要多少钱
+(price:i 海底捞:r)
+
+西单附近有哪些餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
+
+北大平庄附近的餐厅，两位，不要太辣的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not （label:t)))
+
+北大平庄附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (< (price:i $0) 70:i)))
+
+酒仙桥附近的餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
+
+东来顺什么时候开门
+(time:s 东来顺:r)
+
+酒仙桥附近的餐厅，要有十五人包间。
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
+
+宣武门附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+
+宣武门附近有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
+
+宣武门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (< (price:i $0) 70:i)))
+
+麻辣诱惑怎么样
+(shopScore:i 麻辣诱惑:r)
+
+宣武门附近的餐厅，烧烤类的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 烧烤:s)))
+
+宣武门附近有什么餐厅环境比较好
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (surroundingScore:i $0) 8:i)))
+
+海底捞电话是多少
+(tel:s 海底捞:r)
+
+带五人包间的餐厅，天桥附近，涮锅类的，人均60
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天桥:s) (npeople:t $0 5:i) (label:t $0 火锅:s)))
+
+东来顺几点关门
+(time:s 东来顺:r)
+
+石景山附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (npeople:t $0 10:i) (label:t $0 湘菜:s)))
+
+南京大牌档怎么样
+(shopScore:i 南京大牌档:r)
+
+我们想在东直门附近找个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+东直门附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+我们想在东直门附近找个地方吃火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+
+东来顺营业时间是什么时候
+(time:s 东来顺:r)
+
+我们想在东直门附近找个地方吃火锅，人均50
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
+
+海底捞怎么样
+(shopScore:i 海底捞:r)
+
+我们想在东直门附近找个餐厅吃火锅，人均50左右，要有停车位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i) (park:t $0)))
+
+我想在东便门附近订个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s)))
+
+我想在东便门附近订个餐厅，八个人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i)))
+
+东便门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (< (price:i $0) 70:i)))
+
+海底捞好吃吗
+(tasteScore:i 海底捞:r)
+
+我想在东便门附近订个餐厅，八个人，人均100元
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i)))
+
+东来顺贵吗
+(price:i 东来顺:r)
+
+我想在东便门附近订个餐厅，八个人，人均100元，家常菜
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+
+肯德基多少钱一个人
+(price:i 肯德基:r)
+
+我们想在天安门附近找个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
+
+我们想在天安门广场附近找个餐厅，五个人，人均八十
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 天安门:s) (< (price:i $0) 80:i)))
+
+天安门附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (< (price:i $0) 70:i)))
+
+天安门附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (label:t $0 火锅:s)))
+
+天安门附近的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
+
+月坛附近的快餐小吃，两个人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s) (npeople:t $0 2:i)))
+
+肯德基早上几点开门
+(time:s 肯德基:r)
+
+酒仙桥附近有什么饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
+
+酒仙桥附近的餐厅，要十五人包间
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
+
+酒仙桥附近附近评分比较高的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (> (shopScore:i $0) 8:i)))
+
+我们想在宣武门附近找个地方吃烧烤，两人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+
+东来顺环境好吗
+(surroundingScore:i 东来顺:r)
+
+西单附近的餐厅，十个人的包间，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+
+东来顺什么时候关门
+(time:s 东来顺:r)
+
+北大庄附近的餐厅，三位，吃火锅
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
+
+哪儿有东来顺
+(address:s 东来顺:r)
+
+我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
+
+月坛附近的餐厅，要麻辣口味的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
+
+麻辣诱惑是吃什么的
+(lambda $0 e (label:t 麻辣诱惑:r $0))
+
+东便门附近的快餐店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
+
+麻辣诱惑人均多少钱
+(price:i 麻辣诱惑:r)
+
+月坛附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 火锅:s)))
+
+麻辣诱惑在哪儿
+(address:s 麻辣诱惑:r)
+
+我想订个带包间的餐厅，有八个人，东便门附近，人均100元，家常菜
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+
+麻辣诱惑的地址是什么
+(address:s 麻辣诱惑:r)
+
+东来顺怎么样
+(shopScore:i 东来顺:r)
+
+五道口有哪些好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+五道口有什么推荐的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+宣武门附近的餐厅，两个人，烧烤类的。
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+
+肯德基晚上开门吗
+(time:s 肯德基:r)
+
+西单附近可以吃川菜的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
+
+中关村有哪些比较好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+
+中关村附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (label:t $0 火锅:s)))
+
+中关村比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+
+全聚德的服务好吗
+(serviceScore:i 全聚德:r)
+
+五道口有哪些比较好吃的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 8:i)))
+
+五道口哪家火锅好吃
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 8:i)))
+
+全聚德服务怎么样
+(serviceScore:i 全聚德:r)
+
+五道口哪家日本料理比较好吃
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+
+五道口有什么好吃的日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+
+麻辣诱惑是什么餐厅
+(lambda $0 e (label:t 麻辣诱惑:r $0))
+
+东来顺是吃什么的
+(lambda $0 e (label:t 东来顺:r $0))
+
+五道口有什么火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+
+五道口附近比较好的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (shopScore:i $0) 8:i)))
+
+五道口有哪些火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+
+五道口哪家日本料理环境比较好
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (surroundingScore:i $0) 8:i)))
+
+五道口有什么火锅，人均八十以上
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口附近人均八十以上的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s)))
+
+哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+
+我想吃北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+
+五道口哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (hasCuisine:t $0 北京烤鸭:c)))
+
+我想吃火锅
+(lambda $0 e (and (restaurant:t $0) (label:t $0 火锅:s)))
+
+西单附近的餐厅，六位，人均七十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+
+我想吃麻辣小龙虾
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 麻辣小龙虾:c)))
+
+五道口哪里有麻小
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (hasCuisine:t $0 麻辣小龙虾:c)))
+
+麻辣小龙虾多少钱
+(cuisinePrice:i 麻辣小龙虾:c)
+
+中关村附近哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (hasCuisine:t $0 北京烤鸭:c)))
+
+麻辣诱惑有麻小吃吗
+(hasCuisine:t 麻辣诱惑:r 麻辣小龙虾:c)
+
+西单附近比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
+
+肯德基人均多少钱
+(price:i 肯德基:r)
+
+西直门附近人均30的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
+
+宣武门附近有哪些餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+
+中关村附近的餐厅，要有停车位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (park:t $0)))
+
+全聚德有麻辣小龙虾卖吗
+(hasCuisine:t 全聚德:r 麻辣小龙虾:c)
+

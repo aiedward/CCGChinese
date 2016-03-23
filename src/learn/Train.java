@@ -259,12 +259,20 @@ public class Train {
 	}
 
 	
-	public void setDataSet(DataSet d){
-		trainData = new DataSetWrapper(d);
+	public void addTrainSet(DataSet d){
+		if (trainData == null || trainData.size() == 0) {
+			trainData = new DataSetWrapper(d);
+			return;
+		}
+		trainData.add(d);
 	}
 
-	public void setTestSet(DataSet d){
-		testData = new DataSetWrapper(d);
+	public void addTestSet(DataSet d){
+		if (testData == null || testData.size() == 0) {
+			testData = new DataSetWrapper(d);
+			return;
+		}
+		testData.add(d);
 	}
 
 

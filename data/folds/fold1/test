@@ -1,0 +1,45 @@
+宣武门附近有哪些川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+
+麻辣诱惑好吃吗
+(tasteScore:i 麻辣诱惑:r)
+
+宣武门附近有哪些川菜餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+
+中关村附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s)))
+
+五道口有哪些好吃的地方
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+中关村附近的餐厅，人均80
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (< (price:i $0) 80:i)))
+
+中关村附近带包间的餐厅，十个人的，人均80元
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+
+麦当劳怎么样
+(shopScore:i 麦当劳:r)
+
+石景山附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
+
+石景山附近有哪些餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s)))
+
+石景山附近的湘菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (label:t $0 湘菜:s)))
+
+全聚德做什么菜的
+(lambda $0 e (label:t 全聚德:r $0))
+
+石景山附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
+
+东直门附近有哪些餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+东直门附近的火锅自助餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+

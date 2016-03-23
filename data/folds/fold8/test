@@ -1,0 +1,45 @@
+五道口有哪些比较好吃的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 8:i)))
+
+五道口哪家火锅好吃
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 8:i)))
+
+全聚德服务怎么样
+(serviceScore:i 全聚德:r)
+
+五道口哪家日本料理比较好吃
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+
+五道口有什么好吃的日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+
+麻辣诱惑是什么餐厅
+(lambda $0 e (label:t 麻辣诱惑:r $0))
+
+东来顺是吃什么的
+(lambda $0 e (label:t 东来顺:r $0))
+
+五道口有什么火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+
+五道口附近比较好的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (shopScore:i $0) 8:i)))
+
+五道口有哪些火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+
+五道口哪家日本料理环境比较好
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (surroundingScore:i $0) 8:i)))
+
+五道口有什么火锅，人均八十以上
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口附近人均八十以上的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s)))
+
+哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+

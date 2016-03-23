@@ -1,0 +1,45 @@
+麻辣诱惑人均多少钱
+(price:i 麻辣诱惑:r)
+
+月坛附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 火锅:s)))
+
+麻辣诱惑在哪儿
+(address:s 麻辣诱惑:r)
+
+我想订个带包间的餐厅，有八个人，东便门附近，人均100元，家常菜
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+
+麻辣诱惑的地址是什么
+(address:s 麻辣诱惑:r)
+
+东来顺怎么样
+(shopScore:i 东来顺:r)
+
+五道口有哪些好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+五道口有什么推荐的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+宣武门附近的餐厅，两个人，烧烤类的。
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+
+肯德基晚上开门吗
+(time:s 肯德基:r)
+
+西单附近可以吃川菜的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
+
+中关村有哪些比较好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+
+中关村附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (label:t $0 火锅:s)))
+
+中关村比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+
+全聚德的服务好吗
+(serviceScore:i 全聚德:r)
+
