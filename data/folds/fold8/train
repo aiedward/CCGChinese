@@ -7,6 +7,9 @@
 西单附近的餐厅，人均70
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
 
+西单附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
+
 西单有什么日本料理
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
 
@@ -16,11 +19,20 @@
 西单附近评分比较高的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
 
+中关村附近比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (shopScore:i $0) 8:i)))
+
 南京大牌档怎么样
 (shopScore:i 南京大牌档:r)
 
+南京大牌档人均多少钱
+(price:i 南京大牌档:r)
+
 南京大牌档开到几点
 (time:s 南京大牌档:r)
+
+南京大牌档有北京烤鸭吃吗
+(hasCuisine:t 南京大牌档:r 北京烤鸭:c)
 
 西单有哪些环境比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (surroundingScore:i $0) 8:i)))
@@ -111,6 +123,9 @@
 
 海底捞人均要多少钱
 (price:i 海底捞:r)
+
+海底捞有北京烤鸭卖吗
+(hasCuisine:t 海底捞:r 北京烤鸭:c)
 
 西单附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
@@ -226,6 +241,9 @@
 天安门附近比较好的饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (shopScore:i $0) 8:i)))
 
+天安门附近比较好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (tasteScore:i $0) 8:i)))
+
 天安门附近的餐馆
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
@@ -340,23 +358,20 @@
 宣武门附近的餐厅，两个人，烧烤类的。
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
 
-肯德基晚上开门吗
-(time:s 肯德基:r)
+五道口有哪些火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
 
-西单附近可以吃川菜的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
+五道口有什么火锅，人均八十以上
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
 
-中关村有哪些比较好吃的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+五道口附近人均八十以上的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
 
-中关村附近的火锅店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (label:t $0 火锅:s)))
+五道口有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s)))
 
-中关村比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
-
-全聚德的服务好吗
-(serviceScore:i 全聚德:r)
+哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
 
 我想吃北京烤鸭
 (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
@@ -391,8 +406,8 @@
 肯德基人均多少钱
 (price:i 肯德基:r)
 
-西直门附近人均30的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
+西直门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 70:i)))
 
 宣武门附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))

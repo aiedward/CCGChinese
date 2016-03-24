@@ -7,6 +7,9 @@
 西单附近的餐厅，人均70
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
 
+西单附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
+
 西单有什么日本料理
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
 
@@ -16,11 +19,20 @@
 西单附近评分比较高的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
 
+中关村附近比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (shopScore:i $0) 8:i)))
+
 南京大牌档怎么样
 (shopScore:i 南京大牌档:r)
 
+南京大牌档人均多少钱
+(price:i 南京大牌档:r)
+
 南京大牌档开到几点
 (time:s 南京大牌档:r)
+
+南京大牌档有北京烤鸭吃吗
+(hasCuisine:t 南京大牌档:r 北京烤鸭:c)
 
 西单有哪些环境比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (surroundingScore:i $0) 8:i)))
@@ -30,16 +42,4 @@
 
 全聚德有停车位吗
 (park:t 全聚德:r)
-
-西单附近服务比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (serviceScore:i $0) 8:i)))
-
-西单附近的川菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
-
-海底捞人均多少钱
-(price:i 海底捞:r)
-
-海底捞是吃什么的
-(lambda $0 e (label:t 海底捞:r $0))
 

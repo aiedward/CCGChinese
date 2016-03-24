@@ -1,3 +1,21 @@
+我想在雍和宫附近找个餐厅吃粤菜
+(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
+
+我想在雍和宫附近找个吃粤菜的餐厅，人均六十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+
+海底捞开到几点
+(time:s 海底捞:r)
+
+雍和宫附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (< (price:i $0) 70:i)))
+
+我想在雍和宫附近找个吃粤菜的餐厅，十个人，人均六十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+
+月坛附近的快餐
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s)))
+
 月坛附近的快餐小吃，两个人
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s) (npeople:t $0 2:i)))
 
@@ -24,22 +42,4 @@
 
 东来顺什么时候关门
 (time:s 东来顺:r)
-
-北大庄附近的餐厅，三位，吃火锅
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
-
-哪儿有东来顺
-(address:s 东来顺:r)
-
-我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
-
-月坛附近的餐厅，要麻辣口味的
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
-
-麻辣诱惑是吃什么的
-(lambda $0 e (label:t 麻辣诱惑:r $0))
-
-东便门附近的快餐店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
 

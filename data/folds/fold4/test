@@ -1,3 +1,18 @@
+我们想在东直门附近找个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+东直门附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+我们想在东直门附近找个地方吃火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+
+东来顺营业时间是什么时候
+(time:s 东来顺:r)
+
+我们想在东直门附近找个地方吃火锅，人均50
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
+
 海底捞怎么样
 (shopScore:i 海底捞:r)
 
@@ -27,19 +42,4 @@
 
 肯德基多少钱一个人
 (price:i 肯德基:r)
-
-我们想在天安门附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
-
-我们想在天安门广场附近找个餐厅，五个人，人均八十
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 天安门:s) (< (price:i $0) 80:i)))
-
-天安门附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (< (price:i $0) 70:i)))
-
-天安门附近的火锅店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (label:t $0 火锅:s)))
-
-天安门附近的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 

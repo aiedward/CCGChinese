@@ -1,3 +1,15 @@
+西单附近服务比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (serviceScore:i $0) 8:i)))
+
+西单附近的川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
+
+海底捞人均多少钱
+(price:i 海底捞:r)
+
+海底捞是吃什么的
+(lambda $0 e (label:t 海底捞:r $0))
+
 宣武门附近有哪些川菜馆
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
 
@@ -30,16 +42,4 @@
 
 石景山附近的湘菜馆
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (label:t $0 湘菜:s)))
-
-全聚德做什么菜的
-(lambda $0 e (label:t 全聚德:r $0))
-
-石景山附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
-
-东直门附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
-
-东直门附近的火锅自助餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
 

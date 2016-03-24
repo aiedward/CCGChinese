@@ -1,3 +1,18 @@
+五道口有哪些火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+
+五道口有什么火锅，人均八十以上
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口附近人均八十以上的火锅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+
+五道口有什么日本料理
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s)))
+
+哪里可以吃到北京烤鸭
+(lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+
 我想吃北京烤鸭
 (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
 
@@ -27,19 +42,4 @@
 
 西单附近比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
-
-肯德基人均多少钱
-(price:i 肯德基:r)
-
-西直门附近人均30的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
-
-宣武门附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
-
-中关村附近的餐厅，要有停车位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (park:t $0)))
-
-全聚德有麻辣小龙虾卖吗
-(hasCuisine:t 全聚德:r 麻辣小龙虾:c)
 

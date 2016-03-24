@@ -7,6 +7,9 @@
 西单附近的餐厅，人均70
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
 
+西单附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
+
 西单有什么日本料理
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
 
@@ -16,11 +19,20 @@
 西单附近评分比较高的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))
 
+中关村附近比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (shopScore:i $0) 8:i)))
+
 南京大牌档怎么样
 (shopScore:i 南京大牌档:r)
 
+南京大牌档人均多少钱
+(price:i 南京大牌档:r)
+
 南京大牌档开到几点
 (time:s 南京大牌档:r)
+
+南京大牌档有北京烤鸭吃吗
+(hasCuisine:t 南京大牌档:r 北京烤鸭:c)
 
 西单有哪些环境比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (surroundingScore:i $0) 8:i)))
@@ -111,6 +123,9 @@
 
 海底捞人均要多少钱
 (price:i 海底捞:r)
+
+海底捞有北京烤鸭卖吗
+(hasCuisine:t 海底捞:r 北京烤鸭:c)
 
 西单附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
@@ -226,6 +241,9 @@
 天安门附近比较好的饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (shopScore:i $0) 8:i)))
 
+天安门附近比较好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (tasteScore:i $0) 8:i)))
+
 天安门附近的餐馆
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
@@ -250,23 +268,23 @@
 东来顺环境怎么样
 (surroundingScore:i 东来顺:r)
 
-我想在雍和宫附近找个餐厅吃粤菜
-(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
+北大庄附近的餐厅，三位，吃火锅
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
 
-我想在雍和宫附近找个吃粤菜的餐厅，人均六十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+哪儿有东来顺
+(address:s 东来顺:r)
 
-海底捞开到几点
-(time:s 海底捞:r)
+我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
 
-雍和宫附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (< (price:i $0) 70:i)))
+月坛附近的餐厅，要麻辣口味的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
 
-我想在雍和宫附近找个吃粤菜的餐厅，十个人，人均六十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+麻辣诱惑是吃什么的
+(lambda $0 e (label:t 麻辣诱惑:r $0))
 
-月坛附近的快餐
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s)))
+东便门附近的快餐店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
 
 麻辣诱惑人均多少钱
 (price:i 麻辣诱惑:r)
@@ -343,9 +361,6 @@
 五道口有哪些火锅店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
 
-五道口哪家日本料理环境比较好
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (surroundingScore:i $0) 8:i)))
-
 五道口有什么火锅，人均八十以上
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
 
@@ -391,8 +406,8 @@
 肯德基人均多少钱
 (price:i 肯德基:r)
 
-西直门附近人均30的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 30:i)))
+西直门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西直门:s) (< (price:i $0) 70:i)))
 
 宣武门附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))

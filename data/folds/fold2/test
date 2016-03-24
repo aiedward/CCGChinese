@@ -1,3 +1,15 @@
+全聚德做什么菜的
+(lambda $0 e (label:t 全聚德:r $0))
+
+石景山附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
+
+东直门附近有哪些餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+
+东直门附近的火锅自助餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+
 东直门附近的火锅店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
 
@@ -22,24 +34,12 @@
 海底捞人均要多少钱
 (price:i 海底捞:r)
 
+海底捞有北京烤鸭卖吗
+(hasCuisine:t 海底捞:r 北京烤鸭:c)
+
 西单附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
 
 北大平庄附近的餐厅，两位，不要太辣的
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not （label:t)))
-
-北大平庄附近人均70的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (< (price:i $0) 70:i)))
-
-酒仙桥附近的餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
-
-东来顺什么时候开门
-(time:s 东来顺:r)
-
-酒仙桥附近的餐厅，要有十五人包间。
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
-
-宣武门附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
 

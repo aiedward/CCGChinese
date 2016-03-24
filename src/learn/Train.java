@@ -406,13 +406,13 @@ public class Train {
 					List<LexEntry> lex = 			
 						makeLexEntriesChart(words,sem,parser);
 					
-					if (verbose){
+					/*if (verbose){
 						System.out.println("Adding:");
 						for (LexEntry le : lex){
 							System.out.println(le+" : "
 									+LexiconFeatSet.initialWeight(le));
 						}
-					}
+					}*/
 					
 					parser.addLexEntries(lex);		   
 

@@ -1,3 +1,18 @@
+北大平庄附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (< (price:i $0) 70:i)))
+
+酒仙桥附近的餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
+
+东来顺什么时候开门
+(time:s 东来顺:r)
+
+酒仙桥附近的餐厅，要有十五人包间。
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
+
+宣武门附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+
 宣武门附近有什么日本料理
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
 
@@ -27,19 +42,4 @@
 
 南京大牌档怎么样
 (shopScore:i 南京大牌档:r)
-
-我们想在东直门附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
-
-东直门附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
-
-我们想在东直门附近找个地方吃火锅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
-
-东来顺营业时间是什么时候
-(time:s 东来顺:r)
-
-我们想在东直门附近找个地方吃火锅，人均50
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 

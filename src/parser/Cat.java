@@ -200,10 +200,12 @@ public abstract class Cat {
 			splits.add(temp);
 
 			if (cator.apply(catee)==null){
-				System.out.println("ERROR 1: null in Cat split");
+				
+				/*System.out.println("ERROR 1: null in Cat split");
 				System.out.println("cat: "+cat);
 				System.out.println("functee: "+catee);
 				System.out.println("functor: "+cator);
+				*/
 			}
 			
 			//>
@@ -217,10 +219,12 @@ public abstract class Cat {
 			splits.add(temp);
 
 			if (cator.apply(catee)==null){
+				/*
 				System.out.println("ERROR 2: null in Cat split");
 				System.out.println("cat: "+cat);
 				System.out.println("functee: "+catee);
 				System.out.println("functor: "+cator);
+				*/
 			}
 			//>
 
@@ -276,9 +280,11 @@ public abstract class Cat {
 
 						Cat comp = ((CompCat)cator).comp(((CompCat)compcatee));
 						if (comp==null){
+							/*
 							System.out.println("ERROR 3: null in Cat split");
 							System.out.println("come functor: "+cator);
 							System.out.println("come functee: "+compcatee);
+							*/
 						}
 					}
 				}
@@ -387,10 +393,12 @@ public abstract class Cat {
 					splits.add(temp);
 
 					if (cator.apply(catee)==null){
+						/*
 						System.out.println("ERROR 1: null in Cat split");
 						System.out.println("cat: "+cat);
 						System.out.println("functee: "+catee);
 						System.out.println("functor: "+cator);
+						*/
 					}
 				} else {		
 					temp = new LinkedList<Cat>();
@@ -401,10 +409,12 @@ public abstract class Cat {
 					splits.add(temp);
 
 					if (cator.apply(catee)==null){
+						/*
 						System.out.println("ERROR 2: null in Cat split");
 						System.out.println("cat: "+cat);
 						System.out.println("functee: "+catee);
 						System.out.println("functor: "+cator);
+						*/
 					}
 				}
 			}
@@ -432,9 +442,10 @@ public abstract class Cat {
 						splits.add(temp);
 						Cat comp = ((CompCat)cator).comp(((CompCat)compcatee));
 						if (comp==null){
-							System.out.println("ERROR 3: null in Cat split");
+							/*System.out.println("ERROR 3: null in Cat split");
 							System.out.println("come functor: "+cator);
 							System.out.println("come functee: "+compcatee);
+							*/
 						}
 					}
 				}

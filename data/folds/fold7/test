@@ -1,3 +1,21 @@
+北大庄附近的餐厅，三位，吃火锅
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
+
+哪儿有东来顺
+(address:s 东来顺:r)
+
+我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
+
+月坛附近的餐厅，要麻辣口味的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
+
+麻辣诱惑是吃什么的
+(lambda $0 e (label:t 麻辣诱惑:r $0))
+
+东便门附近的快餐店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
+
 麻辣诱惑人均多少钱
 (price:i 麻辣诱惑:r)
 
@@ -24,22 +42,4 @@
 
 宣武门附近的餐厅，两个人，烧烤类的。
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
-
-肯德基晚上开门吗
-(time:s 肯德基:r)
-
-西单附近可以吃川菜的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 川菜:s)))
-
-中关村有哪些比较好吃的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
-
-中关村附近的火锅店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (label:t $0 火锅:s)))
-
-中关村比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
-
-全聚德的服务好吗
-(serviceScore:i 全聚德:r)
 
