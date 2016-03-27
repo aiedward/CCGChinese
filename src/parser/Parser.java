@@ -98,14 +98,13 @@ public class Parser {
 		
 		//Chinese. parse after segmentation
 		/**
-		 * four segmentation methods
+		 * three segmentation methods
 		 * BaseAnalysis.parse(input);
 		 * ToAnalysis.parse(input)
 		 * NlpAnalysis.parse(input)
-		 * IndexAnalysis.parse(input)
 		 * return type List<Term>
 		 */
-		List<Term> myTokens= NlpAnalysis.parse(input);
+		List<Term> myTokens= ToAnalysis.parse(input);
 		String tmp;
 		for (Term tt : myTokens) {
 			tmp = tt.toString();

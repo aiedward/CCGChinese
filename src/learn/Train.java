@@ -167,19 +167,19 @@ public class Train {
 	int emptyWrong=0;
 	int emptyNoParses=0;
 
-	public double test(Parser p){
-		double score = test(p,false);
+	public double test(Parser p, testResult res){
+		double score = test(p,false, res);
 		return score;
 	}
 
-	public double test(Parser p, boolean prunedLex){
+	public double test(Parser p, boolean prunedLex, testResult res){
 		HashVector temp=null;
 		resetCounts();
 		for (int i=0; i<testData.size(); i++){
 			if (verbose) System.out.println("\nFile #"+i+": "+testData.getFilename(i));
 			test(p,testData.getDataSet(i));
 		}
-		printStats(prunedLex);
+		printStats(prunedLex, res);
 		return 0.0;
 	}
 
@@ -198,7 +198,6 @@ public class Train {
 						" -- "+wrongParses+")");
 				System.out.println(words);
 				System.out.println(sem);
-
 			}
 
 			String mes = null;
@@ -227,7 +226,7 @@ public class Train {
 	}
 
 	// print out results after a test run.
-	private void printStats(boolean prunedLex){
+	private void printStats(boolean prunedLex, testResult res){
 		String pruned = "";
 		if (prunedLex){
 			pruned = "pruned";
@@ -236,15 +235,18 @@ public class Train {
 		double recall = (double)correctParses/(double)testSize;
 		double precision = (correctParses/(double)(testSize-noParses));
 		double f1 = (2*precision*recall)/(precision+recall);
+		res.setRecall(recall);
+		res.setPrecision(precision);
+		res.setF1(f1);
 		System.out.print(pruned+"Recall");
 		System.out.println(" : "+correctParses+"/"+testSize+" = "+recall);
 		System.out.print(pruned+"Precision");
 		System.out.println(" : "+correctParses+"/"+
 				(testSize-noParses)+" = "+precision);
 		System.out.println(pruned+"F1: "+f1);
-		System.out.println("No Parses : "+zeroParses);
+		System.out.println("No Parses : "+noParses);
 
-		if (emptyTest){
+		/*if (emptyTest){
 			double emptyRecall = (double)(emptyCorrect+correctParses)/(double)testSize;
 			double emptyPrecision = (double)(emptyCorrect+correctParses)/(double)(testSize-emptyNoParses);
 			double emptyF1 = (2*emptyPrecision*emptyRecall)/(emptyPrecision+emptyRecall);
@@ -254,7 +256,7 @@ public class Train {
 			System.out.println(pruned+"EMPTY Precision : "+(emptyCorrect+correctParses)
 					+"/"+(testSize-emptyNoParses)+" = "+emptyPrecision);
 			System.out.println(pruned+"EMPTY F1: "+emptyF1);
-		}
+		}*/
 		System.out.println("-----------");	
 	}
 
@@ -536,10 +538,10 @@ public class Train {
 				parser.setLexicon(cur);
 			}
 
-			if (testEachRound){
+			/*if (testEachRound){
 				System.out.println("Testing");
 				test(parser,false);
-			}
+			}*/
 		} // end epochs loop
 	}
 

@@ -13,7 +13,7 @@ import parser.*;
 public class SingleTest {
 	
 	public static void main(String[] args) {
-		String words = "我们想在雍和宫附近找个地方吃火锅，人均80";
+		String words = "雍和宫附近比较好吃的日本料理， 人均70";
 		
 		PType.addTypesFromFile("data/types");
 		Lang.loadLangFromFile("data/relations");

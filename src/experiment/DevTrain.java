@@ -25,7 +25,7 @@ import parser.*;
 
 public class DevTrain {
 
-	public static void trainAndTest(String trainFile, String testFile) {
+	public static testResult trainAndTest(String trainFile, String testFile) {
 		PType.addTypesFromFile("data/types");
 		Lang.loadLangFromFile("data/relations");
 
@@ -82,10 +82,11 @@ public class DevTrain {
 		//System.out.println("Print lexicon...");
 		//p.returnLex().printLexiconWithWeightsToFile();
 
+		testResult res = new testResult();
 		System.out.println("Start testing...");
-		t.test(p,Train.pruneLex);
+		t.test(p,Train.pruneLex, res);
 
-		return;
+		return res;
 
 	}
 	
