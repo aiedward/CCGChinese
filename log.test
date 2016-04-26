@@ -1,17 +1,17 @@
-Train Size: 155
+Train Size: 404
 
-Test Size: 155
+Test Size: 404
 
-Mar 24, 2016 4:30:33 PM null
+Apr 26, 2016 10:29:04 AM null
 WARNING: not find library.properties in classpath use it by default !
-Mar 24, 2016 4:30:33 PM org.ansj.library.UserDefineLibrary loadFile
+Apr 26, 2016 10:29:05 AM org.ansj.library.UserDefineLibrary loadFile
 INFO: init user userLibrary ok path is : /Users/TsaonYih/Documents/Study/EXP/thesis/CCGChinese/library/default.dic
-Mar 24, 2016 4:30:33 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+Apr 26, 2016 10:29:05 AM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
 INFO: init ambiguityLibrary ok!
-Mar 24, 2016 4:30:34 PM org.ansj.library.DATDictionary loadDAT
-INFO: init core library ok use time :457
-Mar 24, 2016 4:30:34 PM org.ansj.library.NgramLibrary <clinit>
-INFO: init ngram ok use time :313
+Apr 26, 2016 10:29:05 AM org.ansj.library.DATDictionary loadDAT
+INFO: init core library ok use time :383
+Apr 26, 2016 10:29:06 AM org.ansj.library.NgramLibrary <clinit>
+INFO: init ngram ok use time :345
 alpha_0 = 1.0
 C = 1.0E-5
 initialMultiplier = 10.0
@@ -26,12 +26,172 @@ Start training...
 Training, iteration 0
 Training, iteration 1
 Training, iteration 2
-Training, iteration 3
-Training, iteration 4
-Training, iteration 5
-Training, iteration 6
-Training, iteration 7
-Training, iteration 8
-Training, iteration 9
-Training, iteration 10
-Training, iteration 11
+Print lexicon...
+Start printing lexicon
+Start testing...
+WRONG
+Sentence: 南京大牌档人均多少钱
+Sem: (price:i 南京大牌档:r)
+Res: (tel:s 南京大牌档:r)
+WRONG
+Sentence: 海底捞人均多少钱
+Sem: (price:i 海底捞:r)
+Res: (tel:s 海底捞:r)
+WRONG
+Sentence: 中关村附近带包间的餐厅，十个人的，人均80元
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+Res: (lambda $0 e (and (zone:t $0 中关村:s) (restaurant:t $0) (npeople:t $0 10:i)))
+WRONG
+Sentence: 宣武门附近有什么日本料理
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
+Res: (lambda $0 e (and (label:t $0 日本料理:s) (zone:t $0 宣武门:s)))
+WRONG
+Sentence: 带五人包间的餐厅，天桥附近，涮锅类的，人均60
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 天桥:s) (npeople:t $0 5:i) (label:t $0 火锅:s)))
+Res: (lambda $0 e (label:t $0 火锅:s))
+WRONG
+Sentence: 我们想在天安门广场附近找个餐厅，五个人，人均八十
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 天安门:s) (< (price:i $0) 80:i)))
+Res: (lambda $0 e (label:t $0 火锅:s))
+WRONG
+Sentence: 我们有五个人，想在天安门附近吃个饭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (npeople:t $0 5:i)))
+Res: (lambda $0 e (and (label:t $0 火锅:s) (npeople:t $0 5:i) (zone:t $0 天安门:s)))
+WRONG
+Sentence: 我想在雍和宫附近找个吃粤菜的餐厅，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (zone:t $0 雍和宫:s) (restaurant:t $0)))
+WRONG
+Sentence: 我想在雍和宫附近找个吃粤菜的餐厅，十个人，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (zone:t $0 雍和宫:s) (npeople:t $0 10:i) (restaurant:t $0) (< (price:i $0) 60:i)))
+WRONG
+Sentence: 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
+Res: (lambda $0 e (and (label:t $0 家常菜:s) (npeople:t $0 20:i) (restaurant:t $0)))
+WRONG
+Sentence: 麻辣诱惑人均多少钱
+Sem: (price:i 麻辣诱惑:r)
+Res: (tel:s 麻辣诱惑:r)
+WRONG
+Sentence: 五道口有什么火锅，人均八十以上
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+Res: (lambda $0 e (and (> (price:i $0) 80:i) (zone:t $0 五道口:s) (label:t $0 火锅:s)))
+WRONG
+Sentence: 哪里可以吃到北京烤鸭
+Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+Res: (lambda $0 e (hasCuisine:t $0 北京烤鸭:c))
+WRONG
+Sentence: 西单附近的餐厅，六位，人均七十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (npeople:t $0 6:i) (zone:t $0 西单:s)))
+WRONG
+Sentence: 中关村附近哪里可以吃到北京烤鸭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (hasCuisine:t $0 北京烤鸭:c)))
+Res: (lambda $0 e (and (label:t $0 中关村:s) (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+WRONG
+Sentence: 肯德基人均多少钱
+Sem: (price:i 肯德基:r)
+Res: (tel:s 肯德基:r)
+WRONG
+Sentence: 日昌多少钱一人
+Sem: (price:i 日昌餐馆:r)
+Res: (price:i 日昌:r)
+WRONG
+Sentence: 宣武门附近有哪些推荐的餐厅
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (shopScore:i $0) 8:i)))
+WRONG
+Sentence: 东直门附近的清真餐厅，人均100
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 清真菜:s) (< (price:i $0) 100:i)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (restaurant:t $0) (zone:t $0 东直门:s)))
+WRONG
+Sentence: 我们想在新街口广场附近找个餐厅，五个人，人均八十
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 新街口:s) (< (price:i $0) 80:i)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+WRONG
+Sentence: 我们有五个人，想在新街口附近吃个饭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+Res: (lambda $0 e (and (label:t $0 火锅:s) (npeople:t $0 5:i) (zone:t $0 新街口:s)))
+WRONG
+Sentence: 复兴门附近的清真餐厅，十个人的包间
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+WRONG
+Sentence: 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，清真菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (npeople:t $0 20:i) (restaurant:t $0)))
+WRONG
+Sentence: 我想吃面包
+Sem: (lambda $0 e (and (restaurant:t $0) (label:t $0 面包甜点:s)))
+Res: (lambda $0 e (restaurant:t $0))
+WRONG
+Sentence: 复兴门附近的餐厅，六位，人均七十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (npeople:t $0 6:i) (zone:t $0 复兴门:s)))
+WRONG
+Sentence: 西单附近的餐厅，人均100
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 100:i)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
+WRONG
+Sentence: 前门附近有什么日本料理
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (label:t $0 日本料理:s)))
+Res: (lambda $0 e (and (label:t $0 日本料理:s) (zone:t $0 前门:s)))
+WRONG
+Sentence: 日昌餐馆人均多少钱
+Sem: (price:i 日昌餐馆:r)
+Res: (tel:s 日昌餐馆:r)
+WRONG
+Sentence: 金钱豹人均多少钱
+Sem: (price:i 金钱豹:r)
+Res: (tel:s 金钱豹:r)
+WRONG
+Sentence: 新街口附近带包间的餐厅，十个人的，人均80元
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+Res: (lambda $0 e (and (zone:t $0 新街口:s) (restaurant:t $0) (npeople:t $0 10:i)))
+WRONG
+Sentence: 望京有什么火锅，人均八十以上
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
+Res: (lambda $0 e (and (> (price:i $0) 80:i) (zone:t $0 望京:s) (label:t $0 火锅:s)))
+WRONG
+Sentence: 哪里可以吃到鳗鱼饭
+Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 鳗鱼饭:c)))
+Res: (lambda $0 e (hasCuisine:t $0 鳗鱼饭:c))
+WRONG
+Sentence: 宣武门附近的餐厅，六位，人均七十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (npeople:t $0 6:i) (zone:t $0 宣武门:s)))
+WRONG
+Sentence: 新街口附近哪里可以吃到鳗鱼饭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (hasCuisine:t $0 鳗鱼饭:c)))
+Res: (lambda $0 e (and (label:t $0 新街口:s) (restaurant:t $0) (hasCuisine:t $0 鳗鱼饭:c)))
+WRONG
+Sentence: 三里屯附近的清真餐厅，人均100
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 清真菜:s) (< (price:i $0) 100:i)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (restaurant:t $0) (zone:t $0 三里屯:s)))
+WRONG
+Sentence: 望京附近的清真餐厅，十个人的包间
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+WRONG
+Sentence: 望京附近的餐厅，六位，人均七十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (npeople:t $0 6:i) (zone:t $0 望京:s)))
+WRONG
+Sentence: 宣武门附近的餐厅，人均100
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (< (price:i $0) 100:i)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+WRONG
+Sentence: 我想在东四附近找个吃粤菜的餐厅，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (zone:t $0 东四:s) (restaurant:t $0)))
+WRONG
+Sentence: 我想在东四附近找个吃粤菜的餐厅，十个人，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (zone:t $0 东四:s) (npeople:t $0 10:i) (restaurant:t $0) (< (price:i $0) 60:i)))
+-----------------------------
+Recall : 364/404 = 0.900990099009901
+Precision : 364/404 = 0.900990099009901
+F1: 0.9009900990099011
+No Parses : 0
+-----------

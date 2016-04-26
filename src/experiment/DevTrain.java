@@ -49,7 +49,7 @@ public class DevTrain {
 			fixed.addEntriesFromFile(npLexFileName,true);
 		}
 
-		Train.EPOCHS=20;
+		Train.EPOCHS=3;
 		Train.alpha_0 = 1.0;
 		Train.c = 0.00001;
 		Train.maxSentLen=50;
@@ -79,8 +79,8 @@ public class DevTrain {
 		System.out.println("Start training...");
 		t.stocGradTrain(p,false);
 		
-		//System.out.println("Print lexicon...");
-		//p.returnLex().printLexiconWithWeightsToFile();
+		System.out.println("Print lexicon...");
+		p.returnLex().printLexiconWithWeightsToFile();
 
 		testResult res = new testResult();
 		System.out.println("Start testing...");

@@ -1,45 +1,120 @@
-我们想在东直门附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+中关村附近的餐厅，要有停车位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (park:t $0)))
 
-东直门附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+全聚德有麻辣小龙虾卖吗
+(hasCuisine:t 全聚德:r 麻辣小龙虾:c)
 
-我们想在东直门附近找个地方吃火锅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+复兴门附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s)))
 
-东来顺营业时间是什么时候
-(time:s 东来顺:r)
+牛街有什么好吃的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 牛街:s)))
 
-我们想在东直门附近找个地方吃火锅，人均50
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
+日昌餐馆电话是多少
+(tel:s 日昌餐馆:r)
 
-海底捞怎么样
-(shopScore:i 海底捞:r)
+日昌多少钱一人
+(price:i 日昌餐馆:r)
 
-我们想在东直门附近找个餐厅吃火锅，人均50左右，要有停车位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i) (park:t $0)))
+宣武门附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (< (price:i $0) 70:i)))
 
-我想在东便门附近订个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s)))
+我们想在牛街吃饭，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 牛街:s) (< (price:i $0) 70:i)))
 
-我想在东便门附近订个餐厅，八个人
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i)))
+复兴门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (< (price:i $0) 70:i)))
 
-东便门附近人均70的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (< (price:i $0) 70:i)))
+东直门有什么咖啡厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 咖啡厅:s)))
 
-海底捞好吃吗
-(tasteScore:i 海底捞:r)
+我们想在复兴门附近找个饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s)))
 
-我想在东便门附近订个餐厅，八个人，人均100元
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i)))
+复兴门附近评分比较高的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
 
-东来顺贵吗
-(price:i 东来顺:r)
+宣武门附近有哪些推荐的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
 
-我想在东便门附近订个餐厅，八个人，人均100元，家常菜
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+日昌怎么样
+(shopScore:i 日昌:r)
 
-肯德基多少钱一个人
-(price:i 肯德基:r)
+日昌人均多少钱
+(price:i 日昌:r)
+
+日昌开到几点
+(time:s 日昌:r)
+
+日昌有北京烤鸭吃吗
+(hasCuisine:t 日昌:r 北京烤鸭:c)
+
+复兴门有哪些环境比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (surroundingScore:i $0) 8:i)))
+
+北京烤鸭大概多少钱
+(cuisinePrice:i 北京烤鸭:c)
+
+全聚德能停车吗
+(park:t 全聚德:r)
+
+复兴门附近服务比较好的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (serviceScore:i $0) 8:i)))
+
+复兴门附近的川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (label:t $0 川菜:s)))
+
+将太无二是吃什么的
+(lambda $0 e (label:t 将太无二:r $0))
+
+前门附近有哪些川菜馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (label:t $0 川菜:s)))
+
+东直门附近的面包房
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 面包甜点:s)))
+
+东直门附近的清真餐厅，人均100
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 清真菜:s) (< (price:i $0) 100:i)))
+
+前门附近的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s)))
+
+日昌在哪儿
+(address:s 日昌:r)
+
+前门附近的餐厅，两位
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (npeople:t $0 2:i)))
+
+我想吃川菜
+(lambda $0 e (and (restaurant:t $0) (label:t $0 川菜:s)))
+
+复兴门附近有哪些餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s)))
+
+前门附近的餐厅，两位，不要太辣的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (npeople:t $0 2:i) (not （label:t)))
+
+前门附近人均70的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (< (price:i $0) 70:i)))
+
+日昌什么时候开门
+(time:s 日昌:r)
+
+宣武门附近有哪些咖啡厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 咖啡厅:s)))
+
+日昌几点关门
+(time:s 日昌:r)
+
+日昌营业时间是什么时候
+(time:s 日昌:r)
+
+日昌贵吗
+(price:i 日昌:r)
+
+我想在东便门附近订个餐厅，八个人，人均100元，清真菜
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:s)))
+
+我们想在新街口附近找个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
 

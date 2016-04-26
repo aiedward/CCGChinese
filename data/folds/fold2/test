@@ -1,45 +1,120 @@
-全聚德做什么菜的
-(lambda $0 e (label:t 全聚德:r $0))
+天安门附近比较好的饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (shopScore:i $0) 8:i)))
 
-石景山附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
+天安门附近比较好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (> (tasteScore:i $0) 8:i)))
 
-东直门附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s)))
+天安门附近的餐馆
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
-东直门附近的火锅自助餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+天安门附近有哪些餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s)))
 
-东直门附近的火锅店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
+我们有五个人，想在天安门附近吃个饭
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (npeople:t $0 5:i)))
 
-东直门附近的火锅自助餐厅，每位50左右
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
+东来顺开到几点
+(time:s 东来顺:r)
 
-东直门附近的餐厅，大众家常菜，人均100
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 家常菜:s) (< (price:i $0) 100:i)))
+我们想在天安门广场附近找个餐厅，五个人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 天安门:s) (npeople:t $0 5:i)))
 
-北大平庄附近的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s)))
+我想在雍和宫附近找个餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s)))
 
-东来顺在哪儿
+我想订个雍和宫附近的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s)))
+
+东来顺环境怎么样
+(surroundingScore:i 东来顺:r)
+
+我想在雍和宫附近找个餐厅吃粤菜
+(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
+
+我想在雍和宫附近找个吃粤菜的餐厅，人均六十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+
+海底捞开到几点
+(time:s 海底捞:r)
+
+雍和宫附近的餐厅，人均70
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (< (price:i $0) 70:i)))
+
+我想在雍和宫附近找个吃粤菜的餐厅，十个人，人均六十
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (npeople:t $0 10:i) (< (price:i $0) 60:i)))
+
+月坛附近的快餐
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s)))
+
+月坛附近的快餐小吃，两个人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s) (npeople:t $0 2:i)))
+
+肯德基早上几点开门
+(time:s 肯德基:r)
+
+酒仙桥附近有什么饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s)))
+
+酒仙桥附近的餐厅，要十五人包间
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (npeople:t $0 15:i)))
+
+酒仙桥附近附近评分比较高的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 酒仙桥:s) (> (shopScore:i $0) 8:i)))
+
+我们想在宣武门附近找个地方吃烧烤，两人
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+
+东来顺环境好吗
+(surroundingScore:i 东来顺:r)
+
+西单附近的餐厅，十个人的包间，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+
+东来顺什么时候关门
+(time:s 东来顺:r)
+
+北大庄附近的餐厅，三位，吃火锅
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
+
+哪儿有东来顺
 (address:s 东来顺:r)
 
-北大平庄附近的餐厅，两位
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i)))
+我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，大众家常菜
+(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 家常菜:s)))
 
-海底捞贵吗
-(price:i 海底捞:r)
+月坛附近的餐厅，要麻辣口味的
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
 
-海底捞人均要多少钱
-(price:i 海底捞:r)
+麻辣诱惑是吃什么的
+(lambda $0 e (label:t 麻辣诱惑:r $0))
 
-海底捞有北京烤鸭卖吗
-(hasCuisine:t 海底捞:r 北京烤鸭:c)
+东便门附近的快餐店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (label:t $0 快餐小吃:s)))
 
-西单附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
+麻辣诱惑人均多少钱
+(price:i 麻辣诱惑:r)
 
-北大平庄附近的餐厅，两位，不要太辣的
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not （label:t)))
+月坛附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 火锅:s)))
+
+麻辣诱惑在哪儿
+(address:s 麻辣诱惑:r)
+
+我想订个带包间的餐厅，有八个人，东便门附近，人均100元，家常菜
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+
+麻辣诱惑的地址是什么
+(address:s 麻辣诱惑:r)
+
+麻辣诱惑电话是多少
+(tel:s 麻辣诱惑:r)
+
+东来顺怎么样
+(shopScore:i 东来顺:r)
+
+五道口有哪些好吃的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
+五道口有什么推荐的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
 

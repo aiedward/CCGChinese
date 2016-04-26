@@ -21,7 +21,9 @@
 package lambda;
 
 import java.util.*;
+
 import utils.*;
+
 import java.io.*;
 
 /*
@@ -364,7 +366,18 @@ public abstract class Exp {
 	public abstract double avgDepth(int d);
 
 	public static void main(String[] args){
+		PType.addTypesFromFile("data/types");
+		Lang.loadLangFromFile("data/relations");
 		
+		Exp a = Exp.makeExp("(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (shopScore:i $0) 8:i)))");
+		Exp b = Exp.makeExp("(lambda $0 e (and (restaurant:t $0) (> (shopScore:i $0) 8:i) (zone:t $0 西单:s)))");
+		if (a.equals(b)) {
+			System.out.println("Equal");
+		}
+		else {
+			System.out.println("not equal");
+		}
+		return;
 	}
 
 }

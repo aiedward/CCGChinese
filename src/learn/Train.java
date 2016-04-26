@@ -71,6 +71,10 @@ public class Train {
 					System.out.println(parses.size()+" parses: "+parses);
 					printLex(l);
 				}
+				System.out.println("WRONG");
+				System.out.println("Sentence: " + words);
+				System.out.println("Sem: " + sem);
+				System.out.println("Res: " + e);
 				wrongParses++;
 
 				boolean hasCorrect = parser.hasParseFor(sem);
