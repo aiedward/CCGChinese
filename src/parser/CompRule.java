@@ -23,8 +23,10 @@ import java.util.*;
 
 /*
  *  This is a forward/backward composition rule
- *   X/Y Y/Z => X/Z
- *   Y\Z X\Y => X\Z
+ *   X/Y Y/Z => X/Z fcomp
+ *   X/Y Y   => X   fapply
+ *   Y\Z X\Y => X\Z bcomp
+ *   Y   X\Y => X   bapply
  */ 
 public class CompRule implements BinaryParseRule {
 

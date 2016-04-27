@@ -1,0 +1,14 @@
+Start LexPhi: 0
+Apr 26, 2016 4:23:06 PM null
+WARNING: not find library.properties in classpath use it by default !
+Apr 26, 2016 4:23:06 PM org.ansj.library.UserDefineLibrary loadFile
+INFO: init user userLibrary ok path is : /Users/TsaonYih/Documents/Study/EXP/thesis/CCGChinese/library/default.dic
+Apr 26, 2016 4:23:06 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO: init ambiguityLibrary ok!
+Apr 26, 2016 4:23:07 PM org.ansj.library.DATDictionary loadDAT
+INFO: init core library ok use time :367
+Apr 26, 2016 4:23:07 PM org.ansj.library.NgramLibrary <clinit>
+INFO: init ngram ok use time :357
+load lexicon finish
+(lambda $0 e (and (restaurant:t $0) (label:t $0 日本料理:s) (< (price:i $0) 70:i) (> (tasteScore:i $0) 8:i) (zone:t $0 雍和宫:s)))
+[0-7: S : (lambda $0 e (and (restaurant:t $0) (label:t $0 日本料理:s) (< (price:i $0) 70:i) (> (tasteScore:i $0) 8:i) (zone:t $0 雍和宫:s))) : 1 : 27.961985023071925: [[[雍和宫] : NP : 雍和宫:s : 9.985259458290358, [附近, 比较, 好吃, 的, 日本料理, 人均, 70] : S\NP : (lambda $0 e (lambda $1 e (and (restaurant:t $1) (label:t $1 日本料理:s) (< (price:i $1) 70:i) (> (tasteScore:i $1) 8:i) (zone:t $1 $0)))) : 17.976725564781567]]]

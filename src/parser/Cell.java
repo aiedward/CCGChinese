@@ -233,6 +233,9 @@ public class Cell implements Comparable<Cell> {
 		return childLists;
 	}
 
+	public List getMaxChildren() {
+		return maxchildren;
+	}
 
 	public double inside(){
 		return inside;
@@ -264,7 +267,7 @@ public class Cell implements Comparable<Cell> {
 
 	//< toString code.  The Latex version is a mess
 
-	public String toString(){
+	public String toString0(){
 		StringBuffer result = new StringBuffer();
 		result.append("[");//.append(isMax).append(" ").append(lex).append(" ");
 		result.append(begin).append("-").append(end).append(": ").
@@ -273,6 +276,13 @@ public class Cell implements Comparable<Cell> {
 		append(maxchildren).
 		append("]");
 
+		return result.toString();
+	}
+	
+	public String toString() {
+		StringBuffer result = new StringBuffer();
+		result.append(getWordSpan()).append(" : ").
+		append(myCat).append(" : ").append(maxscore);
 		return result.toString();
 	}
 

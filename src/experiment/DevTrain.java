@@ -49,7 +49,7 @@ public class DevTrain {
 			fixed.addEntriesFromFile(npLexFileName,true);
 		}
 
-		Train.EPOCHS=3;
+		Train.EPOCHS = 5;
 		Train.alpha_0 = 1.0;
 		Train.c = 0.00001;
 		Train.maxSentLen=50;

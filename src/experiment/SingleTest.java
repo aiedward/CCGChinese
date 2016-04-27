@@ -5,6 +5,7 @@
 package experiment;
 
 import java.io.File;
+import java.util.List;
 
 import learn.*;
 import lambda.*;
@@ -12,9 +13,9 @@ import parser.*;
 
 public class SingleTest {
 	
-	public static void main(String[] args) {
-		String words = "雍和宫附近比较好吃的日本料理， 人均70";
-		
+	private Parser p;
+	
+	public SingleTest(){
 		PType.addTypesFromFile("data/types");
 		Lang.loadLangFromFile("data/relations");
 		
@@ -22,7 +23,7 @@ public class SingleTest {
 		LexiconFeatSet.initLexWeight = 10.0;
 		Parser.pruneN = 200;
 		
-		Parser p = new Parser();
+		p = new Parser();
 		//load lexicon
 		String LexFileName = "configure/final_lexicon";
 		File LexFile = new File(LexFileName);
@@ -31,12 +32,29 @@ public class SingleTest {
 			return;
 		}
 		p.loadLexiconFromFile(LexFileName);
-		System.out.println("after load lexicon");
-		
+		System.out.println("load lexicon finish");
+	}
+	
+	public Exp getSem(String words){
 		p.parseTimed(words,null,null);
 		Exp best = p.bestSem();
+		return best;
+	}
+	
+	public Cell getCell() {
+		return p.bestParses().get(0).getCell();
+	}
+	
+	public List ParseEntries(Exp sem) {
+		return p.getMaxLexEntriesFor(sem);
+	}
+	
+	public static void main(String[] args) {
+		String words = "雍和宫附近比较好吃的日本料理， 人均70";
 		
-		System.out.println(best);	
+		SingleTest test = new SingleTest();
+		
+		test.getSem(words);
 		
 	}
 
