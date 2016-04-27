@@ -12,7 +12,7 @@
 
 首先运行DevTrain，训练Parser，得到Lexicon，输出到./congifure/final_lexicon。然后运行TestUI，出现测试界面，输入语句进行parse，可以得到parse过程、使用的词条和最终生成的逻辑表达式Lambda Calculus。
 
-运行crossTest可以进行10折交叉验证。- 
+运行crossTest可以进行10折交叉验证。
 
 标注方案及标注数据：
 
