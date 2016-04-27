@@ -84,6 +84,7 @@ public class TestUI {
 		
 		tree = new JTree(root);
 		scroll = new JScrollPane(tree);
+		centerPanel.removeAll();
 		centerPanel.add(scroll, "Center");
 		frame.setVisible(true);
 		return;
