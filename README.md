@@ -12,12 +12,16 @@
 
 首先运行DevTrain，训练Parser，得到Lexicon，输出到./congifure/final_lexicon。然后运行TestUI，出现测试界面，输入语句进行parse，可以得到parse过程、使用的词条和最终生成的逻辑表达式Lambda Calculus。
 
-运行crossTest可以进行10折交叉验证。
+运行crossTest可以进行10折交叉验证。- 
+
+标注方案及标注数据：
 
 - ./data/types: 三元关系 <e, p, e> 中实体e类型。
-- ./data/relations: 标注方案中的关系p。
+- ./data/relations: 关系p。
 - ./data/np_lexicon: 数据中出现的名词实体及其对应逻辑表达式。
 - ./data/train: 训练数据，问题及对应逻辑表达式。
+
+
 
 ## Semantic Parsing
  
