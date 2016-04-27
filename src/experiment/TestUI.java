@@ -63,6 +63,7 @@ public class TestUI {
 	private void parse() {
 		String words = txt_input.getText();
 		Exp res = test.getSem(words);
+		txt_entries.setText("使用词条：\n");
 		//System.out.println(res);
 		if (res == null) {
 			txt_entries.setText("Null");
@@ -85,6 +86,7 @@ public class TestUI {
 		tree = new JTree(root);
 		scroll = new JScrollPane(tree);
 		centerPanel.removeAll();
+		centerPanel.add(txt_entries, "South");
 		centerPanel.add(scroll, "Center");
 		frame.setVisible(true);
 		return;
@@ -112,6 +114,7 @@ public class TestUI {
 	
 		northPanel.add(txt_input, "Center");
 		northPanel.add(btn_parse, "East");
+		centerPanel.add(txt_entries, "South");
 		southPanel.add(txt_res, "Center");
 		frame.add(northPanel, "North");
 		frame.add(centerPanel, "Center");
