@@ -27,13 +27,10 @@
  
 自然语句 -> 逻辑表达式(Lambda Calculus)
  
- ```语句: 西单有什么日本料理
  ```
- 
- ```Lambda Calculus: (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
- ```
- 
- ```即: λx.restaurant(x) ∧ zone(x, 西单) ∧ label(x, 日本料理)
+ 语句: 西单有什么日本料理
+ Lambda Calculus: (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
+ 即: λx.restaurant(x) ∧ zone(x, 西单) ∧ label(x, 日本料理)
  ```
 
 ## Combinatory Categorial Grammar
@@ -42,22 +39,16 @@
  
  Lexicon entry examples:
  
- ```西直门  :- NP : 西直门:s : 3 : 10.0
  ```
- 
- ```附近 : S\NP/(S|NP) : (lambda $0 <e,t> (lambda $1 e (lambda $2 e (and ($0 $2) (zone:t $2 $1))))) : 5.40679052197842
+ 西直门  :- NP : 西直门:s : 3 : 10.0
+ 附近 : S\NP/(S|NP) : (lambda $0 <e,t> (lambda $1 e (lambda $2 e (and ($0 $2) (zone:t $2 $1))))) : 5.40679052197842
  ```
  
  - Parsing Rules
  
- ```X/Y Y/Z => X/Z fcomp
  ```
- 
- ```X/Y Y   => X   fapply
- ```
- 
- ```Y\Z X\Y => X\Z bcomp
- ```
-
- ```Y   X\Y => X   bapply
+ X/Y Y/Z => X/Z fcomp
+ X/Y Y   => X   fapply
+ Y\Z X\Y => X\Z bcomp
+ Y   X\Y => X   bapply
  ```
