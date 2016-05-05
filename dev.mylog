@@ -1,0 +1,11 @@
+Apr 27, 2016 4:00:32 PM null
+WARNING: not find library.properties in classpath use it by default !
+Apr 27, 2016 4:00:32 PM org.ansj.library.UserDefineLibrary loadFile
+INFO: init user userLibrary ok path is : /Users/TsaonYih/Documents/Study/EXP/thesis/CCGChinese/library/default.dic
+Apr 27, 2016 4:00:32 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO: init ambiguityLibrary ok!
+Apr 27, 2016 4:00:33 PM org.ansj.library.DATDictionary loadDAT
+INFO: init core library ok use time :379
+Apr 27, 2016 4:00:33 PM org.ansj.library.NgramLibrary <clinit>
+INFO: init ngram ok use time :352
+[五道口/nz, 附近/f, 的/uj, 火锅店/nis, ，/w, 人均/j, 三百二/m]

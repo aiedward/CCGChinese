@@ -8,6 +8,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
+import javax.swing.tree.TreePath;
 
 import java.util.Iterator;
 import java.util.List;
@@ -26,6 +28,7 @@ public class TestUI {
 	private JTextField txt_res;
 	private JScrollPane scroll;
 	private JTree tree;
+	private DefaultTreeCellRenderer renderer;
 	private JButton btn_parse;
 	private JPanel northPanel;
 	private JPanel centerPanel;
@@ -59,6 +62,7 @@ public class TestUI {
 		//}
 		return;
 	}
+
 	
 	private void parse() {
 		String words = txt_input.getText();
@@ -85,6 +89,7 @@ public class TestUI {
 		
 		tree = new JTree(root);
 		scroll = new JScrollPane(tree);
+		tree.setCellRenderer(renderer); 
 		centerPanel.removeAll();
 		centerPanel.add(txt_entries, "South");
 		centerPanel.add(scroll, "Center");
@@ -105,6 +110,12 @@ public class TestUI {
 		southPanel = new JPanel(new BorderLayout());
 		southPanel.setBorder(new TitledBorder("结果"));
 		
+		renderer=new DefaultTreeCellRenderer(); 
+		renderer.setLeafIcon(new ImageIcon("")); 
+		renderer.setClosedIcon(new ImageIcon("")); 
+		renderer.setOpenIcon(new ImageIcon("")); 
+		
+		tree = new JTree();
 		txt_input = new JTextField();
 		txt_entries = new JTextArea();
 		txt_res = new JTextField();
@@ -134,6 +145,7 @@ public class TestUI {
 				parse();
 			}
 		});
+		
 	}
 	
 

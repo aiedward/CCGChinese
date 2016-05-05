@@ -1,3 +1,6 @@
+三里屯附近的火锅店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
+
 三里屯附近的火锅自助餐厅，每位50左右
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 
@@ -114,7 +117,4 @@
 
 望京哪家火锅好吃
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 8:i)))
-
-火炉火服务怎么样
-(serviceScore:i 火炉火:r)
 

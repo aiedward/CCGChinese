@@ -1,3 +1,6 @@
+五道口有什么推荐的餐厅
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (> (tasteScore:i $0) 8:i)))
+
 宣武门附近的餐厅，两个人，烧烤类的。
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
 
@@ -114,7 +117,4 @@
 
 宣武门附近有哪些餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
-
-宣武门附近有哪些环境比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (surroundingScore:i $0) 8:i)))
 

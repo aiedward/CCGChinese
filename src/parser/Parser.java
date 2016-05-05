@@ -105,6 +105,7 @@ public class Parser {
 		 * return type List<Term>
 		 */
 		List<Term> myTokens= ToAnalysis.parse(input);
+		//System.out.println(myTokens);
 		String tmp;
 		for (Term tt : myTokens) {
 			tmp = tt.toString();
@@ -112,7 +113,7 @@ public class Parser {
 			if (tmpIndex != -1) tmp = tmp.substring(0, tmpIndex);
 			//Pattern pattern2 = Pattern.compile("[/ \t\r]");
 			//Matcher matcher2 = pattern.matcher(tmp);
-			if (tmp.equalsIgnoreCase("，") || tmp.equalsIgnoreCase("。")) continue;
+			if (tmp.equalsIgnoreCase("，") || tmp.equalsIgnoreCase("。") || tmp.equalsIgnoreCase("？")) continue;
 			tokens.add(tmp);
 			//System.out.print(tmp + " ");
 		}
@@ -505,32 +506,7 @@ public class Parser {
 	public static void main(String[] args){
 		
 		Parser p = new Parser();
-		//p.tokenize("我想订个有二十人包间的餐厅，人均80元，地坛附近，大众家常菜");
-		try {
-			BufferedReader in = new BufferedReader(new FileReader("data/train"));
-			BufferedWriter out = new BufferedWriter(new OutputStreamWriter
-					(new FileOutputStream("data/chinese"),"UTF-8"));
-
-			String line = "a";
-			while (line != null) {
-				line = in.readLine();
-				if (line != null) {
-					List<String> res = new LinkedList();
-					res = p.tokenize(line);
-					for (int i=0; i<res.size(); i++) {
-						out.write(res.get(i) + " ");
-					}
-					out.write("\n");
-				}
-				in.readLine();
-				in.readLine();
-			}
-			in.close();
-			out.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		p.tokenize("五道口附近的火锅店，人均三百二");
 
 	}
 }

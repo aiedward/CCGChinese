@@ -172,6 +172,9 @@
 东来顺几点关门
 (time:s 东来顺:r)
 
+五道口有什么烧烤店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 烧烤:s)))
+
 石景山附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (npeople:t $0 10:i) (label:t $0 湘菜:s)))
 
@@ -518,16 +521,16 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
 
 日昌怎么样
-(shopScore:i 日昌:r)
+(shopScore:i 日昌餐馆:r)
 
 日昌人均多少钱
-(price:i 日昌:r)
+(price:i 日昌餐馆:r)
 
 日昌开到几点
-(time:s 日昌:r)
+(time:s 日昌餐馆:r)
 
 日昌有北京烤鸭吃吗
-(hasCuisine:t 日昌:r 北京烤鸭:c)
+(hasCuisine:t 日昌餐馆:r 北京烤鸭:c)
 
 复兴门有哪些环境比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (surroundingScore:i $0) 8:i)))
@@ -560,7 +563,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s)))
 
 日昌在哪儿
-(address:s 日昌:r)
+(address:s 日昌餐馆:r)
 
 前门附近的餐厅，两位
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (npeople:t $0 2:i)))
@@ -578,19 +581,19 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (< (price:i $0) 70:i)))
 
 日昌什么时候开门
-(time:s 日昌:r)
+(time:s 日昌餐馆:r)
 
 宣武门附近有哪些咖啡厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 咖啡厅:s)))
 
 日昌几点关门
-(time:s 日昌:r)
+(time:s 日昌餐馆:r)
 
 日昌营业时间是什么时候
-(time:s 日昌:r)
+(time:s 日昌餐馆:r)
 
 日昌贵吗
-(price:i 日昌:r)
+(price:i 日昌餐馆:r)
 
 我想在东便门附近订个餐厅，八个人，人均100元，清真菜
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:s)))
@@ -629,19 +632,19 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
 
 日昌环境怎么样
-(surroundingScore:i 日昌:r)
+(surroundingScore:i 日昌餐馆:r)
 
 日昌环境好吗
-(surroundingScore:i 日昌:r)
+(surroundingScore:i 日昌餐馆:r)
 
 复兴门附近的清真餐厅，十个人的包间
 (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
 
 日昌什么时候关门
-(time:s 日昌:r)
+(time:s 日昌餐馆:r)
 
 哪儿有日昌
-(address:s 日昌:r)
+(address:s 日昌餐馆:r)
 
 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，清真菜
 (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 清真菜:s)))
@@ -662,7 +665,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 咖啡厅:s) (> (shopScore:i $0) 8:i)))
 
 日昌是吃什么的
-(lambda $0 e (label:t 日昌:r $0))
+(lambda $0 e (label:t 日昌餐馆:r $0))
 
 五道口有什么面包房
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s)))
@@ -1040,7 +1043,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (> (shopScore:i $0) 8:i)))
 
 日昌有鳗鱼饭吃吗
-(hasCuisine:t 日昌:r 鳗鱼饭:c)
+(hasCuisine:t 日昌餐馆:r 鳗鱼饭:c)
 
 望京有哪些环境比较好的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (> (surroundingScore:i $0) 8:i)))
@@ -1075,14 +1078,20 @@
 望京有什么好的咖啡厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 咖啡厅:s) (> (shopScore:i $0) 8:i)))
 
-望京有什么面包房
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 面包甜点:s)))
+东四附近有什么饭店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s)))
+
+东四附近的餐厅，要十五人包间
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (npeople:t $0 15:i)))
 
 东四附近附近评分比较高的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (> (shopScore:i $0) 8:i)))
 
 望京附近人均70的饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (< (price:i $0) 70:i)))
+
+五道口附近有哪些烧烤店
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 烧烤:s)))
 
 三里屯附近的甜品店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 面包甜点:s)))

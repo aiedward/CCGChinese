@@ -37,10 +37,16 @@
 
  - Lexicon
  
+ Lexicon entry组成:
+ 
+ ```
+ 短语 :- 语法成分 : 逻辑表达式 : 权重
+ ```
+ 
  Lexicon entry examples:
  
  ```
- 西直门  :- NP : 西直门:s : 3 : 10.0
+ 西直门  :- NP : 西直门:s : 10.0
  附近 : S\NP/(S|NP) : (lambda $0 <e,t> (lambda $1 e (lambda $2 e (and ($0 $2) (zone:t $2 $1))))) : 5.40679052197842
  ```
  

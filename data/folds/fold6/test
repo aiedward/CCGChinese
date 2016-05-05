@@ -1,3 +1,6 @@
+南京大牌档多少钱一个人
+(price:i 南京大牌档:r)
+
 南京大牌档几点关门
 (time:s 南京大牌档:r)
 
@@ -113,8 +116,5 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s)))
 
 三里屯附近的火锅自助餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
-
-三里屯附近的火锅店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
 
