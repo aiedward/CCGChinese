@@ -11,6 +11,9 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.TreePath;
 
+import com.mxgraph.swing.mxGraphComponent;
+import com.mxgraph.view.mxGraph;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -18,7 +21,7 @@ import learn.*;
 import lambda.*;
 import parser.*;
 
-public class TestUI {
+public class DemoUI {
 	
 	private SingleTest test;
 	
@@ -29,6 +32,11 @@ public class TestUI {
 	private JScrollPane scroll;
 	private JTree tree;
 	private DefaultTreeCellRenderer renderer;
+	
+	private mxGraph graph;
+	private Object parent;
+	
+	
 	private JButton btn_parse;
 	private JPanel northPanel;
 	private JPanel centerPanel;
@@ -46,7 +54,6 @@ public class TestUI {
 			if (l.size() == 1){
 				Cell c = (Cell)l.get(0);
 				DefaultMutableTreeNode son = new DefaultMutableTreeNode(c.toString());
-				System.out.println(son.toString());
 				dad.add(son);
 				addNodes(son, (Cell)c);
 			}
@@ -54,18 +61,73 @@ public class TestUI {
 				Cell c0 = (Cell)l.get(0);
 				Cell c1 = (Cell)l.get(1);
 				DefaultMutableTreeNode son0 = new DefaultMutableTreeNode(c0.toString());
-				System.out.println(son0.toString());
 				dad.add(son0);
 				addNodes(son0, (Cell)c0);
 				DefaultMutableTreeNode son1 = new DefaultMutableTreeNode(c1.toString());
-				System.out.println(son1.toString());
 				dad.add(son1);
 				addNodes(son1, (Cell)c1);
 			}
 		//}
 		return;
 	}
+	
+	private String nodeSpan(DefaultMutableTreeNode node) {
+		String res = node.toString();
+		int index = res.indexOf(":");
+		res = res.substring(0, index);
+		return res;
+	}
+	
+	private Object paintNode(DefaultMutableTreeNode dad, int x, int y) {
+		String dadName = nodeSpan(dad);
+		int xx = x;
+		int yy = y;
+		Object daddy = graph.insertVertex(parent, null, dadName, xx, yy, 80,
+				30);
+		if (dad.isLeaf()) return daddy;
+		yy += 100;
+		for (int i=0; i<dad.getChildCount(); i++) {
+			DefaultMutableTreeNode son = (DefaultMutableTreeNode) dad.getChildAt(i);
+			Object myson = paintNode(son, xx, yy);
+			xx += 100;
+			graph.insertEdge(parent, null, null, myson, daddy);
+		}
+		return daddy;
+	}
 
+	private void paintTree(DefaultMutableTreeNode root) {
+		graph.getModel().beginUpdate();
+		try
+		{
+			paintNode(root, 20, 20);
+			/*
+			Object v1 = graph.insertVertex(parent, null, "Hello", 20, 20, 80,
+					30);
+			Object v2 = graph.insertVertex(parent, null, "World!", 240, 150,
+					80, 30);
+			graph.insertEdge(parent, null, "Edge", v1, v2);*/
+		}
+		finally
+		{
+			graph.getModel().endUpdate();
+		}
+		
+		graph.setCellsEditable(false);
+		//graph.setCellsMovable(true);
+		//graph.setAllowDanglingEdges(false);
+		//graph.setEventsEnabled(false);
+
+		mxGraphComponent graphComponent = new mxGraphComponent(graph);
+		
+		scroll = new JScrollPane(tree);
+		tree.setCellRenderer(renderer); 		
+		centerPanel.removeAll();
+		centerPanel.add(txt_entries, "South");
+		centerPanel.add(scroll, "East");
+		centerPanel.add(graphComponent, "Center");
+		frame.setVisible(true);
+		return;
+	}
 	
 	private void parse() {
 		String words = txt_input.getText();
@@ -91,16 +153,20 @@ public class TestUI {
 		addNodes(root, cell);
 		
 		tree = new JTree(root);
-		scroll = new JScrollPane(tree);
+		
+		paintTree(root);
+		
+		
+		/*scroll = new JScrollPane(tree);
 		tree.setCellRenderer(renderer); 
 		centerPanel.removeAll();
 		centerPanel.add(txt_entries, "South");
 		centerPanel.add(scroll, "Center");
-		frame.setVisible(true);
+		frame.setVisible(true);*/
 		return;
 	}
 	
-	public TestUI(){
+	public DemoUI(){
 		test = new SingleTest();
 		
 		frame = new JFrame("Test");
@@ -118,6 +184,9 @@ public class TestUI {
 		renderer.setClosedIcon(new ImageIcon("")); 
 		renderer.setOpenIcon(new ImageIcon("")); 
 		
+		graph = new mxGraph();
+		parent = graph.getDefaultParent();
+		
 		tree = new JTree();
 		txt_input = new JTextField();
 		txt_entries = new JTextArea();
@@ -133,7 +202,7 @@ public class TestUI {
 		frame.add(northPanel, "North");
 		frame.add(centerPanel, "Center");
 		frame.add(southPanel, "South");
-		frame.setSize(960, 480);
+		frame.setSize(1280, 720);
 		int screen_width = Toolkit.getDefaultToolkit().getScreenSize().width;
 		int screen_height = Toolkit.getDefaultToolkit().getScreenSize().height;
 		frame.setLocation((screen_width - frame.getWidth()) / 2,
@@ -153,7 +222,7 @@ public class TestUI {
 	
 
 	public static void main(String[] args) {		
-		new TestUI();
+		new DemoUI();
 	}
 
 }
