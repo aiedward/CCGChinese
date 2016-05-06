@@ -42,6 +42,8 @@ public class DemoUI {
 	private JPanel centerPanel;
 	private JPanel southPanel;
 	
+	private int[] xx;
+	
 	private void addNodes(DefaultMutableTreeNode dad, Cell cell) {
 		List children = cell.getMaxChildren();
 		if (children == null) {
@@ -71,6 +73,7 @@ public class DemoUI {
 		return;
 	}
 	
+	
 	private String nodeSpan(DefaultMutableTreeNode node) {
 		String res = node.toString();
 		int index = res.indexOf(":");
@@ -78,34 +81,31 @@ public class DemoUI {
 		return res;
 	}
 	
-	private Object paintNode(DefaultMutableTreeNode dad, int x, int y) {
+	private Object paintNode(DefaultMutableTreeNode dad,int y) {
 		String dadName = nodeSpan(dad);
-		int xx = x;
-		int yy = y;
-		Object daddy = graph.insertVertex(parent, null, dadName, xx, yy, 80,
+		//System.out.println(dadName + dad.isLeaf());
+		int mx = xx[y];
+		int my = (y+1)*100;
+		Object daddy = graph.insertVertex(parent, null, dadName, mx, my, 180,
 				30);
 		if (dad.isLeaf()) return daddy;
-		yy += 100;
 		for (int i=0; i<dad.getChildCount(); i++) {
 			DefaultMutableTreeNode son = (DefaultMutableTreeNode) dad.getChildAt(i);
-			Object myson = paintNode(son, xx, yy);
-			xx += 100;
+			Object myson = paintNode(son, y+1);
+			xx[y+1] += 200;
 			graph.insertEdge(parent, null, null, myson, daddy);
 		}
 		return daddy;
 	}
 
 	private void paintTree(DefaultMutableTreeNode root) {
+		graph = new mxGraph();
+		parent = graph.getDefaultParent();
+		
 		graph.getModel().beginUpdate();
 		try
 		{
-			paintNode(root, 20, 20);
-			/*
-			Object v1 = graph.insertVertex(parent, null, "Hello", 20, 20, 80,
-					30);
-			Object v2 = graph.insertVertex(parent, null, "World!", 240, 150,
-					80, 30);
-			graph.insertEdge(parent, null, "Edge", v1, v2);*/
+			paintNode(root, 0);
 		}
 		finally
 		{
@@ -113,9 +113,6 @@ public class DemoUI {
 		}
 		
 		graph.setCellsEditable(false);
-		//graph.setCellsMovable(true);
-		//graph.setAllowDanglingEdges(false);
-		//graph.setEventsEnabled(false);
 
 		mxGraphComponent graphComponent = new mxGraphComponent(graph);
 		
@@ -123,13 +120,17 @@ public class DemoUI {
 		tree.setCellRenderer(renderer); 		
 		centerPanel.removeAll();
 		centerPanel.add(txt_entries, "South");
-		centerPanel.add(scroll, "East");
-		centerPanel.add(graphComponent, "Center");
+		centerPanel.add(scroll, "Center");
+		centerPanel.add(graphComponent, "West");
 		frame.setVisible(true);
 		return;
 	}
 	
 	private void parse() {
+		for (int i=0; i<10; i++) {
+			xx[i] = 20;
+		}
+		
 		String words = txt_input.getText();
 		Exp res = test.getSem(words);
 		txt_entries.setText("使用词条：\n");
@@ -169,6 +170,11 @@ public class DemoUI {
 	public DemoUI(){
 		test = new SingleTest();
 		
+		xx = new int[10];
+		for (int i=0; i<10; i++) {
+			xx[i] = 20;
+		}
+		
 		frame = new JFrame("Test");
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -183,9 +189,6 @@ public class DemoUI {
 		renderer.setLeafIcon(new ImageIcon("")); 
 		renderer.setClosedIcon(new ImageIcon("")); 
 		renderer.setOpenIcon(new ImageIcon("")); 
-		
-		graph = new mxGraph();
-		parent = graph.getDefaultParent();
 		
 		tree = new JTree();
 		txt_input = new JTextField();
