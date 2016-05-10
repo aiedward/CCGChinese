@@ -8,9 +8,11 @@
 - ./src/experiment/DevTrain: 训练Parser。
 - ./src/experiment/crossTest: 10折交叉验证。
 - ./src/experiment/SingleTest: 对单句进行parse。
-- ./src/experiment/TestUI: Demo界面。
+- ./src/experiment/DemoUI: Demo界面。
 
-首先运行DevTrain，训练Parser，得到Lexicon，输出到./congifure/final_lexicon。然后运行TestUI，出现测试界面，输入语句进行parse，可以得到parse过程、使用的词条和最终生成的逻辑表达式Lambda Calculus。
+首先运行DevTrain，训练Parser，得到Lexicon，输出到./congifure/final_lexicon。
+
+然后运行DemoUI，出现测试界面，输入语句进行parse，可以得到parse过程、使用的词条和最终生成的逻辑表达式Lambda Calculus。
 
 运行crossTest可以进行10折交叉验证。
 

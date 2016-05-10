@@ -104,7 +104,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
 
 望京附近的清真餐厅，十个人的包间
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
 
 我们想在望京吃个饭
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))

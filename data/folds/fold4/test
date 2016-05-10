@@ -38,7 +38,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
 
 宣武门附近有哪些推荐的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (shopScore:i $0) 8:i)))
 
 日昌怎么样
 (shopScore:i 日昌餐馆:r)

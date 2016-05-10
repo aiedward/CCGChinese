@@ -1,7 +1,7 @@
 三里屯附近的火锅店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
 
-三里屯附近的火锅自助餐厅，每位50左右
+三里屯附近的火锅自助餐厅，人均50左右
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 
 三里屯附近的餐厅，大众家常菜，人均100
@@ -107,7 +107,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (tasteScore:i $0) 8:i)))
 
 新街口比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (shopScore:i $0) 8:i)))
 
 火炉火的服务好吗
 (serviceScore:i 火炉火:r)

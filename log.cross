@@ -5,16 +5,16 @@ Train Size: 367
 
 Test Size: 40
 
-May 05, 2016 2:09:24 PM null
+May 08, 2016 4:26:06 PM null
 WARNING: not find library.properties in classpath use it by default !
-May 05, 2016 2:09:25 PM org.ansj.library.UserDefineLibrary loadFile
+May 08, 2016 4:26:07 PM org.ansj.library.UserDefineLibrary loadFile
 INFO: init user userLibrary ok path is : /Users/TsaonYih/Documents/Study/EXP/thesis/CCGChinese/library/default.dic
-May 05, 2016 2:09:25 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+May 08, 2016 4:26:07 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
 INFO: init ambiguityLibrary ok!
-May 05, 2016 2:09:25 PM org.ansj.library.DATDictionary loadDAT
-INFO: init core library ok use time :382
-May 05, 2016 2:09:25 PM org.ansj.library.NgramLibrary <clinit>
-INFO: init ngram ok use time :320
+May 08, 2016 4:26:07 PM org.ansj.library.DATDictionary loadDAT
+INFO: init core library ok use time :360
+May 08, 2016 4:26:07 PM org.ansj.library.NgramLibrary <clinit>
+INFO: init ngram ok use time :298
 alpha_0 = 1.0
 C = 1.0E-5
 initialMultiplier = 10.0
@@ -38,19 +38,14 @@ WRONG
 Sentence: 中关村附近带包间的餐厅，十个人的，人均80元
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
 Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (npeople:t $0 10:i)))
-WRONG
-Sentence: 东直门附近的火锅自助餐厅
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s)))
-Res: (lambda $0 e (and (zone:t $0 东直门:s) (label:t $0 火锅:s)))
-WRONG
+NO PARSE
 Sentence: 东直门附近的火锅自助餐厅，每位50左右
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
-Res: (lambda $0 e (and (zone:t $0 东直门:s) (label:t $0 火锅:s) (restaurant:t $0)))
 -----------------------------
-Recall : 37/40 = 0.925
-Precision : 37/40 = 0.925
-F1: 0.925
-No Parses : 0
+Recall : 38/40 = 0.95
+Precision : 38/39 = 0.9743589743589743
+F1: 0.9620253164556962
+No Parses : 1
 -----------
 fold 1
 Train Size: 367
@@ -76,22 +71,28 @@ Training, iteration 4
 Print lexicon...
 Start printing lexicon
 Start testing...
+NO PARSE
+Sentence: 北大平庄附近的餐厅，两位，不要太辣的
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not (label:t $0 川菜:s))))
 WRONG
 Sentence: 宣武门附近的餐厅，烧烤类的
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 烧烤:s)))
 Res: (lambda $0 e (and (label:t $0 烧烤:s) (zone:t $0 宣武门:s)))
 WRONG
+Sentence: 五道口有什么烧烤店
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 烧烤:s)))
+Res: (lambda $0 e (and (label:t $0 烧烤:s) (zone:t $0 五道口:s)))
+WRONG
 Sentence: 石景山附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (npeople:t $0 10:i) (label:t $0 湘菜:s)))
-Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 石景山:s) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (label:t $0 湘菜:s) (restaurant:t $0) (zone:t $0 石景山:s)))
 WRONG
 Sentence: 我想在东便门附近订个餐厅，八个人
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i)))
 Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s)))
-WRONG
-Sentence: 我想在东便门附近订个餐厅，八个人，人均100元
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i)))
-Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s)))
+NO PARSE
+Sentence: 我们想在天安门广场附近找个餐厅，五个人，人均八十
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 天安门:s) (< (price:i $0) 80:i)))
 -----------------------------
 Recall : 34/40 = 0.85
 Precision : 34/38 = 0.8947368421052632
@@ -129,24 +130,32 @@ Res: (lambda $0 e (and (npeople:t $0 5:i) (zone:t $0 天安门:s)))
 WRONG
 Sentence: 我想在雍和宫附近找个餐厅吃粤菜
 Sem: (lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
-Res: (lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s) (zone:t $0 雍和宫:s)))
-WRONG
-Sentence: 月坛附近的快餐小吃，两个人
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 快餐小吃:s) (npeople:t $0 2:i)))
-Res: (lambda $0 e (and (label:t $0 快餐小吃:s) (zone:t $0 月坛:s) (npeople:t $0 2:i)))
+Res: (lambda $0 e (and (label:t $0 粤菜:s) (restaurant:t $0) (zone:t $0 雍和宫:s)))
+NO PARSE
+Sentence: 肯德基早上几点开门
+Sem: (time:s 肯德基:r)
+NO PARSE
+Sentence: 我们想在宣武门附近找个地方吃烧烤，两人
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
 WRONG
 Sentence: 西单附近的餐厅，十个人的包间，大众家常菜
 Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
-Res: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s) (zone:t $0 西单:s)))
+Res: (lambda $0 e (and (zone:t $0 西单:s) (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+NO PARSE
+Sentence: 北大庄附近的餐厅，三位，吃火锅
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
+NO PARSE
+Sentence: 月坛附近的餐厅，要麻辣口味的
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 月坛:s) (label:t $0 川菜:s)))
 WRONG
-Sentence: 我想订个带包间的餐厅，有八个人，东便门附近，人均100元，家常菜
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
-Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+Sentence: 麻辣诱惑的地址是什么
+Sem: (address:s 麻辣诱惑:r)
+Res: (time:s 麻辣诱惑:r)
 -----------------------------
-Recall : 30/40 = 0.75
-Precision : 30/35 = 0.8571428571428571
-F1: 0.7999999999999999
-No Parses : 5
+Recall : 32/40 = 0.8
+Precision : 32/36 = 0.8888888888888888
+F1: 0.8421052631578948
+No Parses : 4
 -----------
 fold 3
 Train Size: 367
@@ -172,18 +181,20 @@ Training, iteration 4
 Print lexicon...
 Start printing lexicon
 Start testing...
+NO PARSE
+Sentence: 宣武门附近的餐厅，两个人，烧烤类的。
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+NO PARSE
+Sentence: 肯德基晚上开门吗
+Sem: (time:s 肯德基:r)
 WRONG
 Sentence: 哪里可以吃到北京烤鸭
 Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
 Res: (lambda $0 e (hasCuisine:t $0 北京烤鸭:c))
-WRONG
-Sentence: 我想吃火锅
-Sem: (lambda $0 e (and (restaurant:t $0) (label:t $0 火锅:s)))
-Res: (lambda $0 e (restaurant:t $0))
 -----------------------------
-Recall : 36/40 = 0.9
-Precision : 36/38 = 0.9473684210526315
-F1: 0.9230769230769231
+Recall : 37/40 = 0.925
+Precision : 37/38 = 0.9736842105263158
+F1: 0.9487179487179489
 No Parses : 2
 -----------
 fold 4
@@ -213,15 +224,20 @@ Start testing...
 WRONG
 Sentence: 牛街有什么好吃的
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 牛街:s)))
-Res: (lambda $0 e (and (zone:t $0 牛街:s) (not （label:t) (restaurant:t $0) (> (tasteScore:i $0) 8:i)))
-WRONG
-Sentence: 宣武门附近有哪些推荐的餐厅
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
-Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (shopScore:i $0) 8:i)))
+Res: (lambda $0 e (and (zone:t $0 牛街:s) (> (tasteScore:i $0) 8:i)))
+NO PARSE
+Sentence: 我们想在牛街吃饭，人均70
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 牛街:s) (< (price:i $0) 70:i)))
+NO PARSE
+Sentence: 前门附近的餐厅，两位，不要太辣的
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (npeople:t $0 2:i) (not （label:t)))
+NO PARSE
+Sentence: 日昌贵吗
+Sem: (price:i 日昌餐馆:r)
 -----------------------------
-Recall : 35/40 = 0.875
-Precision : 35/37 = 0.9459459459459459
-F1: 0.9090909090909091
+Recall : 36/40 = 0.9
+Precision : 36/37 = 0.972972972972973
+F1: 0.935064935064935
 No Parses : 3
 -----------
 fold 5
@@ -248,15 +264,32 @@ Training, iteration 4
 Print lexicon...
 Start printing lexicon
 Start testing...
+NO PARSE
+Sentence: 我们想在新街口广场附近找个餐厅，五个人，人均八十
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 新街口:s) (< (price:i $0) 80:i)))
 WRONG
-Sentence: 复兴门附近的清真餐厅，十个人的包间
-Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
-Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Sentence: 我们有五个人，想在新街口附近吃个饭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+Res: (lambda $0 e (zone:t $0 新街口:s))
+NO PARSE
+Sentence: 我们想在新街口广场附近找个餐厅，五个人
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+WRONG
+Sentence: 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，清真菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (restaurant:t $0) (< (price:i $0) 80:i)))
+NO PARSE
+Sentence: 我想吃面包
+Sem: (lambda $0 e (and (restaurant:t $0) (label:t $0 面包甜点:s)))
+WRONG
+Sentence: 复兴门附近的餐厅，六位，人均七十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+Res: (lambda $0 e (and (< (price:i $0) 70:i) (zone:t $0 复兴门:s)))
 -----------------------------
-Recall : 35/40 = 0.875
-Precision : 35/36 = 0.9722222222222222
-F1: 0.9210526315789473
-No Parses : 4
+Recall : 34/40 = 0.85
+Precision : 34/37 = 0.918918918918919
+F1: 0.8831168831168831
+No Parses : 3
 -----------
 fold 6
 Train Size: 367
@@ -282,10 +315,13 @@ Training, iteration 4
 Print lexicon...
 Start printing lexicon
 Start testing...
+NO PARSE
+Sentence: 多少钱
+Sem: (cuisinePrice:i 北京烤鸭:c)
 WRONG
 Sentence: 新街口附近带包间的餐厅，十个人的，人均80元
 Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
-Res: (lambda $0 e (and (zone:t $0 新街口:s) (npeople:t $0 5:i) (label:t $0 清真菜:s) (restaurant:t $0) (npeople:t $0 10:i)))
+Res: (lambda $0 e (and (zone:t $0 新街口:s) (restaurant:t $0) (npeople:t $0 10:i)))
 -----------------------------
 Recall : 38/40 = 0.95
 Precision : 38/39 = 0.9743589743589743
@@ -316,15 +352,25 @@ Training, iteration 4
 Print lexicon...
 Start printing lexicon
 Start testing...
+NO PARSE
+Sentence: 将太无二几点关门
+Sem: (time:s 将太无二:r)
+NO PARSE
+Sentence: 将太无二开到几点
+Sem: (time:s 将太无二:r)
 WRONG
-Sentence: 三里屯附近的火锅自助餐厅，每位50左右
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
-Res: (lambda $0 e (and (restaurant:t $0) (label:t $0 火锅:s) (zone:t $0 三里屯:s)))
+Sentence: 宣武门附近的餐厅，十个人的包间，大众家常菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+Res: (lambda $0 e (and (restaurant:t $0) (label:t $0 家常菜:s) (zone:t $0 宣武门:s)))
+WRONG
+Sentence: 望京有什么推荐的餐厅
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (> (tasteScore:i $0) 8:i)))
+Res: (lambda $0 e (and (zone:t $0 望京:s) (restaurant:t $0)))
 -----------------------------
 Recall : 36/40 = 0.9
-Precision : 36/37 = 0.972972972972973
-F1: 0.935064935064935
-No Parses : 3
+Precision : 36/38 = 0.9473684210526315
+F1: 0.9230769230769231
+No Parses : 2
 -----------
 fold 8
 Train Size: 367
@@ -351,29 +397,21 @@ Print lexicon...
 Start printing lexicon
 Start testing...
 WRONG
-Sentence: 望京有什么火锅，人均八十以上
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
-Res: (lambda $0 e (and (> (price:i $0) 80:i) (zone:t $0 望京:s) (label:t $0 火锅:s)))
-WRONG
-Sentence: 望京附近人均八十以上的火锅
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
-Res: (lambda $0 e (and (label:t $0 火锅:s) (> (price:i $0) 80:i) (npeople:t $0 5:i) (zone:t $0 望京:s)))
-WRONG
 Sentence: 哪里可以吃到鳗鱼饭
 Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 鳗鱼饭:c)))
 Res: (lambda $0 e (hasCuisine:t $0 鳗鱼饭:c))
 WRONG
-Sentence: 三里屯附近的清真餐厅，人均100
-Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 清真菜:s) (< (price:i $0) 100:i)))
-Res: (lambda $0 e (and (label:t $0 粤菜:s) (< (price:i $0) 100:i) (zone:t $0 三里屯:s)))
-WRONG
 Sentence: 望京附近的清真餐厅，十个人的包间
-Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
-Res: (lambda $0 e (and (npeople:t $0 10:i) (zone:t $0 望京:s)))
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (restaurant:t $0) (npeople:t $0 15:i) (zone:t $0 望京:s)))
+WRONG
+Sentence: 我们想在望京吃个饭
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
+Res: (lambda $0 e (zone:t $0 望京:s))
 -----------------------------
-Recall : 35/40 = 0.875
-Precision : 35/40 = 0.875
-F1: 0.875
+Recall : 37/40 = 0.925
+Precision : 37/40 = 0.925
+F1: 0.925
 No Parses : 0
 -----------
 fold 9
@@ -401,17 +439,41 @@ Print lexicon...
 Start printing lexicon
 Start testing...
 WRONG
+Sentence: 望京哪家甜品店比较好吃
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+Res: (lambda $0 e (and (> (tasteScore:i $0) 8:i) (zone:t $0 望京:s) (> (shopScore:i $0) 8:i)))
+NO PARSE
+Sentence: 五道口的烧烤摊
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 烧烤:s)))
+WRONG
+Sentence: 带五人包间的餐厅，前门附近，涮锅类的，人均60
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (npeople:t $0 5:i) (label:t $0 火锅:s)))
+Res: (lambda $0 e (and (npeople:t $0 10:i) (zone:t $0 天桥:s) (zone:t $0 前门:s) (label:t $0 火锅:s)))
+WRONG
+Sentence: 我想在东直门附近订个餐厅，八个人
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (npeople:t $0 8:i)))
+Res: (lambda $0 e (zone:t $0 东直门:s))
+NO PARSE
 Sentence: 我想在东四附近找个餐厅吃粤菜
-Sem: (lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
-Res: (lambda $0 e (and (label:t $0 粤菜:s) (restaurant:t $0) (zone:t $0 东四:s)))
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s)))
+NO PARSE
+Sentence: 我想订个带包间的餐厅，有八个人，东直门附近，人均100元，家常菜
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 家常菜:s)))
+NO PARSE
+Sentence: 我想订个带包间的餐厅，有八个人，东直门附近，人均100元，清真菜
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:s)))
+WRONG
+Sentence: 东四附近的餐厅，要有十五人包间。
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (npeople:t $0 15:i)))
+Res: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (zone:t $0 东四:s)))
 -----------------------------
-Recall : 36/40 = 0.9
-Precision : 36/37 = 0.972972972972973
-F1: 0.935064935064935
-No Parses : 3
+Recall : 32/40 = 0.8
+Precision : 32/36 = 0.8888888888888888
+F1: 0.8421052631578948
+No Parses : 4
 -----------
 =================================
-Average precision : 0.9337721208773841
-Average recall : 0.8800000000000001
-Average F1 : 0.9057170522127217
+Average precision : 0.935917709207183
+Average recall : 0.8850000000000001
+Average F1 : 0.9095032720998745
 =================================

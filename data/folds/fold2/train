@@ -131,7 +131,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
 
 北大平庄附近的餐厅，两位，不要太辣的
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not （label:t)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not (label:t $0 川菜:s))))
 
 北大平庄附近人均70的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (< (price:i $0) 70:i)))
@@ -257,7 +257,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (label:t $0 火锅:s)))
 
 中关村比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (shopScore:i $0) 8:i)))
 
 全聚德的服务好吗
 (serviceScore:i 全聚德:r)
@@ -398,7 +398,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
 
 宣武门附近有哪些推荐的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (shopScore:i $0) 8:i)))
 
 日昌怎么样
 (shopScore:i 日昌餐馆:r)
@@ -518,7 +518,7 @@
 (surroundingScore:i 日昌餐馆:r)
 
 复兴门附近的清真餐厅，十个人的包间
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
 
 日昌什么时候关门
 (time:s 日昌餐馆:r)
@@ -721,7 +721,7 @@
 三里屯附近的火锅店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
 
-三里屯附近的火锅自助餐厅，每位50左右
+三里屯附近的火锅自助餐厅，人均50左右
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s) (< (price:i $0) 50:i)))
 
 三里屯附近的餐厅，大众家常菜，人均100
@@ -827,7 +827,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (tasteScore:i $0) 8:i)))
 
 新街口比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (shopScore:i $0) 8:i)))
 
 火炉火的服务好吗
 (serviceScore:i 火炉火:r)
@@ -944,7 +944,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
 
 望京附近的清真餐厅，十个人的包间
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
 
 我们想在望京吃个饭
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
@@ -1040,7 +1040,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s)))
 
 我想在东四附近找个餐厅吃粤菜
-(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s)))
 
 我想在东四附近找个吃粤菜的餐厅，人均六十
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))

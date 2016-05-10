@@ -91,6 +91,9 @@ public class Train {
 			}
 		} else { 
 			noParses++;
+			System.out.println("NO PARSE");
+			System.out.println("Sentence: " + words);
+			System.out.println("Sem: " + sem);
 			if (parses.size()>1){
 				// There are more than one equally high scoring 
 				// logical forms. If this is the case, we abstain

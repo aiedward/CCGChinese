@@ -38,7 +38,7 @@
 (surroundingScore:i 日昌餐馆:r)
 
 复兴门附近的清真餐厅，十个人的包间
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
 
 日昌什么时候关门
 (time:s 日昌餐馆:r)

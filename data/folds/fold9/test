@@ -80,7 +80,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s)))
 
 我想在东四附近找个餐厅吃粤菜
-(lambda $0 e (and (restaurant:t $0) (label:t $0 粤菜:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s)))
 
 我想在东四附近找个吃粤菜的餐厅，人均六十
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
