@@ -22,6 +22,7 @@ import java.util.*;
 import learn.*;
 import lambda.*;
 import parser.*;
+import KB.*;
 
 public class DevTrain {
 
@@ -43,11 +44,14 @@ public class DevTrain {
 
 		//fixed np lexicon
 		Lexicon fixed = new Lexicon();
+		
+		//extract NP lexicon from KB directly
+		//extractNP extract = new extractNP();
+		//extract.extract2lex(fixed);
+		
+		//load NP lexicon from file
 		String npLexFileName = "data/np_lexicon";
-		File npLexFile = new File(npLexFileName);
-		if (npLexFile.exists()) {
-			fixed.addEntriesFromFile(npLexFileName,true);
-		}
+		fixed.addEntriesFromFile(npLexFileName,true);
 
 		Train.EPOCHS = 5;
 		Train.alpha_0 = 1.0;

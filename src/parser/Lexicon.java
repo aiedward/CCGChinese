@@ -58,6 +58,12 @@ public class Lexicon {
 	}
 
 	public void addEntriesFromFile(String filename, boolean flag){
+		File npLexFile = new File(filename);
+		if (!npLexFile.exists()) {
+			System.out.println("NP Lexicon does not exist!");
+			return;
+		}
+		
 		String line;
 
 		try{
@@ -65,6 +71,7 @@ public class Lexicon {
 			line = in.readLine();
 			while (line!=null){  // for each line in the file
 				line.trim();
+				System.out.println(line);
 				if (line.equals("") || line.startsWith("//")) {
 					// do nothing: ignore blank lines and comments.
 				} else {

@@ -1,7 +1,7 @@
 fin = open("train", "r")
 fout = open("train0", "w")
 
-newlist = []
+newlist = set()
 
 line0 = " "
 line1 = " "
@@ -12,7 +12,7 @@ while line0:
     fin.readline()
 
     if line0 not in newlist:
-        newlist.append(line0)
+        newlist.add(line0)
         fout.write(line0)
         fout.write(line1)
         fout.write("\n")

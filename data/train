@@ -11,7 +11,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 70:i)))
 
 西单有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 日本菜:s)))
 
 我们想在西单附近找个饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s)))
@@ -149,7 +149,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
 
 宣武门附近有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本菜:s)))
 
 宣武门附近人均70的餐厅
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (< (price:i $0) 70:i)))
@@ -392,10 +392,10 @@
 (serviceScore:i 全聚德:r)
 
 五道口哪家日本料理比较好吃
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本菜:s) (> (tasteScore:i $0) 8:i)))
 
 五道口有什么好吃的日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本菜:s) (> (tasteScore:i $0) 8:i)))
 
 我们想在五道口附近找个饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s)))
@@ -434,7 +434,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
 
 五道口有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 日本菜:s)))
 
 哪里可以吃到北京烤鸭
 (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
@@ -704,7 +704,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 100:i)))
 
 前门附近有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (label:t $0 日本菜:s)))
 
 我们想在前门附近找个饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s)))
@@ -755,7 +755,7 @@
 (tel:s 将太无二:r)
 
 宣武门有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本菜:s)))
 
 我们想在宣武门附近找个饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
@@ -962,10 +962,10 @@
 (serviceScore:i 火炉火:r)
 
 望京哪家日本料理比较好吃
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本菜:s) (> (tasteScore:i $0) 8:i)))
 
 望京有什么好吃的日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本料理:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本菜:s) (> (tasteScore:i $0) 8:i)))
 
 我们想在望京附近找个饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
@@ -1001,7 +1001,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 火锅:s) (> (price:i $0) 80:i)))
 
 望京有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 日本菜:s)))
 
 哪里可以吃到鳗鱼饭
 (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 鳗鱼饭:c)))
@@ -1184,7 +1184,7 @@
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:s)))
 
 我想吃日本料理
-(lambda $0 e (and (restaurant:t $0) (label:t $0 日本料理:s)))
+(lambda $0 e (and (restaurant:t $0) (label:t $0 日本菜:s)))
 
 火炉火是吃什么的
 (lambda $0 e (label:t 火炉火:r $0))
@@ -1218,4 +1218,5 @@
 
 望京附近有哪些饭店
 (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s)))
+
 
