@@ -20,16 +20,20 @@ import java.util.List;
 import learn.*;
 import lambda.*;
 import parser.*;
+import KB.*;
 
 public class DemoUI {
 	
 	private SingleTest test;
+	private query qr;
 	
 	private JFrame frame;
 	private JTextField txt_input;
 	private JTextArea txt_entries;
 	private JTextField txt_res;
+	private JTextArea txt_KB;
 	private JScrollPane scroll;
+	private JScrollPane KBscroll;
 	private JTree tree;
 	private DefaultTreeCellRenderer renderer;
 	
@@ -133,13 +137,19 @@ public class DemoUI {
 		
 		String words = txt_input.getText();
 		Exp res = test.getSem(words);
-		txt_entries.setText("使用词条：\n");
+
 		//System.out.println(res);
 		if (res == null) {
 			txt_entries.setText("Null");
 			txt_res.setText("No result");
 			return;
 		}
+		String spq = qr.convert(res);
+		String KBres = qr.execute(spq);
+		txt_KB.setText(KBres);
+		KBscroll = new JScrollPane(txt_KB);
+		southPanel.add(KBscroll, "South");
+		txt_entries.setText("使用词条：\n");
 		txt_res.setText(res.toString());
 		List entries = test.ParseEntries(res);
 		//System.out.println(entries);
@@ -169,6 +179,7 @@ public class DemoUI {
 	
 	public DemoUI(){
 		test = new SingleTest();
+		qr = new query();
 		
 		xx = new int[10];
 		for (int i=0; i<10; i++) {
@@ -194,8 +205,11 @@ public class DemoUI {
 		txt_input = new JTextField();
 		txt_entries = new JTextArea();
 		txt_res = new JTextField();
+		txt_KB = new JTextArea();
+		KBscroll = new JScrollPane(txt_KB);
 		txt_res.setEditable(false);
 		txt_entries.setEditable(false);
+		txt_KB.setEditable(false);
 		btn_parse = new JButton("Parse");
 	
 		northPanel.add(txt_input, "Center");

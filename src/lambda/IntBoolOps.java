@@ -352,6 +352,14 @@ public class IntBoolOps extends Exp {
 	return (left.avgDepth(d+1)+right.avgDepth(d+1))/2.0;
     }
 
+    public Exp getLeft() {
+    	return left;
+    }
+    
+    public Exp getRight() {
+    	return right;
+    }
+    
     Exp left;
     Exp right;
     int con_type;

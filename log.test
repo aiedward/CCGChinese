@@ -1,0 +1,100 @@
+Train Size: 407
+
+Test Size: 407
+
+log4j:WARN No appenders could be found for logger (DICLOG).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+alpha_0 = 1.0
+C = 1.0E-5
+initialMultiplier = 10.0
+NP init = 10.0
+Parser beam  = 200
+
+Start LexPhi: 0
+Start train
+add Dataset
+add Dataset
+Start training...
+Training, iteration 0
+Training, iteration 1
+Training, iteration 2
+Training, iteration 3
+Training, iteration 4
+Print lexicon...
+Start printing lexicon
+Start testing...
+WRONG
+Sentence: 北大平庄附近的餐厅，两位，不要太辣的
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (npeople:t $0 2:i) (not (label:t $0 川菜:s))))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 北大平庄:s) (not (label:t $0 川菜:s))))
+WRONG
+Sentence: 我想在雍和宫附近找个餐厅吃粤菜
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s)))
+Res: (lambda $0 e (and (label:t $0 粤菜:s) (npeople:t $0 10:i) (zone:t $0 雍和宫:s) (restaurant:t $0)))
+WRONG
+Sentence: 我想在雍和宫附近找个吃粤菜的餐厅，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 雍和宫:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (label:t $0 粤菜:s) (npeople:t $0 10:i) (zone:t $0 雍和宫:s) (restaurant:t $0) (< (price:i $0) 60:i)))
+WRONG
+Sentence: 我们想在宣武门附近找个地方吃烧烤，两人
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (npeople:t $0 2:i) (label:t $0 烧烤:s)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 烧烤:s) (npeople:t $0 10:i)))
+WRONG
+Sentence: 西单附近的餐厅，十个人的包间，大众家常菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+Res: (lambda $0 e (and (label:t $0 家常菜:s) (zone:t $0 西单:s)))
+WRONG
+Sentence: 北大庄附近的餐厅，三位，吃火锅
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 3:i) (label:t $0 火锅:s)))
+Res: (lambda $0 e (label:t $0 火锅:s))
+WRONG
+Sentence: 哪里可以吃到北京烤鸭
+Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 北京烤鸭:c)))
+Res: (lambda $0 e (hasCuisine:t $0 北京烤鸭:c))
+WRONG
+Sentence: 复兴门附近的清真餐厅，十个人的包间
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (npeople:t $0 10:i) (zone:t $0 复兴门:s)))
+WRONG
+Sentence: 五道口哪家甜品店比较好吃
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+Res: (lambda $0 e (and (zone:t $0 五道口:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+WRONG
+Sentence: 王府井附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s) (npeople:t $0 10:i) (label:t $0 湘菜:s)))
+Res: (lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s) (npeople:t $0 10:i) (label:t $0 湘菜:s) (< (price:i $0) 70:i)))
+WRONG
+Sentence: 宣武门附近的餐厅，十个人的包间，大众家常菜
+Sem: (lambda $0 e (and (restaurant:t $0) (npeople:t $0 10:i) (label:t $0 家常菜:s)))
+Res: (lambda $0 e (and (label:t $0 家常菜:s) (zone:t $0 宣武门:s)))
+WRONG
+Sentence: 哪里可以吃到鳗鱼饭
+Sem: (lambda $0 e (and (restaurant:t $0) (hasCuisine:t $0 鳗鱼饭:c)))
+Res: (lambda $0 e (hasCuisine:t $0 鳗鱼饭:c))
+WRONG
+Sentence: 望京附近的清真餐厅，十个人的包间
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+Res: (lambda $0 e (and (label:t $0 清真菜:s) (npeople:t $0 10:i) (zone:t $0 望京:s)))
+WRONG
+Sentence: 望京哪家甜品店比较好吃
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+Res: (lambda $0 e (and (zone:t $0 望京:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+WRONG
+Sentence: 五道口的烧烤摊
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 烧烤:s)))
+Res: (lambda $0 e (zone:t $0 五道口:s))
+WRONG
+Sentence: 我想在东四附近找个餐厅吃粤菜
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s)))
+Res: (lambda $0 e (and (label:t $0 粤菜:s) (npeople:t $0 10:i) (zone:t $0 东四:s) (restaurant:t $0)))
+WRONG
+Sentence: 我想在东四附近找个吃粤菜的餐厅，人均六十
+Sem: (lambda $0 e (and (restaurant:t $0) (zone:t $0 东四:s) (label:t $0 粤菜:s) (< (price:i $0) 60:i)))
+Res: (lambda $0 e (and (label:t $0 粤菜:s) (npeople:t $0 10:i) (zone:t $0 东四:s) (restaurant:t $0) (< (price:i $0) 60:i)))
+-----------------------------
+Recall : 390/407 = 0.9582309582309583
+Precision : 390/407 = 0.9582309582309583
+F1: 0.9582309582309584
+No Parses : 0
+-----------

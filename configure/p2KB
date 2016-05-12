@@ -1,0 +1,15 @@
+name:t restruant:name
+district:t restruant:district
+zone:t restruant:zone
+street:t restruant:street
+lat:i restruant:lat
+lng:i restruant:lng
+price:i restruant:price
+address:s restruant:address
+tel:s restruant:tel
+label:t restruant:category
+tasteScore:i restruant:tasteScore
+surroundingScore:i restruant:surroundingScore
+serviceScore:i restruant:serviceScore
+hasCuisine:t dish
+cuisinePrice:i dish:dishprice

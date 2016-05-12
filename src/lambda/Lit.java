@@ -100,8 +100,11 @@ public class Lit extends Exp {
 	args[i]=e;
     }
 
-    public Exp getArg(int i){
-	return args[i];
+    public Exp getArg(int index){
+    	if (index >= args.length) {
+    		return null;
+    	}
+    	return args[index];
     }
 
     public Exp replace(Exp olde, Exp newe){

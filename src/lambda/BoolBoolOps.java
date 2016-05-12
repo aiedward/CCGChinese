@@ -725,6 +725,14 @@ public class BoolBoolOps extends Exp {
 			total+=e.avgDepth(d+1);
 		return total/exps.size();
 	}
+	
+	public int getOP(){
+		return op_type;
+	}
+	
+	public List<Exp> getExps() {
+		return exps;
+	}
 
 	List<Exp> exps;
 	int op_type;
