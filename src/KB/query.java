@@ -24,52 +24,27 @@ public class query {
 								+ "PREFIX dish: <http://dishname/> \n"
 								+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \n";
 
-	private String convertLit(Lit exp) {
-		String pred = exp.getHeadString();
-		if (!pMap.containsKey(pred)) {
-			return "NO Pred: " + pred + " in KB\n";
-		}
-		String p = pMap.get(pred);
-		int argNum = exp.arity();
-		if (argNum != 1) {
-			return "Exp: " + exp + " has more than one arg\n";
-		}
-		Exp arg = exp.getArg(0);
-		System.out.println(arg.getClass().toString());
-		if (!arg.getClass().toString().equals("class lambda.Const")) {
-			return "Arg: " + arg + " is not Const\n";
-		}
-		String argg = arg.toString();
+	private String convertSingleConst(Const exp, String x) {
+		////System.out.println("convertSingleConst" + exp);
+		String argg = exp.toString();
 		String argType = argg.substring(argg.indexOf(":")+1, argg.length());
 		argg = argg.substring(0, argg.indexOf(":"));
 		if (argType.equals("r")) {
-			String res = PREFIX
-					  + "SELECT ?s ?name ?o \n"
-					  + "WHERE \n"
-					  + "{ \n"
-					  + "?s " + p + " ?o . \n"
-					  + "?s restruant:name ?name . \n"
-					  + "FILTER regex(?name, \"" + argg + "\" ) . \n"
-					  + "} \n";
+			String res = "?" + x + " restruant:name ?name . \n"
+					   + "FILTER regex(?name, \"" + argg + "\" ) . \n";
 			return res;
 		}
 		else if (argType.equals("c")) {
-			String res = PREFIX
-					  + "SELECT ?s ?name ?o \n"
-					  + "WHERE \n"
-					  + "{ \n"
-					  + "?s dish:dish ?d . \n"
-					  + "?d dish:dishname ?dname . \n"
-					  + "FILTER regex(?dname, \"" + argg + "\" ) . \n"
-					  + "?d " + p + " ?o . \n"
-					  + "?s restruant:name ?name . \n"
-					  + "} \n";
+			String res = "?" + x + " dish:dishname ?dname . \n"
+					   + "FILTER regex(?dname, \"" + argg + "\" ) . \n";
 			return res;
 		}
-		return "Unknown Const Type: " + argType + "\n";
+		return "Unresolved Const Type: " + argType + "\n";
 	}
 	
 	private String convertSingleLit(Lit exp) {
+		//System.out.println("convertSingleLit" + exp);
+
 		String pred = exp.getHeadString();
 		if (!pMap.containsKey(pred)) {
 			return "NO Pred: " + pred + " in KB\n";
@@ -83,16 +58,25 @@ public class query {
 		String argg = arg.toString();
 		String argType = argg.substring(argg.indexOf(":")+1, argg.length());
 		argg = argg.substring(0, argg.indexOf(":"));
-		if (!argType.equals("s")) return "Unknown Const Type: " + argType + "\n";
-		
-		String p = pMap.get(pred);
-		String xx = "x" + Math.abs(p.hashCode());
-		String res = "?s " + p + " ?" + xx + " . \n"
-				   + "FILTER regex(?" + xx + ", \"" + argg + "\" ) . \n";
-		return res;
+		if (argType.equals("s")) {
+			String p = pMap.get(pred);
+			String xx = "x" + Math.abs(p.hashCode());
+			String res = "?s " + p + " ?" + xx + " . \n"
+					   + "FILTER regex(?" + xx + ", \"" + argg + "\" ) . \n";
+			return res;
+		}
+		else {
+			String p = pMap.get(pred);
+			String xx = "x" + Math.abs(p.hashCode());
+			String res = "?s " + p + " ?" + xx + " . \n"
+					   + convertSingleConst((Const)arg, xx);
+			return res;		
+		}
 	}
 	
 	private String convertSingleIntBoolOps(IntBoolOps exp) {
+		//System.out.println("convertSingleIntBoolOps" + exp);
+
 		String op = exp.getHeadString();
 		Exp left = exp.getLeft();
 		Exp right =exp.getRight();
@@ -115,6 +99,70 @@ public class query {
 			return convertSingleIntBoolOps((IntBoolOps)exp);
 		}
 		return "ERROR: " + exp.toString() + " \n";
+	}
+	
+	private String convertLit(Lit exp) {
+		String pred = exp.getHeadString();
+		if (!pMap.containsKey(pred)) {
+			return "NO Pred: " + pred + " in KB\n";
+		}
+		String p = pMap.get(pred);
+		int argNum = exp.arity();
+		if (argNum == 1) {
+			Exp arg = exp.getArg(0);
+			////System.out.println(arg.getClass().toString());
+			if (!arg.getClass().toString().equals("class lambda.Const")) {
+				return "Arg: " + arg + " is not Const\n";
+			}
+			String argg = arg.toString();
+			String argType = argg.substring(argg.indexOf(":")+1, argg.length());
+			argg = argg.substring(0, argg.indexOf(":"));
+			if (argType.equals("r")) {
+				String res = PREFIX
+						  + "SELECT ?s ?name ?o \n"
+						  + "WHERE \n"
+						  + "{ \n"
+						  + "?s " + p + " ?o . \n"
+						  + convertSingleConst((Const)arg, "s")
+						  + "} \n";
+				return res;
+			}
+			else if (argType.equals("c")) {
+				String res = PREFIX
+						  + "SELECT ?s ?name ?o \n"
+						  + "WHERE \n"
+						  + "{ \n"
+						  + "?s dish:dish ?d . \n"
+						  + convertSingleConst((Const)arg, "d")
+						  + "?d " + p + " ?o . \n"
+						  + "?s restruant:name ?name . \n"
+						  + "} \n";
+				return res;
+			}
+			return "Unknown Const Type: " + argType + "\n";
+		}
+		else if (argNum == 2) {
+			Exp arg0 = exp.getArg(0);
+			Exp arg1 = exp.getArg(1);
+			if (!arg0.getClass().toString().equals("class lambda.Const")) {
+				return "Arg: " + arg0 + " is not Const\n";
+			}
+			if (!arg1.getClass().toString().equals("class lambda.Const")) {
+				return "Arg: " + arg1 + " is not Const\n";
+			}
+			String res = PREFIX
+					  + "SELECT ?s ?name \n"
+					  + "WHERE \n"
+					  + "{ \n"
+					  + "?s " + p + " ?o . \n"
+					  + convertSingleConst((Const)arg0, "s")
+					  + convertSingleConst((Const)arg1, "o")
+					  + "} \n";
+			return res;
+		}
+		
+		return "Exp: " + exp + " has more than two arg\n";
+
 	}
 	
 	private String convertFunct(Funct exp) {
@@ -142,14 +190,14 @@ public class query {
 	
 	public String convert(Exp exp) {
 		String res = "";
-		System.out.println(exp.getClass().toString());
+		//System.out.println(exp.getClass().toString());
 		if (exp.getClass().toString().equals("class lambda.Lit")) {
 			return convertLit((Lit)exp);
 		}
 		else if (exp.getClass().toString().equals("class lambda.Funct")) {
 			return convertFunct((Funct)exp);
 		}
-		System.out.print(res);
+		//System.out.print(res);
 		return res;
 	}
 	
@@ -160,10 +208,11 @@ public class query {
 	
 	public String execute(String spq) {
 		if (!spq.startsWith("PREFIX")) return "ERROR\n";
+		//System.out.println(spq);
 		String KBresult = "";
 		VirtGraph graph = new VirtGraph ("restrauntknowledge", "jdbc:virtuoso://localhost:1111", "dba", "dba");
 		Query sparql = QueryFactory.create(spq);
-		//System.out.println(sparql.getResultVars());
+		////System.out.println(sparql.getResultVars());
 		VirtuosoQueryExecution vqe = VirtuosoQueryExecutionFactory.create (sparql, graph);
 
 		ResultSet results = vqe.execSelect();
@@ -172,8 +221,8 @@ public class query {
 		while (results.hasNext()) {
 			nullNum = 0;
 			QuerySolution result = results.nextSolution();
-		    RDFNode graph_name = result.get("graph");
-		    res = graph_name + " { ";
+		    //RDFNode graph_name = result.get("graph");
+		    res = " { ";
 		    for (int i=0; i<sparql.getResultVars().size(); i++) {
 		    	String tmp = result.get(sparql.getResultVars().get(i)).toString();
 		    	if (tmp.equals("") || tmp.equals("-")) {
@@ -184,7 +233,7 @@ public class query {
 		    }
 		    res += "}\n";
 		    if (nullNum == 0 ) {
-		    	System.out.print(res);
+		    	//System.out.print(res);
 		    	KBresult += res;
 		    }
 
@@ -224,7 +273,7 @@ public class query {
 		Lang.loadLangFromFile("data/relations");
 		
 		query qr = new query();
-		String spq = qr.convert("(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (label:t $0 火锅:s) (> (tasteScore:i $0) 9.0:i) (> (price:i $0) 100:i)))");
+		String spq = qr.convert("(hasCuisine:t 麻辣诱惑:r 麻辣小龙虾:c)");
 		System.out.println(spq);
 		qr.execute(spq);
 	}

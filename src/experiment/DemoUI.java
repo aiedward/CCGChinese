@@ -39,12 +39,14 @@ public class DemoUI {
 	
 	private mxGraph graph;
 	private Object parent;
-	
+	private mxGraphComponent graphComponent;	
 	
 	private JButton btn_parse;
-	private JPanel northPanel;
-	private JPanel centerPanel;
-	private JPanel southPanel;
+	private JPanel inputPanel;
+	private JPanel midPanel;
+	private JPanel lfPanel;
+	private JPanel KBPanel;
+	private JPanel treePanel;
 	
 	private int[] xx;
 	
@@ -118,14 +120,17 @@ public class DemoUI {
 		
 		graph.setCellsEditable(false);
 
-		mxGraphComponent graphComponent = new mxGraphComponent(graph);
+		graphComponent = new mxGraphComponent(graph);
 		
 		scroll = new JScrollPane(tree);
 		tree.setCellRenderer(renderer); 		
-		centerPanel.removeAll();
-		centerPanel.add(txt_entries, "South");
-		centerPanel.add(scroll, "Center");
-		centerPanel.add(graphComponent, "West");
+		midPanel.removeAll();
+		midPanel.add(txt_entries, "South");
+		midPanel.add(scroll, "Center");
+		//treescroll = new JScrollPane(graphComponent);
+		//treePanel.add(treescroll);
+		treePanel.removeAll();
+		treePanel.add(graphComponent);
 		frame.setVisible(true);
 		return;
 	}
@@ -146,9 +151,8 @@ public class DemoUI {
 		}
 		String spq = qr.convert(res);
 		String KBres = qr.execute(spq);
+		//System.out.println(KBres);
 		txt_KB.setText(KBres);
-		KBscroll = new JScrollPane(txt_KB);
-		southPanel.add(KBscroll, "South");
 		txt_entries.setText("使用词条：\n");
 		txt_res.setText(res.toString());
 		List entries = test.ParseEntries(res);
@@ -166,14 +170,7 @@ public class DemoUI {
 		tree = new JTree(root);
 		
 		paintTree(root);
-		
-		
-		/*scroll = new JScrollPane(tree);
-		tree.setCellRenderer(renderer); 
-		centerPanel.removeAll();
-		centerPanel.add(txt_entries, "South");
-		centerPanel.add(scroll, "Center");
-		frame.setVisible(true);*/
+
 		return;
 	}
 	
@@ -189,12 +186,16 @@ public class DemoUI {
 		frame = new JFrame("Test");
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		northPanel = new JPanel(new BorderLayout());
-		northPanel.setBorder(new TitledBorder("请输入语句"));
-		centerPanel = new JPanel(new BorderLayout());
-		centerPanel.setBorder(new TitledBorder("过程"));
-		southPanel = new JPanel(new BorderLayout());
-		southPanel.setBorder(new TitledBorder("结果"));
+		inputPanel = new JPanel(new BorderLayout());
+		inputPanel.setBorder(new TitledBorder("请输入语句"));
+		midPanel = new JPanel(new BorderLayout());
+		midPanel.setBorder(new TitledBorder("过程"));
+		KBPanel = new JPanel(new BorderLayout());
+		KBPanel.setBorder(new TitledBorder("结果"));
+		treePanel = new JPanel(new BorderLayout());
+		treePanel.setBorder(new TitledBorder("解析树"));
+		lfPanel = new JPanel(new BorderLayout());
+		lfPanel.setBorder(new TitledBorder("逻辑表达式"));
 		
 		renderer=new DefaultTreeCellRenderer(); 
 		renderer.setLeafIcon(new ImageIcon("")); 
@@ -207,18 +208,30 @@ public class DemoUI {
 		txt_res = new JTextField();
 		txt_KB = new JTextArea();
 		KBscroll = new JScrollPane(txt_KB);
+
 		txt_res.setEditable(false);
 		txt_entries.setEditable(false);
 		txt_KB.setEditable(false);
 		btn_parse = new JButton("Parse");
 	
-		northPanel.add(txt_input, "Center");
-		northPanel.add(btn_parse, "East");
-		centerPanel.add(txt_entries, "South");
-		southPanel.add(txt_res, "Center");
-		frame.add(northPanel, "North");
-		frame.add(centerPanel, "Center");
-		frame.add(southPanel, "South");
+		inputPanel.add(txt_input, "Center");
+		inputPanel.add(btn_parse, "East");
+		midPanel.add(txt_entries, "South");
+		lfPanel.add(txt_res);
+		KBPanel.add(KBscroll);
+		
+		frame.setLayout(null);
+		frame.add(midPanel);
+		frame.add(treePanel);
+		frame.add(KBPanel);
+		frame.add(inputPanel);
+		frame.add(lfPanel);
+		inputPanel.setBounds(0, 0, 720, 50);
+		midPanel.setBounds(0, 50, 720, 300);
+		lfPanel.setBounds(0, 350, 720, 50);
+		KBPanel.setBounds(0, 400, 720, 300);
+		treePanel.setBounds(720, 0, 560, 700);
+
 		frame.setSize(1280, 720);
 		int screen_width = Toolkit.getDefaultToolkit().getScreenSize().width;
 		int screen_height = Toolkit.getDefaultToolkit().getScreenSize().height;

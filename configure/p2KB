@@ -11,5 +11,5 @@ label:t restruant:category
 tasteScore:i restruant:tasteScore
 surroundingScore:i restruant:surroundingScore
 serviceScore:i restruant:serviceScore
-hasCuisine:t dish
+hasCuisine:t dish:dish
 cuisinePrice:i dish:dishprice
