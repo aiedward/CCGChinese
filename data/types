@@ -1,5 +1,9 @@
 (
 r		//restaurant
+nm		//name
 c		//cuisine
+dt		//district
+zn		//zone
+lb		//label
 s		//string
 )

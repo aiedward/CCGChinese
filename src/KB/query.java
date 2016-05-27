@@ -58,13 +58,14 @@ public class query {
 		String argg = arg.toString();
 		String argType = argg.substring(argg.indexOf(":")+1, argg.length());
 		argg = argg.substring(0, argg.indexOf(":"));
-		if (argType.equals("s")) {
+		if (argType.equals("s") || argType.equals("zn") || argType.equals("lb")) {
 			String p = pMap.get(pred);
 			String xx = "x" + Math.abs(p.hashCode());
 			String res = "?s " + p + " ?" + xx + " . \n"
 					   + "FILTER regex(?" + xx + ", \"" + argg + "\" ) . \n";
 			return res;
 		}
+		//dish or restaurant
 		else {
 			String p = pMap.get(pred);
 			String xx = "x" + Math.abs(p.hashCode());
@@ -273,9 +274,9 @@ public class query {
 		Lang.loadLangFromFile("data/relations");
 		
 		query qr = new query();
-		String spq = qr.convert("(hasCuisine:t 麻辣诱惑:r 麻辣小龙虾:c)");
+		String spq = qr.convert("(cuisinePrice:i 北京烤鸭:c)");
 		System.out.println(spq);
-		qr.execute(spq);
+		System.out.println(qr.execute(spq));
 	}
 
 }

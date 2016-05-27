@@ -4,7 +4,10 @@
 
 package experiment;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.List;
 
 import learn.*;
@@ -41,6 +44,38 @@ public class SingleTest {
 		return best;
 	}
 	
+	public void ParseTestFile(String filename) {
+		File testFile = new File(filename);
+		if (!testFile.exists()) {
+			System.out.println("ERROR: No test file!");
+			return;
+		}
+		int num = 0;
+		int parsed = 0;
+		try {
+			BufferedReader fin = new BufferedReader(new FileReader(filename));
+			String line = fin.readLine();
+			while (line != null) {
+				line.trim();
+				System.out.println(line);
+				System.out.println(getSem(line));
+				System.out.println();
+				num ++;
+				if (getSem(line) != null) {
+					parsed ++;
+				}
+				line = fin.readLine();
+			}
+			fin.close();
+			System.out.println(num + " in total, " + parsed + " parsed, percentage = " + (double)parsed/num + ".");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return;
+	}
+	
 	public Cell getCell() {
 		return p.bestParses().get(0).getCell();
 	}
@@ -50,11 +85,12 @@ public class SingleTest {
 	}
 	
 	public static void main(String[] args) {
-		String words = "雍和宫附近比较好吃的日本料理， 人均70";
+		//String words = "雍和宫附近比较好吃的日本料理， 人均70";
 		
 		SingleTest test = new SingleTest();
+		test.ParseTestFile("test/QASamsungCourpus.txt");
 		
-		test.getSem(words);
+		//test.getSem(words);
 		
 	}
 

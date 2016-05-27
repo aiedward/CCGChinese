@@ -38,7 +38,7 @@ public class extractNP {
 	
 	
 	private void extract2file(String p, String type, HashSet<String> set) {
-		
+				
 		Query sparql = QueryFactory.create("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
 										+ "PREFIX restruant: <http://csaixyz.org/restraunt#> "
 										+ "PREFIX dish: <http://dishname/> "
@@ -96,10 +96,10 @@ public class extractNP {
 	}
 	
 	public void extract2file() {
-		extract2file("restruant:district", "s", district);
-		extract2file("restruant:zone", "s", zone);
-		extract2file("restruant:name", "r", resName);
-		extract2file("restruant:category", "s", cat);
+		extract2file("restruant:district", "dt", district);
+		extract2file("restruant:zone", "zn", zone);
+		extract2file("restruant:name", "nm", resName);
+		extract2file("restruant:category", "lb", cat);
 		extract2file("dish:dishname", "c", dishName);
 		return;
 	}
@@ -107,6 +107,7 @@ public class extractNP {
 	
 	private void extract2lex(String p, String type, HashSet<String> set, Lexicon lex) {
 		
+				
 		Query sparql = QueryFactory.create("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
 										+ "PREFIX restruant: <http://csaixyz.org/restraunt#> "
 										+ "PREFIX dish: <http://dishname/> "
@@ -166,10 +167,10 @@ public class extractNP {
 	}
 	
 	public void extract2lex(Lexicon lex) {
-		extract2lex("restruant:district", "s", district, lex);
-		extract2lex("restruant:zone", "s", zone, lex);
+		extract2lex("restruant:district", "dt", district, lex);
+		extract2lex("restruant:zone", "zn", zone, lex);
 		extract2lex("restruant:name", "r", resName, lex);
-		extract2lex("restruant:category", "s", cat, lex);
+		extract2lex("restruant:category", "lb", cat, lex);
 		extract2lex("dish:dishname", "c", dishName, lex);
 		return;
 	}

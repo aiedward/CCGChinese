@@ -284,6 +284,7 @@ public class Lexicon {
 			if (e.hasWords(words))
 				entries.add(e);
 		}
+		return;
 	}
 
 	public List<LexEntry> getLexEntries(List<String> words){
