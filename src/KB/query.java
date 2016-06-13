@@ -189,6 +189,28 @@ public class query {
 		return "ERROR\n";
 	}
 	
+	private String convertCount(Count exp) {
+		Exp body = exp.getBody();
+		if (body.getClass().toString().equals("class lambda.BoolBoolOps")) {
+			BoolBoolOps bd = (BoolBoolOps)body;
+			// (and
+			if (bd.getOP() == BoolBoolOps.CONJ) {
+				String res = PREFIX
+						  + "SELECT (COUNT(?s) AS ?count) \n"
+						  + "WHERE \n"
+						  + "{ \n";
+				List<Exp> exps = bd.getExps();
+				for (Exp e : exps) {
+					res += convertSingleExp(e);
+				}
+				res = res + "} \n";
+				return res;
+			}
+			return "Unresolved Bool Op\n";
+		}
+		return "ERROR\n";
+	}
+	
 	public String convert(Exp exp) {
 		String res = "";
 		//System.out.println(exp.getClass().toString());
@@ -198,10 +220,14 @@ public class query {
 		else if (exp.getClass().toString().equals("class lambda.Funct")) {
 			return convertFunct((Funct)exp);
 		}
+		else if (exp.getClass().toString().equals("class lambda.Count")) {
+			return convertCount((Count)exp);
+		}
 		//System.out.print(res);
 		return res;
 	}
 	
+
 	public String convert(String sem) {
 		Exp exp = Exp.makeExp(sem);
 		return convert(exp);
@@ -274,7 +300,7 @@ public class query {
 		Lang.loadLangFromFile("data/relations");
 		
 		query qr = new query();
-		String spq = qr.convert("(cuisinePrice:i 北京烤鸭:c)");
+		String spq = qr.convert("(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 日本菜:lb) (> (price:i $0) 100:i)))");
 		System.out.println(spq);
 		System.out.println(qr.execute(spq));
 	}

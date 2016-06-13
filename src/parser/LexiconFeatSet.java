@@ -43,14 +43,22 @@ public class LexiconFeatSet implements LexicalFeatureSet {
 	}
 
 	public double score(LexEntry l, HashVector theta){
-		if (l==null) return 0.0;
+		if (l==null) {
+			return 0.0;
+		}
+		if (l.isNumber()) {
+			return 10;
+		}
 		int i= indexOf(l);
-		if (i!=-1) 
+		if (i!=-1) {
 			return theta.get("LEX:"+i);
-		if (l.getCat().equalsNoSem(Cat.EMP))
+		}
+		if (l.getCat().equalsNoSem(Cat.EMP)){
 			return -1.0;
-		if (Train.CoocInit)
+		}
+		if (Train.CoocInit){
 			return initialWeight(l);
+		}
 		return -0.5;  // unknown. 
 	}
 

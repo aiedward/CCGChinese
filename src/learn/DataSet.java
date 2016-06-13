@@ -151,6 +151,11 @@ public class DataSet {
 		//clear the data/fold directory
 		String path = "data/folds";
 		File file = new File(path);
+		if (file.exists()) {
+			file.delete();
+			file.mkdir();
+		}
+		
 		if (! file.isDirectory()) {
 			return;
 		}

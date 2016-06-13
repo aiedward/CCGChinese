@@ -26,7 +26,7 @@ import KB.*;
 
 public class DevTrain {
 
-	public static testResult trainAndTest(String trainFile, String testFile) {
+	public static void trainAndTest(String trainFile, String testFile, testResult d_res, testResult t_res, int beam) {
 		PType.addTypesFromFile("data/types");
 		Lang.loadLangFromFile("data/relations");
 
@@ -54,13 +54,15 @@ public class DevTrain {
 		fixed.addEntriesFromFile(npLexFileName,true);
 
 		Train.EPOCHS = 5;
+		//Train.EPOCHS = epo;
 		Train.alpha_0 = 1.0;
 		Train.c = 0.00001;
 		Train.maxSentLen=50;
 
 		LexiconFeatSet.initWeightMultiplier = 10.0;
 		LexiconFeatSet.initLexWeight = 10.0;
-		Parser.pruneN=200;
+		//Parser.pruneN=200;
+		Parser.pruneN = beam;
 
 		System.out.println("alpha_0 = "+Train.alpha_0);
 		System.out.println("C = "+Train.c);
@@ -85,19 +87,30 @@ public class DevTrain {
 		
 		System.out.println("Print lexicon...");
 		p.returnLex().printLexiconWithWeightsToFile();
+		
+		if (d_res != null) {
+			System.out.println("Start testing on train set...");
+			t.test(p,Train.pruneLex, t.getTrainData(0), d_res);
+		}
+		
+		if (t_res != null){
+			System.out.println("Start testing on test set...");
+			t.test(p,Train.pruneLex, t.getTestData(0), t_res);
+		}
+		else {
+			System.out.println("Start testing on test set...");
+			t.test(p,Train.pruneLex, t_res);
+		}
 
-		testResult res = new testResult();
-		System.out.println("Start testing...");
-		t.test(p,Train.pruneLex, res);
-
-		return res;
+		
+		return;
 
 	}
 	
 	
 	public static void main(String[] args){
 		
-		trainAndTest("data/train", "data/train");
+		//trainAndTest("data/train", "data/train", null, null);
 
 		return;
 	}

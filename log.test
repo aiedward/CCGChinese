@@ -1,6 +1,6 @@
-Train Size: 407
+Train Size: 621
 
-Test Size: 407
+Test Size: 621
 
 log4j:WARN No appenders could be found for logger (DICLOG).
 log4j:WARN Please initialize the log4j system properly.
@@ -11,7 +11,6 @@ initialMultiplier = 10.0
 NP init = 10.0
 Parser beam  = 200
 
-Start LexPhi: 0
 Start train
 add Dataset
 add Dataset
@@ -21,32 +20,5 @@ Training, iteration 1
 Training, iteration 2
 Training, iteration 3
 Training, iteration 4
-Print lexicon...
-Start printing lexicon
-Start testing...
-WRONG
-Sentence: 石景山附近的餐厅，要有容纳十人的包间，湘菜馆，人均70
-Sem: (lambda $0 e (and (zone:t $0 石景山:zn) (npeople:t $0 10:i) (label:t $0 湘菜:lb) (< (price:i $0) 70:i)))
-Res: (lambda $0 e (and (zone:t $0 石景山:zn) (npeople:t $0 10:i) (label:t $0 湘菜:lb)))
-WRONG
-Sentence: 月坛附近的快餐小吃，两个人
-Sem: (lambda $0 e (and (zone:t $0 月坛:zn) (label:t $0 快餐小吃:lb) (npeople:t $0 2:i)))
-Res: (lambda $0 e (and (label:t $0 快餐小吃:lb) (zone:t $0 月坛:zn)))
-WRONG
-Sentence: 西单附近的餐厅，十个人的包间，大众家常菜
-Sem: (lambda $0 e (and (npeople:t $0 10:i) (label:t $0 家常菜:lb)))
-Res: (lambda $0 e (and (zone:t $0 西单:zn) (label:t $0 家常菜:lb)))
-WRONG
-Sentence: 三里屯附近的火锅自助餐厅，人均50左右
-Sem: (lambda $0 e (and (zone:t $0 三里屯:zn) (label:t $0 火锅:lb) (< (price:i $0) 50:i)))
-Res: (lambda $0 e (and (zone:t $0 三里屯:zn) (label:t $0 火锅:lb)))
-WRONG
-Sentence: 宣武门附近的餐厅，十个人的包间，大众家常菜
-Sem: (lambda $0 e (and (npeople:t $0 10:i) (label:t $0 家常菜:lb)))
-Res: (lambda $0 e (and (zone:t $0 宣武门:zn) (label:t $0 家常菜:lb)))
------------------------------
-Recall : 402/407 = 0.9877149877149877
-Precision : 402/407 = 0.9877149877149877
-F1: 0.9877149877149877
-No Parses : 0
------------
+Training, iteration 5
+Training, iteration 6

@@ -21,6 +21,7 @@
 package lambda;
 
 import utils.*;
+
 import java.io.*;
 import java.util.*;
 
@@ -288,6 +289,10 @@ public class Count extends Exp {
 
     public double avgDepth(int d){
 	return body.avgDepth(d+1);
+    }
+    
+    public Exp getBody(){
+    	return body;
     }
 
     Var arg;

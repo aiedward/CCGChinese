@@ -150,11 +150,15 @@ public class DemoUI {
 			return;
 		}
 		String spq = qr.convert(res);
+		if (spq == null || spq.equals("")) {
+			txt_res.setText(res.toString());
+			txt_KB.setText("null");
+			return;
+		}
 		String KBres = qr.execute(spq);
-		//System.out.println(KBres);
+		txt_res.setText(res.toString());
 		txt_KB.setText(KBres);
 		txt_entries.setText("使用词条：\n");
-		txt_res.setText(res.toString());
 		List entries = test.ParseEntries(res);
 		//System.out.println(entries);
 		

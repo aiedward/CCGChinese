@@ -94,6 +94,8 @@ public class Train {
 			System.out.println("NO PARSE");
 			System.out.println("Sentence: " + words);
 			System.out.println("Sem: " + sem);
+			return false;
+			/*
 			if (parses.size()>1){
 				// There are more than one equally high scoring 
 				// logical forms. If this is the case, we abstain
@@ -157,6 +159,7 @@ public class Train {
 					}
 				}
 			}
+			*/
 		}
 		return false;
 	}
@@ -189,6 +192,14 @@ public class Train {
 		printStats(prunedLex, res);
 		return 0.0;
 	}
+	
+	public double test(Parser p, boolean prunedLex, DataSet data, testResult res) {
+		HashVector temp = null;
+		resetCounts();
+		test(p, data);
+		printStats(prunedLex, res);
+		return 0.0;
+	}
 
 	
 	private void test(Parser p, DataSet d){
@@ -199,6 +210,7 @@ public class Train {
 		for (int i=0; i<dsize; i++){
 
 			String words = d.sent(i);
+			//System.out.println(words);
 			Exp sem = d.sem(i);
 			if (verbose){
 				System.out.println(i+": ==================("+correctParses+
@@ -283,7 +295,14 @@ public class Train {
 		}
 		testData.add(d);
 	}
-
+	
+	public DataSet getTestData(int i) {
+		return testData.getDataSet(i);
+	}
+	
+	public DataSet getTrainData(int i) {
+		return trainData.getDataSet(i);
+	}
 
 	public void setFixed(Lexicon l){
 		fixedLex = l;

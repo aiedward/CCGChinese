@@ -20,6 +20,8 @@
 package parser;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.io.*;
 
 import lambda.*;
@@ -278,6 +280,18 @@ public class Lexicon {
 	 * @modifies entries
 	 */    
 	public void getLexEntries(List words, List entries){
+		if (words.size() == 1) {
+			String mword = (String) words.get(0);
+			if (mword.matches("^[0-9]+.")) {
+				Pattern p = Pattern.compile("^[0-9]+");
+				Matcher m = p.matcher(mword);
+				m.find();
+				String mnum = m.group();
+				LexEntry ii = new LexEntry(mword, "NP : " + mnum + ":i");
+				entries.add(ii);
+				return;
+			}
+		}
 		Iterator i = lexicon.iterator();
 		while (i.hasNext()){
 			LexEntry e = (LexEntry)i.next();

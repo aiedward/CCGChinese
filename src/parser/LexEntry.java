@@ -189,6 +189,18 @@ public class LexEntry {
     public boolean isNew = false;
     
     //>
+    
+	public boolean isNumber() {
+		List words = myTokens;
+		//System.out.println(words);
+		if (words.size() == 1 && myCat.getSem().type().toString().equals("i")){
+			String mword = (String) words.get(0);
+			if (mword.matches("^[0-9]+.")) {
+				return true;
+			}
+		}
+		return false;
+	}
 
     int count=0;
     public int getCount(){ return count; }

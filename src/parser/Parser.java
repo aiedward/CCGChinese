@@ -56,7 +56,7 @@ public class Parser {
     	int fStartIndex =0;
 
     	firstLexFeatIndex = fStartIndex;
-    	System.out.println("Start LexPhi: "+fStartIndex);
+    	//System.out.println("Start LexPhi: "+fStartIndex);
     	
     	
     	lexicalFeatures = new LinkedList<LexicalFeatureSet>();
@@ -506,7 +506,6 @@ public class Parser {
 	public static void main(String[] args){
 		
 		Parser p = new Parser();
-		p.tokenize("五道口附近的火锅店，人均三百二");
-
+		System.out.println(p.tokenize("我想找家川菜馆"));
 	}
 }

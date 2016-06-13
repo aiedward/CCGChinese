@@ -1,6 +1,5 @@
 (
 (restaurant:t r t)
-(name:t r nm t)
 (district:t r dt t)
 (zone:t r zn t)
 (street:t r s t)

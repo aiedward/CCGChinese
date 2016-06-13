@@ -1,53 +1,29 @@
-南京大牌档多少钱一个人
-(price:i 南京大牌档:r)
-
-南京大牌档几点关门
-(time:s 南京大牌档:r)
-
-南京大牌档有麻辣小龙虾吃吗
-(hasCuisine:t 南京大牌档:r 麻辣小龙虾:c)
-
-西单有哪些环境比较好的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (> (surroundingScore:i $0) 8:i)))
-
-多少钱
-(cuisinePrice:i 北京烤鸭:c)
-
-全聚德有停车的地方吗
-(park:t 全聚德:r)
-
-海底捞多少钱一个人
-(price:i 海底捞:r)
-
-海底捞是什么餐厅
-(lambda $0 e (label:t 海底捞:r $0))
-
 宣武门附近有哪些吃川菜的地方
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (label:t $0 川菜:lb)))
 
 将太无二好吃吗
 (tasteScore:i 将太无二:r)
 
 东直门附近的烧烤
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东直门:s) (label:t $0 烧烤:s)))
+(lambda $0 e (and (zone:t $0 东直门:zn) (label:t $0 烧烤:lb)))
 
 将太无二电话是多少
 (tel:s 将太无二:r)
 
 宣武门有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (label:t $0 日本菜:lb)))
 
 我们想在宣武门附近找个饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s)))
+(lambda $0 e (zone:t $0 宣武门:zn))
 
 宣武门附近评分比较高的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (> (tasteScore:i $0) 8:i)))
 
 新街口附近比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (> (tasteScore:i $0) 8:i)))
 
 日昌餐馆怎么样
-(shopScore:i 日昌餐馆:r)
+(tasteScore:i 日昌餐馆:r)
 
 日昌餐馆人均多少钱
 (price:i 日昌餐馆:r)
@@ -59,7 +35,7 @@
 (hasCuisine:t 日昌餐馆:r 鳗鱼饭:c)
 
 宣武门有哪些环境比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (surroundingScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (> (surroundingScore:i $0) 8:i)))
 
 鳗鱼饭多少钱
 (cuisinePrice:i 鳗鱼饭:c)
@@ -68,10 +44,13 @@
 (park:t 火炉火:r)
 
 宣武门附近服务比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (> (serviceScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (> (serviceScore:i $0) 8:i)))
+
+我要找家韩国料理
+(lambda $0 e (label:t $0 韩国料理:lb))
 
 宣武门附近的川菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 宣武门:s) (label:t $0 川菜:s)))
+(lambda $0 e (and (zone:t $0 宣武门:zn) (label:t $0 川菜:lb)))
 
 金钱豹人均多少钱
 (price:i 金钱豹:r)
@@ -83,38 +62,125 @@
 (tasteScore:i 金钱豹:r)
 
 新街口附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
+(lambda $0 e (zone:t $0 新街口:zn))
 
 望京有哪些好吃的地方
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 望京:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 望京:zn) (> (tasteScore:i $0) 8:i)))
 
 新街口附近的餐厅，人均80
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (< (price:i $0) 80:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (< (price:i $0) 80:i)))
 
 新街口附近带包间的餐厅，十个人的，人均80元
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (npeople:t $0 10:i) (< (price:i $0) 80:i)))
 
 德克士怎么样
-(shopScore:i 德克士:r)
+(tasteScore:i 德克士:r)
 
 王府井附近的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s)))
+(lambda $0 e (zone:t $0 王府井:zn))
 
 王府井附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s)))
+(lambda $0 e (zone:t $0 王府井:zn))
 
 王府井附近的湘菜馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s) (label:t $0 湘菜:s)))
+(lambda $0 e (and (zone:t $0 王府井:zn) (label:t $0 湘菜:lb)))
 
 火炉火做什么菜的
 (lambda $0 e (label:t 火炉火:r $0))
 
-王府井附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 王府井:s) (< (price:i $0) 70:i)))
+苏州桥附近有啥日料自助
+(lambda $0 e (and (zone:t $0 苏州桥:zn) (label:t $0 日式自助:lb)))
 
-三里屯附近有哪些餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s)))
+附近有什么东北菜
+(lambda $0 e (label:t $0 东北菜:lb))
 
-三里屯附近的火锅自助餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 三里屯:s) (label:t $0 火锅:s)))
+我想订一家淮扬菜馆
+(lambda $0 e (label:t $0 淮扬菜:lb))
+
+我想在苏州桥找家餐厅，5位
+(lambda $0 e (and (zone:t $0 苏州桥:zn) (npeople:t $0 5:i)))
+
+我想找一家韩国料理
+(lambda $0 e (label:t $0 韩国料理:lb))
+
+找个苏州桥寿司店
+(lambda $0 e (and (zone:t $0 苏州桥:zn) (label:t $0 寿司:lb)))
+
+找个寿司店
+(lambda $0 e (label:t $0 寿司:lb))
+
+有什么餐馆推荐
+(lambda $0 e (> (tasteScore:i $0) 8:i))
+
+有什么推荐的餐厅
+(lambda $0 e (> (tasteScore:i $0) 8:i))
+
+我想吃烤全羊
+(lambda $0 e (hasCuisine:t $0 烤全羊:c))
+
+我想找清河附近的寿司店
+(lambda $0 e (and (zone:t $0 清河:zn) (label:t $0 寿司:lb)))
+
+请推荐一家环境比较好的餐厅
+(lambda $0 e (> (surroundingScore:i $0) 8:i))
+
+南京大牌档是什么菜系
+(lambda $0 e (label:t 南京大牌档:r $0))
+
+我想找个清河旁边的饭店
+(lambda $0 e (zone:t $0 清河:zn))
+
+我想找附近的和合谷
+(address:s 和合谷:r)
+
+找一家人均60的
+(lambda $0 e (< (price:i $0) 60:i))
+
+我想吃甜品
+(lambda $0 e (label:t $0 清真菜:lb))
+
+我想吃锅包肉
+(lambda $0 e (hasCuisine:t $0 锅包肉:c))
+
+有清真餐厅吗
+(lambda $0 e (label:t $0 清真菜:lb))
+
+我想在清河附近找家淮扬菜馆
+(lambda $0 e (and (zone:t $0 清河:zn) (label:t $0 淮扬菜:lb)))
+
+有没有淮扬菜
+(lambda $0 e (label:t $0 淮扬菜:lb))
+
+想吃铁板烧
+(lambda $0 e (label:t $0 铁板烧:lb))
+
+有寿司店吗
+(lambda $0 e (label:t $0 寿司:lb))
+
+太阳宫的寿司店
+(lambda $0 e (and (zone:t $0 太阳宫:zn) (label:t $0 寿司:lb)))
+
+哪家烤肉比较好
+(lambda $0 e (and (label:t $0 烧烤:lb) (> (tasteScore:i $0) 8:i)))
+
+我们10人，想找一个淮扬菜馆，在清华大学附近
+(lambda $0 e (and (zone:t $0 清华大学:zn) (npeople:t $0 10:i) (label:t $0 淮扬菜:lb)))
+
+我想吃日式料理
+(lambda $0 e (label:t $0 韩国料理:lb))
+
+推荐一家环境好的烤肉店
+(lambda $0 e (and (label:t $0 烧烤:lb) (> (surroundingScore:i $0) 8:i)))
+
+想吃淮扬菜
+(lambda $0 e (label:t $0 淮扬菜:lb))
+
+寿司店
+(lambda $0 e (label:t $0 寿司:lb))
+
+欢乐谷附近的美食推荐
+(lambda $0 e (and (zone:t $0 欢乐谷:zn) (> (tasteScore:i $0) 8:i)))
+
+我想找家60块的
+(lambda $0 e (< (price:i $0) 60:i))
 

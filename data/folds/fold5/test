@@ -1,35 +1,77 @@
+东直门附近的清真餐厅，人均100
+(lambda $0 e (and (zone:t $0 东直门:zn) (label:t $0 清真菜:lb) (< (price:i $0) 100:i)))
+
+前门附近的饭店
+(lambda $0 e (zone:t $0 前门:zn))
+
+日昌在哪儿
+(address:s 日昌餐馆:r)
+
+前门附近的餐厅，两位
+(lambda $0 e (and (zone:t $0 前门:zn) (npeople:t $0 2:i)))
+
+我想吃川菜
+(lambda $0 e (label:t $0 川菜:lb))
+
+复兴门附近有哪些餐厅
+(lambda $0 e (zone:t $0 复兴门:zn))
+
+前门附近的餐厅，两位，不要太辣的
+(lambda $0 e (and (zone:t $0 前门:zn) (npeople:t $0 2:i) (not (label:t $0 川菜:lb))))
+
+前门附近人均70的餐厅
+(lambda $0 e (and (zone:t $0 前门:zn) (< (price:i $0) 70:i)))
+
+日昌什么时候开门
+(time:s 日昌餐馆:r)
+
+宣武门附近有哪些咖啡厅
+(lambda $0 e (and (zone:t $0 宣武门:zn) (label:t $0 咖啡厅:lb)))
+
+日昌几点关门
+(time:s 日昌餐馆:r)
+
+日昌营业时间是什么时候
+(time:s 日昌餐馆:r)
+
+日昌贵吗
+(price:i 日昌餐馆:r)
+
+我想在东便门附近订个餐厅，八个人，人均100元，清真菜
+(lambda $0 e (and (zone:t $0 东便门:zn) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:lb)))
+
 我们想在新街口附近找个餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
+(lambda $0 e (zone:t $0 新街口:zn))
 
 我们想在新街口广场附近找个餐厅，五个人，人均八十
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 5:i) (zone:t $0 新街口:s) (< (price:i $0) 80:i)))
+(lambda $0 e (and (npeople:t $0 5:i) (zone:t $0 新街口:zn) (< (price:i $0) 80:i)))
 
 新街口附近的餐厅，人均70
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (< (price:i $0) 70:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (< (price:i $0) 70:i)))
 
 新街口附近的火锅店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (label:t $0 火锅:s)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (label:t $0 火锅:lb)))
 
 新街口附近的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
+(lambda $0 e (zone:t $0 新街口:zn))
 
 新街口附近比较好的饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (> (tasteScore:i $0) 8:i)))
 
 新街口附近比较好吃的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (> (tasteScore:i $0) 8:i)))
 
 新街口附近的餐馆
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
+(lambda $0 e (zone:t $0 新街口:zn))
 
 新街口附近有哪些餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s)))
+(lambda $0 e (zone:t $0 新街口:zn))
 
 我们有五个人，想在新街口附近吃个饭
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (npeople:t $0 5:i)))
 
 我们想在新街口广场附近找个餐厅，五个人
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 新街口:s) (npeople:t $0 5:i)))
+(lambda $0 e (and (zone:t $0 新街口:zn) (npeople:t $0 5:i)))
 
 日昌环境怎么样
 (surroundingScore:i 日昌餐馆:r)
@@ -38,7 +80,7 @@
 (surroundingScore:i 日昌餐馆:r)
 
 复兴门附近的清真餐厅，十个人的包间
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 10:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (zone:t $0 复兴门:zn) (npeople:t $0 10:i) (label:t $0 清真菜:lb)))
 
 日昌什么时候关门
 (time:s 日昌餐馆:r)
@@ -47,52 +89,52 @@
 (address:s 日昌餐馆:r)
 
 我想订个可以容纳二十人的包间餐厅，人均80元，地坛附近，清真菜
-(lambda $0 e (and (restaurant:t $0) (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (npeople:t $0 20:i) (< (price:i $0) 80:i) (label:t $0 清真菜:lb)))
 
 我想订个带包间的餐厅，有八个人，东便门附近，人均100元，清真菜
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 东便门:s) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:s)))
+(lambda $0 e (and (zone:t $0 东便门:zn) (npeople:t $0 8:i) (< (price:i $0) 100:i) (label:t $0 清真菜:lb)))
 
 我们想在五道口吃个饭
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s)))
+(lambda $0 e (zone:t $0 五道口:zn))
 
 复兴门附近可以吃川菜的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (label:t $0 川菜:s)))
+(lambda $0 e (and (zone:t $0 复兴门:zn) (label:t $0 川菜:lb)))
 
 五道口哪家咖啡厅比较好
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 咖啡厅:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 咖啡厅:lb) (> (tasteScore:i $0) 8:i)))
 
 五道口有什么好的咖啡厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 咖啡厅:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 咖啡厅:lb) (> (tasteScore:i $0) 8:i)))
 
 日昌是吃什么的
 (lambda $0 e (label:t 日昌餐馆:r $0))
 
 五道口有什么面包房
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 面包甜点:lb)))
 
 五道口有什么甜品店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 面包甜点:lb)))
 
 五道口哪家甜品店比较好吃
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s) (> (tasteScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 面包甜点:lb) (> (tasteScore:i $0) 8:i)))
 
 五道口有哪些面包房
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 面包甜点:lb)))
 
 五道口有哪些甜品店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 面包甜点:s)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 面包甜点:lb)))
 
 五道口有哪些咖啡厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 五道口:s) (label:t $0 咖啡厅:s)))
+(lambda $0 e (and (zone:t $0 五道口:zn) (label:t $0 咖啡厅:lb)))
 
 我想吃面包
-(lambda $0 e (and (restaurant:t $0) (label:t $0 面包甜点:s)))
+(lambda $0 e (label:t $0 面包甜点:lb))
 
 复兴门附近的餐厅，六位，人均七十
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
+(lambda $0 e (and (zone:t $0 复兴门:zn) (npeople:t $0 6:i) (< (price:i $0) 70:i)))
 
 复兴门附近比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 复兴门:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 复兴门:zn) (> (tasteScore:i $0) 8:i)))
 
 原麦山丘贵吗
 (price:i 原麦山丘:r)
@@ -101,20 +143,44 @@
 (price:i 原麦山丘:r)
 
 西单附近的餐厅，人均100
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 西单:s) (< (price:i $0) 100:i)))
+(lambda $0 e (and (zone:t $0 西单:zn) (< (price:i $0) 100:i)))
 
 前门附近有什么日本料理
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (label:t $0 日本料理:s)))
+(lambda $0 e (and (zone:t $0 前门:zn) (label:t $0 日本菜:lb)))
 
 我们想在前门附近找个饭店
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s)))
+(lambda $0 e (zone:t $0 前门:zn))
 
 前门附近比较好的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 前门:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 前门:zn) (> (tasteScore:i $0) 8:i)))
 
 中关村附近有哪些推荐的餐厅
-(lambda $0 e (and (restaurant:t $0) (zone:t $0 中关村:s) (> (shopScore:i $0) 8:i)))
+(lambda $0 e (and (zone:t $0 中关村:zn) (> (tasteScore:i $0) 8:i)))
 
 南京大牌档好吃吗
 (tasteScore:i 南京大牌档:r)
+
+南京大牌档多少钱一个人
+(price:i 南京大牌档:r)
+
+南京大牌档几点关门
+(time:s 南京大牌档:r)
+
+南京大牌档有麻辣小龙虾吃吗
+(hasCuisine:t 南京大牌档:r 麻辣小龙虾:c)
+
+西单有哪些环境比较好的饭店
+(lambda $0 e (and (zone:t $0 西单:zn) (> (surroundingScore:i $0) 8:i)))
+
+多少钱
+(cuisinePrice:i 北京烤鸭:c)
+
+全聚德有停车的地方吗
+(park:t 全聚德:r)
+
+海底捞多少钱一个人
+(price:i 海底捞:r)
+
+海底捞是什么餐厅
+(lambda $0 e (label:t 海底捞:r $0))
 
