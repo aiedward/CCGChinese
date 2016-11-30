@@ -1,5 +1,0 @@
-log4j:WARN No appenders could be found for logger (DICLOG).
-log4j:WARN Please initialize the log4j system properly.
-log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
-load lexicon finish
-(tasteScore:i 全聚德:r)
