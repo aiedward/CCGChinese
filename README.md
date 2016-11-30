@@ -14,7 +14,7 @@
       
   - a logical form Sem
   
-  ![alt tag](https://github.com/jessicatsaon/CCGChinese/blob/master/parse_process.png)
+  <img src="https://github.com/jessicatsaon/CCGChinese/blob/master/parse_process.png" width="500">
 
 ## Query Knowledge Base  
   Converting logic form to SPARQL in order to find answers by querying the knowledge base. Using [Virtuoso-opensource](https://github.com/openlink/virtuoso-opensource) as the RDF database engine.
