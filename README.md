@@ -21,4 +21,4 @@
 
 # UI demo
 
-![alt tag](https://github.com/jessicatsaon/CCGChinese/blob/master/UIdemo.png)
+![alt tag](https://github.com/jessicatsaon/CCGChinese/blob/master/screenshot.png)
